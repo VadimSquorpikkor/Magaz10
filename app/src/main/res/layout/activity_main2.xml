@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/horizontalLayoutStyle">
+        <TextView
+            style="@style/textStyle"
+            android:text="Количество соков:" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <TextView
+            style="@style/textStyle"
+            android:text="С/М/В/Ю(4)" />
+
+        <EditText style="@style/editStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <TextView
+            style="@style/textStyle"
+            android:text="Крот(8)" />
+
+        <EditText style="@style/editStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <TextView
+            style="@style/textStyle"
+            android:text="Сборка(8)" />
+
+        <EditText style="@style/editStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <TextView
+            style="@style/textStyle"
+            android:text="Монтаж(5)" />
+
+        <EditText style="@style/editStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <TextView
+            style="@style/textStyle"
+            android:text="Корелин(17)" />
+
+        <EditText style="@style/editStyle" />
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/horizontalLayoutStyle">
+        <TextView
+            style="@style/textStyle"
+            android:text="Цены:" />
+
+    </LinearLayout>
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <TextView
+            style="@style/textStyle"
+            android:text="Сок 1литр" />
+
+        <EditText style="@style/editStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <TextView
+            style="@style/textStyle"
+            android:text="Сок 0.125мл" />
+
+        <EditText style="@style/editStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <TextView
+            style="@style/textStyle"
+            android:text="Молоко 1литр" />
+
+        <EditText style="@style/editStyle" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <TextView
+            style="@style/textStyle"
+            android:text="Молоко 0.250мл" />
+
+        <EditText style="@style/editStyle" />
+
+    </LinearLayout>
+</LinearLayout>
