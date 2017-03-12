@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/horizontalLayoutStyle"
+        android:layout_height="150dp">
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <TextView
+            style="@style/textStyle"
+            android:text="Денег осталось:" />
+
+        <TextView
+            style="@style/textStyle"
+            android:text="0" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <EditText style="@style/WeightEditStyle" />
+        <EditText
+            style="@style/editStyle"
+            android:id="@+id/orderPrice1"/>
+        <TextView style="@style/editStyle" />
+    </LinearLayout>
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <EditText style="@style/WeightEditStyle" />
+        <EditText
+            style="@style/editStyle"
+            android:id="@+id/orderPrice2"/>
+        <TextView style="@style/editStyle" />
+    </LinearLayout>
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <EditText style="@style/WeightEditStyle" />
+        <EditText
+            style="@style/editStyle"
+            android:id="@+id/orderPrice3"/>
+        <TextView style="@style/editStyle" />
+    </LinearLayout>
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <EditText style="@style/WeightEditStyle" />
+        <EditText
+            style="@style/editStyle"
+            android:id="@+id/orderPrice4"/>
+        <TextView style="@style/editStyle" />
+    </LinearLayout>
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <EditText style="@style/WeightEditStyle" />
+        <EditText
+            style="@style/editStyle"
+            android:id="@+id/orderPrice5"/>
+        <TextView style="@style/editStyle" />
+    </LinearLayout>
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <EditText style="@style/WeightEditStyle" />
+        <EditText
+            style="@style/editStyle"
+            android:id="@+id/orderPrice6"/>
+        <TextView style="@style/editStyle" />
+    </LinearLayout>
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <EditText style="@style/WeightEditStyle" />
+        <EditText
+            style="@style/editStyle"
+            android:id="@+id/orderPrice7"/>
+        <TextView style="@style/editStyle" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle"
+        android:layout_height="150dp">
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/homeButton"
+            android:text="Дом" />
+
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/leftButton"
+            android:text="Остаток" />
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/orderButton"
+            android:text="Заказы" />
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/countButton"
+            android:text="Считать" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -14,6 +14,11 @@
             style="@style/textStyle"
             android:text="0" />
 
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/SetValueButton"
+            android:layout_height="30dp"
+            android:text="Настройки" />
     </LinearLayout>
 
     <LinearLayout style="@style/horizontalLayoutStyle">
@@ -167,8 +172,9 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
         <Button
             style="@style/buttonStyle"
-            android:id="@+id/SetValueButton"
-            android:text="Настройки" />
+            android:id="@+id/homeButton"
+            android:text="Дом" />
+
         <Button
             style="@style/buttonStyle"
             android:id="@+id/leftButton"

@@ -129,5 +129,29 @@
 
     </LinearLayout>
 
+    <LinearLayout style="@style/horizontalLayoutStyle"
+        android:layout_height="150dp">
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/homeButton"
+            android:text="Дом" />
+
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/leftButton"
+            android:text="Остаток" />
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/orderButton"
+            android:text="Заказы" />
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/countButton"
+            android:text="Считать" />
+    </LinearLayout>
 
 </LinearLayout>
