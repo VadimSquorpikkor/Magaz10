@@ -114,7 +114,7 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Соков в накладной" />
+            android:text="Соков в накладной:" />
 
         <EditText style="@style/editStyle" />
 
