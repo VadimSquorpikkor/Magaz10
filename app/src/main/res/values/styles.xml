@@ -9,7 +9,17 @@
     </style>
 
     <style name="editStyle">
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <!--<item name="android:layout_width">match_parent</item>-->
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="WeightEditStyle">
+        <item name="android:layout_weight">3</item>
+        <!--<item name="android:layout_width">match_parent</item>-->
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">15sp</item>
         <item name="android:gravity">right</item>
@@ -30,4 +40,11 @@
         <item name="android:orientation">horizontal</item>
     </style>
 
+    <style name="buttonStyle">
+        <item name="android:textSize">10sp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
 </resources>

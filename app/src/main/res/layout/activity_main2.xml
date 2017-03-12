@@ -114,10 +114,20 @@
 
         <TextView
             style="@style/textStyle"
+            android:text="" />
+
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <TextView
+            style="@style/textStyle"
             android:text="Соков в накладной:" />
 
         <EditText style="@style/editStyle" />
 
     </LinearLayout>
+
 
 </LinearLayout>
