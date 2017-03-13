@@ -2,6 +2,7 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -151,7 +152,7 @@
         <Button
             style="@style/buttonStyle"
             android:id="@+id/countButton"
-            android:text="Считать" />
+            android:text="Сохранить" />
     </LinearLayout>
 
 </LinearLayout>

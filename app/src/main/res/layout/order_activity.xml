@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -130,13 +131,7 @@
             android:id="@+id/orderPrice18"/>
         <TextView style="@style/editStyle" />
     </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle" />
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice19"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
+
     <LinearLayout style="@style/horizontalLayoutStyle">
         <Button
             style="@style/buttonStyle"

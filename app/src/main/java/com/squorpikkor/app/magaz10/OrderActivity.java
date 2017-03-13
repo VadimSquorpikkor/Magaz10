@@ -15,7 +15,7 @@ public class OrderActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_activity);
+        setContentView(R.layout.order_activity);
 
         button1 = (Button) findViewById(R.id.homeButton);
         button2 = (Button) findViewById(R.id.leftButton);
@@ -26,13 +26,13 @@ public class OrderActivity extends AppCompatActivity {
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.homeButton:
-                        clickActivity(SettingActivity.class);
+                        clickActivity(HomeActivity.class);
                         break;
                     case R.id.leftButton:
                         clickActivity(LeftActivity.class);
                         break;
                     case R.id.countButton:
-                        clickActivity(OrderActivity.class);
+                        //
                         break;
 
 
