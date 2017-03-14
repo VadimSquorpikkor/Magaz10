@@ -15,21 +15,12 @@
 
     </LinearLayout>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <TextView
-            style="@style/textStyle"
-            android:text="С/М/В/Ю(4)" />
-
-        <EditText style="@style/editStyle" />
-
-    </LinearLayout>
 
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <TextView
             style="@style/textStyle"
-            android:text="Крот(8)" />
+            android:text="Крот(2)" />
 
         <EditText style="@style/editStyle" />
 
@@ -55,6 +46,15 @@
 
     </LinearLayout>
 
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <TextView
+            style="@style/textStyle"
+            android:text="С/М/В/Ю(4)" />
+
+        <EditText style="@style/editStyle" />
+
+    </LinearLayout>
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <TextView
