@@ -30,6 +30,7 @@
 
         <TextView
             style="@style/textStyle"
+            android:id="@+id/textN"
             android:text="0" />
 
     </LinearLayout>
@@ -62,8 +63,10 @@
 
 
         <EditText style="@style/WeightEditStyle"
+            android:inputType="numberDecimal"
             android:id="@+id/edit1"/>
         <EditText style="@style/editStyle"
+            android:inputType="number"
             android:id="@+id/edit2"/>
 
     </LinearLayout>

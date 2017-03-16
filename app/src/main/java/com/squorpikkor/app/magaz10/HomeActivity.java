@@ -1,17 +1,23 @@
 package com.squorpikkor.app.magaz10;
 
 import android.content.Intent;
+import android.support.annotation.IntegerRes;
 import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
 
 public class HomeActivity extends AppCompatActivity {
+
+    public static final String LOGTAG = "LOGGG!!!";
 
     Button button1;
     Button button2;
@@ -20,13 +26,24 @@ public class HomeActivity extends AppCompatActivity {
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10,
             edit11, edit12, edit13, edit14, edit15, edit16, edit17, edit18, edit19,
             edit20, edit21, edit22, edit23, edit24, edit25, edit26, edit27, edit28;
+    TextView textN;
 
-    public enum EDITLIST {
+    //region Description
+    /*public enum EDITLIST {
         edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10,
         edit11, edit12, edit13, edit14, edit15, edit16, edit17, edit18, edit19,
         edit20, edit21, edit22, edit23, edit24, edit25, edit26, edit27, edit28
-    }
+    }*/
+    //endregion
 
+
+    EditText[] editArrayFirst = {edit1, edit3, edit5, edit7, edit9,
+            edit11, edit13, edit15, edit17, edit19,
+            edit21, edit23, edit25, edit27};
+
+    EditText[] editArraySecond = {edit2, edit4, edit6, edit8, edit10,
+            edit12, edit14, edit16, edit18,
+            edit20, edit22, edit24, edit26, edit28};
 
 
     @Override
@@ -40,6 +57,10 @@ public class HomeActivity extends AppCompatActivity {
         button2 = (Button) findViewById(R.id.leftButton);
         button3 = (Button) findViewById(R.id.orderButton);
         button4 = (Button) findViewById(R.id.countButton);
+
+        textN = (TextView) findViewById(R.id.textN);
+
+        //region EDITTEXT FINDVIEW//////////////////////////////////////////////////////////////////////////
         edit1 = (EditText) findViewById(R.id.edit1);
         edit2 = (EditText) findViewById(R.id.edit2);
         edit3 = (EditText) findViewById(R.id.edit3);
@@ -68,6 +89,7 @@ public class HomeActivity extends AppCompatActivity {
         edit26 = (EditText) findViewById(R.id.edit26);
         edit27 = (EditText) findViewById(R.id.edit27);
         edit28 = (EditText) findViewById(R.id.edit28);
+        //endregion
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -83,9 +105,8 @@ public class HomeActivity extends AppCompatActivity {
                         clickActivity(OrderActivity.class);
                         break;
                     case R.id.countButton:
-                        //count
-                        edit1.setText("777");
-
+//                        textN.setText(String.valueOf(sumOfLines(editArrayFirst, editArraySecond)));
+                        textN.setText(String.valueOf(multiplexEdit(edit1, edit2)));
                         break;
 
 
@@ -98,7 +119,7 @@ public class HomeActivity extends AppCompatActivity {
         button3.setOnClickListener(listener);
         button4.setOnClickListener(listener);
 
-//        int[] arrayO
+
     }
 
     public void clickActivity(Class c) {
@@ -106,16 +127,36 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public int[] arrayOfEdit(Enum anEnum) {
+    public double multiplexEdit(EditText e1, EditText e2) {
+        double d1 = Double.parseDouble(e1.getText().toString());
+        int i1 = Integer.parseInt(e2.getText().toString());
+        Log.w(LOGTAG, "d1 = " + d1);
+        Log.w(LOGTAG, "i1 = " + i1);
+        return d1 * (double)i1;
+//        return d1;
+    }
+
+    public double sumOfLines(EditText[] arr1, EditText[] arr2) {
+        double res = 0;
+        /*for (int i = 0; i < arr1.length; i++) {
+            res += multiplexEdit(arr1[i], arr2[i]);
+        }*/
+        res += multiplexEdit(arr1[0], arr2[0]);
+        return res;
+    }
+
+    //region Description
+    /*public int[] arrayOfEdit(Enum anEnum) {
         int[] res = new int[28];
         int i = 0;
-        /*for (EDITLIST edit : EDITLIST.values()) {
+        *//*for (EDITLIST edit : EDITLIST.values()) {
             res[i] = edit.
-        }*/
+        }*//*
         for (EditText edit : Collections.list((Enumeration<EditText>) anEnum)) {
             res[i] = Integer.parseInt(edit.getText().toString());
             i++;
         }
         return res;
-    }
+    }*/
+    //endregion
 }
