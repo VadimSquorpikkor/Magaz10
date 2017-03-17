@@ -106,7 +106,8 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     case R.id.countButton:
 //                        textN.setText(String.valueOf(sumOfLines(editArrayFirst, editArraySecond)));
-                        textN.setText(String.valueOf(multiplexEdit(edit1, edit2)));
+//                        textN.setText(String.valueOf(multiplexEdit(edit1, edit2)));
+                        textN.setText(String.valueOf(multiplexEdit(editArrayFirst[0], editArraySecond[0])));
                         break;
 
 
@@ -128,12 +129,9 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public double multiplexEdit(EditText e1, EditText e2) {
-        double d1 = Double.parseDouble(e1.getText().toString());
-        int i1 = Integer.parseInt(e2.getText().toString());
-        Log.w(LOGTAG, "d1 = " + d1);
-        Log.w(LOGTAG, "i1 = " + i1);
+        double d1 = e1.length()==0 ? 0 : Double.parseDouble(e1.getText().toString());
+        int i1 = e2.length()==0 ? 0 : Integer.parseInt(e2.getText().toString());
         return d1 * (double)i1;
-//        return d1;
     }
 
     public double sumOfLines(EditText[] arr1, EditText[] arr2) {
@@ -141,8 +139,13 @@ public class HomeActivity extends AppCompatActivity {
         /*for (int i = 0; i < arr1.length; i++) {
             res += multiplexEdit(arr1[i], arr2[i]);
         }*/
-        res += multiplexEdit(arr1[0], arr2[0]);
-        return res;
+//        Log.w(LOGTAG, arr1[0].getText().toString());
+//        Log.w(LOGTAG, arr2[0].getText().toString());
+//        res += multiplexEdit(arr1[0], arr2[0]);
+//        return res;
+//        multiplexEdit(editArrayFirst[0], edit2);
+        double d = Double.parseDouble(arr1[0].getText().toString());
+        return d;
     }
 
     //region Description
