@@ -15,6 +15,8 @@ public class HomeActivity extends AppCompatActivity {
 
     Button button1, button2, button3, button4;
 
+    EditTextSummator summator;
+
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10,
             edit11, edit12, edit13, edit14, edit15, edit16, edit17, edit18, edit19,
             edit20, edit21, edit22, edit23, edit24, edit25, edit26, edit27, edit28;
@@ -29,6 +31,8 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
 
+        summator = new EditTextSummator();
+
         button1 = (Button) findViewById(R.id.SetValueButton);
         button2 = (Button) findViewById(R.id.leftButton);
         button3 = (Button) findViewById(R.id.orderButton);
@@ -38,15 +42,15 @@ public class HomeActivity extends AppCompatActivity {
 
 
         //region EDITTEXT FINDVIEW//////////////////////////////////////////////////////////////////////////
-        edit1 = (EditText) findViewById(R.id.edit1);
-        edit2 = (EditText) findViewById(R.id.edit2);
-        edit3 = (EditText) findViewById(R.id.edit3);
-        edit4 = (EditText) findViewById(R.id.edit4);
-        edit5 = (EditText) findViewById(R.id.edit5);
-        edit6 = (EditText) findViewById(R.id.edit6);
-        edit7 = (EditText) findViewById(R.id.edit7);
-        edit8 = (EditText) findViewById(R.id.edit8);
-        edit9 = (EditText) findViewById(R.id.edit9);
+         edit1 = (EditText) findViewById(R.id.edit1);
+         edit2 = (EditText) findViewById(R.id.edit2);
+         edit3 = (EditText) findViewById(R.id.edit3);
+         edit4 = (EditText) findViewById(R.id.edit4);
+         edit5 = (EditText) findViewById(R.id.edit5);
+         edit6 = (EditText) findViewById(R.id.edit6);
+         edit7 = (EditText) findViewById(R.id.edit7);
+         edit8 = (EditText) findViewById(R.id.edit8);
+         edit9 = (EditText) findViewById(R.id.edit9);
         edit10 = (EditText) findViewById(R.id.edit10);
         edit11 = (EditText) findViewById(R.id.edit11);
         edit12 = (EditText) findViewById(R.id.edit12);
@@ -111,7 +115,7 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.orderButton:
                         clickActivity(OrderActivity.class); break;
                     case R.id.countButton:
-                        textN.setText(String.valueOf(sumOfLines(listOfEdit1, listOfEdit2)));
+                        textN.setText(String.valueOf(summator.sumOfLines(listOfEdit1, listOfEdit2)));
                 }
             }
         };
@@ -128,7 +132,7 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public double multiplexEdit(EditText e1, EditText e2) {
+    /*public double multiplexEdit(EditText e1, EditText e2) {
         double d1 = e1.length()==0 ? 0 : Double.parseDouble(e1.getText().toString());
         int i1 = e2.length()==0 ? 0 : Integer.parseInt(e2.getText().toString());
         return d1 * (double)i1;
@@ -140,6 +144,6 @@ public class HomeActivity extends AppCompatActivity {
             res += multiplexEdit(et1.get(i), et2.get(i));
         }
         return res;
-    }
+    }*/
 
 }

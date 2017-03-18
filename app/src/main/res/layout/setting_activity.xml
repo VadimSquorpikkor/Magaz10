@@ -130,8 +130,17 @@
 
     </LinearLayout>
 
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/resetButton"
+            android:text="Новый заказ" />
+    </LinearLayout>
+
     <LinearLayout style="@style/horizontalLayoutStyle"
-        android:layout_height="150dp">
+        android:layout_height="100dp">
+
+
 
     </LinearLayout>
 
