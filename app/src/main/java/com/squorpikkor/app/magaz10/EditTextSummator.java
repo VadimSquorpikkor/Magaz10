@@ -3,6 +3,7 @@ package com.squorpikkor.app.magaz10;
 // Created by Squorpikkor on 18.03.2017.
 
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -18,6 +19,17 @@ public class EditTextSummator {
         double res = 0;
         for (int i = 0; i < et1.size(); i++) {
             res += multiplexEdit(et1.get(i), et2.get(i));
+        }
+        return res;
+    }
+
+    public double sumOfLines(ArrayList<EditText> et1, ArrayList<EditText> et2, ArrayList<TextView> txt) {
+        double res = 0;
+        double temp;
+        for (int i = 0; i < et1.size(); i++) {
+            temp = multiplexEdit(et1.get(i), et2.get(i));
+            txt.get(i).setText(String.valueOf(temp));
+            res += temp;
         }
         return res;
     }

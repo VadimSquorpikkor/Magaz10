@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -20,10 +21,12 @@ public class OrderActivity extends AppCompatActivity {
             eedit11, eedit12, eedit13, eedit14, eedit15, eedit16, eedit17, eedit18, eeedit1, eeedit2, eeedit3, eeedit4, eeedit5, eeedit6, eeedit7, eeedit8, eeedit9, eeedit10,
             eeedit11, eeedit12, eeedit13, eeedit14, eeedit15, eeedit16, eeedit17, eeedit18;
 
+    TextView text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13, text14, text15, text16, text17, text18;
 
     ArrayList<EditText> listOfEdit1 = new ArrayList<>();
     ArrayList<EditText> listOfEdit2 = new ArrayList<>();
     ArrayList<EditText> listOfEdit3 = new ArrayList<>();
+    ArrayList<TextView> listOfText = new ArrayList<>();
 
     EditTextSummator summator;
 
@@ -96,6 +99,25 @@ public class OrderActivity extends AppCompatActivity {
         eeedit17 = (EditText) findViewById(R.id.orderCount17);
         eeedit18 = (EditText) findViewById(R.id.orderCount18);
 
+        text1 = (TextView) findViewById(R.id.text1);
+        text2 = (TextView) findViewById(R.id.text2);
+        text3 = (TextView) findViewById(R.id.text3);
+        text4 = (TextView) findViewById(R.id.text4);
+        text5 = (TextView) findViewById(R.id.text5);
+        text6 = (TextView) findViewById(R.id.text6);
+        text7 = (TextView) findViewById(R.id.text7);
+        text8 = (TextView) findViewById(R.id.text8);
+        text9 = (TextView) findViewById(R.id.text9);
+        text10 = (TextView) findViewById(R.id.text10);
+        text11 = (TextView) findViewById(R.id.text11);
+        text12 = (TextView) findViewById(R.id.text12);
+        text13 = (TextView) findViewById(R.id.text13);
+        text14 = (TextView) findViewById(R.id.text14);
+        text15 = (TextView) findViewById(R.id.text15);
+        text16 = (TextView) findViewById(R.id.text16);
+        text17 = (TextView) findViewById(R.id.text17);
+        text18 = (TextView) findViewById(R.id.text18);
+
         listOfEdit1.add(edit1);
         listOfEdit1.add(edit2);
         listOfEdit1.add(edit3);
@@ -152,6 +174,25 @@ public class OrderActivity extends AppCompatActivity {
         listOfEdit3.add(eeedit16);
         listOfEdit3.add(eeedit17);
         listOfEdit3.add(eeedit18);
+
+        listOfText.add(text1);
+        listOfText.add(text2);
+        listOfText.add(text3);
+        listOfText.add(text4);
+        listOfText.add(text5);
+        listOfText.add(text6);
+        listOfText.add(text7);
+        listOfText.add(text8);
+        listOfText.add(text9);
+        listOfText.add(text10);
+        listOfText.add(text11);
+        listOfText.add(text12);
+        listOfText.add(text13);
+        listOfText.add(text14);
+        listOfText.add(text15);
+        listOfText.add(text16);
+        listOfText.add(text17);
+        listOfText.add(text18);
         //endregion
 
         View.OnClickListener listener = new View.OnClickListener() {
@@ -165,7 +206,7 @@ public class OrderActivity extends AppCompatActivity {
                         clickActivity(LeftActivity.class);
                         break;
                     case R.id.countButton:
-                        //
+                        summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
                         break;
 
 

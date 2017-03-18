@@ -6,221 +6,350 @@
     android:orientation="vertical">
 
     <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit1"/>
+
         <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice1"/>
+            android:id="@+id/edit1"
+            style="@style/WeightEditStyle" />
+
         <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount1"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit2" />
+            android:id="@+id/orderPrice1"
+            style="@style/editStyle" />
+
         <EditText
+            android:id="@+id/orderCount1"
+            style="@style/editStyle" />
+
+        <TextView
             style="@style/editStyle"
-            android:id="@+id/orderPrice2"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount2"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit3"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice3"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount3"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit4"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice4"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount4"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit5"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice5"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount5"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit6"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice6"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount6"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit7"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice7"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount7"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit8"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice8"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount8"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit9"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice9"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount9"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit10"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice10"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount10"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit11"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice11"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount11"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit12"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice12"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount12"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit13"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice13"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount13"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit14"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice14"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount14"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit15"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice15"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount15"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit16"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice16"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount16"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit17"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice17"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount17"/>
-        <TextView style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <EditText style="@style/WeightEditStyle"
-            android:id="@+id/edit18"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderPrice18"/>
-        <EditText
-            style="@style/editStyle"
-            android:id="@+id/orderCount18"/>
-        <TextView style="@style/editStyle" />
+            android:id="@+id/text1" />
     </LinearLayout>
 
     <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit2"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice2"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount2"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit3"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice3"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount3"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text3" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit4"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice4"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount4"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text4" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit5"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice5"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount5"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text5" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit6"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice6"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount6"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text6" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit7"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice7"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount7"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text7" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit8"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice8"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount8"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text8" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit9"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice9"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount9"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text9" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit10"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice10"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount10"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text10" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit11"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice11"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount11"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text11" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit12"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice12"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount12"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text12" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit13"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice13"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount13"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text13" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit14"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice14"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount14"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text14" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit15"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice15"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount15"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text15" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit16"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice16"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount16"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text16" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit17"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice17"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount17"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text17" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <EditText
+            android:id="@+id/edit18"
+            style="@style/WeightEditStyle" />
+
+        <EditText
+            android:id="@+id/orderPrice18"
+            style="@style/editStyle" />
+
+        <EditText
+            android:id="@+id/orderCount18"
+            style="@style/editStyle" />
+
+        <TextView style="@style/editStyle"
+            android:id="@+id/text18" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
         <Button
-            style="@style/buttonStyle"
             android:id="@+id/homeButton"
+            style="@style/buttonStyle"
             android:text="Дом" />
 
         <Button
-            style="@style/buttonStyle"
             android:id="@+id/leftButton"
+            style="@style/buttonStyle"
             android:text="Остаток" />
+
         <Button
-            style="@style/buttonStyle"
             android:id="@+id/orderButton"
-            android:text="Заказы" />
-        <Button
             style="@style/buttonStyle"
+            android:text="Заказы" />
+
+        <Button
             android:id="@+id/countButton"
+            style="@style/buttonStyle"
             android:text="Считать" />
     </LinearLayout>
 
