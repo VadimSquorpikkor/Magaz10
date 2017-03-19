@@ -3,15 +3,20 @@ package com.squorpikkor.app.magaz10;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import java.util.ArrayList;
 
+import static com.squorpikkor.app.magaz10.OrderActivity.ordersSumma;
+
 public class HomeActivity extends AppCompatActivity {
 
     public static final String LOGTAG = "LOGGG!!!";
+
+
 
     Button button1, button2, button3, button4;
 
@@ -21,7 +26,9 @@ public class HomeActivity extends AppCompatActivity {
             edit11, edit12, edit13, edit14, edit15, edit16, edit17, edit18, edit19,
             edit20, edit21, edit22, edit23, edit24, edit25, edit26, edit27, edit28;
 
-    TextView textN;
+    TextView textN, textJ;
+
+    double[] dArray;
 
     ArrayList<EditText> listOfEdit1 = new ArrayList<>();
     ArrayList<EditText> listOfEdit2 = new ArrayList<>();
@@ -39,6 +46,7 @@ public class HomeActivity extends AppCompatActivity {
         button4 = (Button) findViewById(R.id.countButton);
 
         textN = (TextView) findViewById(R.id.textN);
+        textJ = (TextView) findViewById(R.id.textJ);
 
 
         //region EDITTEXT FINDVIEW//////////////////////////////////////////////////////////////////////////
@@ -104,6 +112,15 @@ public class HomeActivity extends AppCompatActivity {
         listOfEdit2.add(edit28);
         //endregion
 
+        /*double temp;
+        Log.e(LOGTAG, "onRestoreInstanceState, ALL = " + savedInstanceState);
+
+        if (savedInstanceState == null) {temp = 0;}
+        else { temp = savedInstanceState.getDouble("saved");}
+        Log.e(LOGTAG, "onRestoreInstanceState, temp = " + temp);
+
+        edit1.setText(String.valueOf(temp));*/
+
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,6 +133,7 @@ public class HomeActivity extends AppCompatActivity {
                         clickActivity(OrderActivity.class); break;
                     case R.id.countButton:
                         textN.setText(String.valueOf(summator.sumOfLines(listOfEdit1, listOfEdit2)));
+                        textJ.setText(String.valueOf(ordersSumma));
                 }
             }
         };
@@ -131,5 +149,23 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, c);
         startActivity(intent);
     }
+
+    /*protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putDouble("saved", Double.parseDouble(edit1.getText().toString()));
+        outState.putInt("check", 777);
+        Log.e(LOGTAG, "onSaveInstanceState, edit = " + edit1.getText().toString());
+        Log.e(LOGTAG, "onSaveInstanceState, outState = " + outState.getBundle("saved"));
+        Log.e(LOGTAG, "onSaveInstanceState, for check outState = " + outState);
+        Log.e(LOGTAG, "onSaveInstanceState, for check outState = " + outState.getDouble("saved"));
+    }
+
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        double temp = savedInstanceState.getDouble("saved");
+        edit1.setText(String.valueOf(temp));
+        Log.e(LOGTAG, "onRestoreInstanceState");
+    }*/
+
 
 }

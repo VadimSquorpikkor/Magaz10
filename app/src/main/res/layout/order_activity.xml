@@ -8,7 +8,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit1"
+            android:id="@+id/orderName1"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -27,7 +27,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit2"
+            android:id="@+id/orderName2"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -45,7 +45,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit3"
+            android:id="@+id/orderName3"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -63,7 +63,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit4"
+            android:id="@+id/orderName4"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -81,7 +81,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit5"
+            android:id="@+id/orderName5"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -99,7 +99,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit6"
+            android:id="@+id/orderName6"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -117,7 +117,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit7"
+            android:id="@+id/orderName7"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -135,7 +135,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit8"
+            android:id="@+id/orderName8"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -153,7 +153,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit9"
+            android:id="@+id/orderName9"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -171,7 +171,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit10"
+            android:id="@+id/orderName10"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -189,7 +189,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit11"
+            android:id="@+id/orderName11"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -207,7 +207,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit12"
+            android:id="@+id/orderName12"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -225,7 +225,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit13"
+            android:id="@+id/orderName13"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -243,7 +243,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit14"
+            android:id="@+id/orderName14"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -261,7 +261,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit15"
+            android:id="@+id/orderName15"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -279,7 +279,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit16"
+            android:id="@+id/orderName16"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -297,7 +297,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit17"
+            android:id="@+id/orderName17"
             style="@style/WeightEditStyle" />
 
         <EditText
@@ -315,7 +315,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <EditText
-            android:id="@+id/edit18"
+            android:id="@+id/orderName18"
             style="@style/WeightEditStyle" />
 
         <EditText

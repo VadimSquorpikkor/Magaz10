@@ -1,20 +1,32 @@
 package com.squorpikkor.app.magaz10;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static android.app.PendingIntent.getActivity;
+
 public class OrderActivity extends AppCompatActivity {
 
-    Button button1;
-    Button button2;
-    Button button3;
+    public static final String ORDER_SETTINGS = "orderSettings";
+    SharedPreferences oSettings;
+    SharedPreferences.Editor editor;
+
+    public static final String LOGTAG = "LOGGG!!!";
+
+    Button button1, button2, button3;
+
+    public static double ordersSumma;
 
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10,
             edit11, edit12, edit13, edit14, edit15, edit16, edit17, edit18, eedit1, eedit2, eedit3, eedit4, eedit5, eedit6, eedit7, eedit8, eedit9, eedit10,
@@ -35,6 +47,8 @@ public class OrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_activity);
 
+        oSettings = getSharedPreferences(ORDER_SETTINGS, Context.MODE_PRIVATE);
+
         summator = new EditTextSummator();
 
         button1 = (Button) findViewById(R.id.homeButton);
@@ -42,24 +56,24 @@ public class OrderActivity extends AppCompatActivity {
         button3 = (Button) findViewById(R.id.countButton);
 
         //region EDIT & LIST INICIALIZING///////////////////////////////////////////////////////
-        edit1 = (EditText) findViewById(R.id.edit1);
-        edit2 = (EditText) findViewById(R.id.edit2);
-        edit3 = (EditText) findViewById(R.id.edit3);
-        edit4 = (EditText) findViewById(R.id.edit4);
-        edit5 = (EditText) findViewById(R.id.edit5);
-        edit6 = (EditText) findViewById(R.id.edit6);
-        edit7 = (EditText) findViewById(R.id.edit7);
-        edit8 = (EditText) findViewById(R.id.edit8);
-        edit9 = (EditText) findViewById(R.id.edit9);
-        edit10 = (EditText) findViewById(R.id.edit10);
-        edit11 = (EditText) findViewById(R.id.edit11);
-        edit12 = (EditText) findViewById(R.id.edit12);
-        edit13 = (EditText) findViewById(R.id.edit13);
-        edit14 = (EditText) findViewById(R.id.edit14);
-        edit15 = (EditText) findViewById(R.id.edit15);
-        edit16 = (EditText) findViewById(R.id.edit16);
-        edit17 = (EditText) findViewById(R.id.edit17);
-        edit18 = (EditText) findViewById(R.id.edit18);
+        edit1 = (EditText) findViewById(R.id.orderName1);
+        edit2 = (EditText) findViewById(R.id.orderName2);
+        edit3 = (EditText) findViewById(R.id.orderName3);
+        edit4 = (EditText) findViewById(R.id.orderName4);
+        edit5 = (EditText) findViewById(R.id.orderName5);
+        edit6 = (EditText) findViewById(R.id.orderName6);
+        edit7 = (EditText) findViewById(R.id.orderName7);
+        edit8 = (EditText) findViewById(R.id.orderName8);
+        edit9 = (EditText) findViewById(R.id.orderName9);
+        edit10 = (EditText) findViewById(R.id.orderName10);
+        edit11 = (EditText) findViewById(R.id.orderName11);
+        edit12 = (EditText) findViewById(R.id.orderName12);
+        edit13 = (EditText) findViewById(R.id.orderName13);
+        edit14 = (EditText) findViewById(R.id.orderName14);
+        edit15 = (EditText) findViewById(R.id.orderName15);
+        edit16 = (EditText) findViewById(R.id.orderName16);
+        edit17 = (EditText) findViewById(R.id.orderName17);
+        edit18 = (EditText) findViewById(R.id.orderName18);
 
         eedit1 = (EditText) findViewById(R.id.orderPrice1);
         eedit2 = (EditText) findViewById(R.id.orderPrice2);
@@ -195,6 +209,7 @@ public class OrderActivity extends AppCompatActivity {
         listOfText.add(text18);
         //endregion
 
+        //region onClickListener///////////////////////////////////////////////////////
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -206,13 +221,12 @@ public class OrderActivity extends AppCompatActivity {
                         clickActivity(LeftActivity.class);
                         break;
                     case R.id.countButton:
-                        summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
+                        ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
                         break;
-
-
                 }
             }
         };
+        //endregion
 
         button1.setOnClickListener(listener);
         button2.setOnClickListener(listener);
@@ -221,5 +235,40 @@ public class OrderActivity extends AppCompatActivity {
 
     private void clickActivity(Class c) {
         startActivity(new Intent(this, c));
+    }
+
+    /*protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if(eedit1.getText().length()!=0) {
+            outState.putDouble("saved", Double.parseDouble(eedit1.getText().toString()));
+            outState.putInt("check", 777);
+            Log.e(LOGTAG, "onSaveInstanceState, eedit = " + eedit1.getText().toString());
+            Log.e(LOGTAG, "onSaveInstanceState, outState = " + outState.getBundle("saved"));
+            Log.e(LOGTAG, "onSaveInstanceState, for check outState = " + outState);
+            Log.e(LOGTAG, "onSaveInstanceState, for check outState = " + outState.getDouble("saved"));
+        }
+    }*/
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+            Log.e(LOGTAG, "onResume method has been launched");
+        if (oSettings.contains(ORDER_SETTINGS)) {
+            eedit1.setText(oSettings.getString(ORDER_SETTINGS, ""));
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e(LOGTAG, "onPause method has been launched");
+        editor = oSettings.edit();
+        editor.putString(ORDER_SETTINGS, eedit1.getText().toString());
+        editor.apply();
+        /*editor.commit();
+        if (editor.commit()) {
+            Toast.makeText(this, "Сохранено", Toast.LENGTH_LONG).show();
+        }*/
+
     }
 }
