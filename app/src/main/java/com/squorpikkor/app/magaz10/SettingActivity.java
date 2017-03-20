@@ -8,17 +8,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class SettingActivity extends AppCompatActivity {
 
     public static int totalJuiceCount;
-    public static int bigJuicePrice;
-    public static int smallJuicePrice;
-    public static int bigMilkPrice;
-    public static int smallMilkPrice;
+    public static int bigJuiceCount;
+    public static int smallJuiceCount;
+    public static int bigMilkCount;
+    public static int smallMilkCount;
 
     SharedPreferences preferences;
     SharedPreferences preferences2;
@@ -132,7 +131,14 @@ public class SettingActivity extends AppCompatActivity {
         int CelayaChast = (int)field;
         double DrobnayaChast = field - (double)CelayaChast;
 
-        bigJuicePrice = CelayaChast;
-        bigMilkPrice = bigJuicePrice * 2;
+        bigJuiceCount = CelayaChast;
+        bigMilkCount = bigJuiceCount * 2;
+
+        if(DrobnayaChast == 0.25)smallJuiceCount = 1;
+        else if(DrobnayaChast == 0.5)smallJuiceCount = 2;
+        else if(DrobnayaChast == 0.75)smallJuiceCount = 3;
+        else smallJuiceCount = 0;
+
+        smallMilkCount = smallJuiceCount * 2;
     }
 }
