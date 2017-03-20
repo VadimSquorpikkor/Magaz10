@@ -20,7 +20,6 @@ public class OrderActivity extends AppCompatActivity {
 
     public static final String ORDER_SETTINGS = "orderSettings";
     SharedPreferences oSettings;
-    SharedPreferences.Editor editor;
 
     public static final String LOGTAG = "LOGGG!!!";
 
@@ -41,6 +40,7 @@ public class OrderActivity extends AppCompatActivity {
     ArrayList<TextView> listOfText = new ArrayList<>();
 
     EditTextSummator summator;
+    SaveLoad saveLoad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +50,7 @@ public class OrderActivity extends AppCompatActivity {
         oSettings = getSharedPreferences(ORDER_SETTINGS, Context.MODE_PRIVATE);
 
         summator = new EditTextSummator();
+        saveLoad = new SaveLoad();
 
         button1 = (Button) findViewById(R.id.homeButton);
         button2 = (Button) findViewById(R.id.leftButton);
@@ -237,38 +238,17 @@ public class OrderActivity extends AppCompatActivity {
         startActivity(new Intent(this, c));
     }
 
-    /*protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        if(eedit1.getText().length()!=0) {
-            outState.putDouble("saved", Double.parseDouble(eedit1.getText().toString()));
-            outState.putInt("check", 777);
-            Log.e(LOGTAG, "onSaveInstanceState, eedit = " + eedit1.getText().toString());
-            Log.e(LOGTAG, "onSaveInstanceState, outState = " + outState.getBundle("saved"));
-            Log.e(LOGTAG, "onSaveInstanceState, for check outState = " + outState);
-            Log.e(LOGTAG, "onSaveInstanceState, for check outState = " + outState.getDouble("saved"));
-        }
-    }*/
-
     @Override
     protected void onResume() {
         super.onResume();
-            Log.e(LOGTAG, "onResume method has been launched");
-        if (oSettings.contains(ORDER_SETTINGS)) {
-            eedit1.setText(oSettings.getString(ORDER_SETTINGS, ""));
-        }
+        saveLoad.loadStringEditArray(listOfEdit2, oSettings);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.e(LOGTAG, "onPause method has been launched");
-        editor = oSettings.edit();
-        editor.putString(ORDER_SETTINGS, eedit1.getText().toString());
-        editor.apply();
-        /*editor.commit();
-        if (editor.commit()) {
-            Toast.makeText(this, "Сохранено", Toast.LENGTH_LONG).show();
-        }*/
-
+        saveLoad.saveStringEditArray(listOfEdit2, oSettings);
     }
+
+
 }
