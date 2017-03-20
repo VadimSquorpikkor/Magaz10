@@ -22,7 +22,9 @@
             style="@style/textStyle"
             android:text="Крот(2)" />
 
-        <EditText style="@style/editStyle" />
+        <EditText
+            android:id="@+id/jCount1"
+            style="@style/editStyle" />
 
     </LinearLayout>
 
@@ -32,7 +34,9 @@
             style="@style/textStyle"
             android:text="Сборка(8)" />
 
-        <EditText style="@style/editStyle" />
+        <EditText
+            android:id="@+id/jCount2"
+            style="@style/editStyle" />
 
     </LinearLayout>
 
@@ -42,7 +46,9 @@
             style="@style/textStyle"
             android:text="Монтаж(5)" />
 
-        <EditText style="@style/editStyle" />
+        <EditText
+            android:id="@+id/jCount3"
+            style="@style/editStyle" />
 
     </LinearLayout>
 
@@ -52,7 +58,9 @@
             style="@style/textStyle"
             android:text="С/М/В/Ю(4)" />
 
-        <EditText style="@style/editStyle" />
+        <EditText
+            android:id="@+id/jCount4"
+            style="@style/editStyle" />
 
     </LinearLayout>
     <LinearLayout style="@style/horizontalLayoutStyle">
@@ -61,7 +69,9 @@
             style="@style/textStyle"
             android:text="Корелин(17)" />
 
-        <EditText style="@style/editStyle" />
+        <EditText
+            android:id="@+id/jCount5"
+            style="@style/editStyle" />
 
     </LinearLayout>
     <LinearLayout
@@ -77,7 +87,9 @@
             style="@style/textStyle"
             android:text="Сок 1литр" />
 
-        <EditText style="@style/editStyle" />
+        <EditText
+            android:id="@+id/price1"
+            style="@style/editStyle" />
 
     </LinearLayout>
 
@@ -87,7 +99,9 @@
             style="@style/textStyle"
             android:text="Сок 0.125мл" />
 
-        <EditText style="@style/editStyle" />
+        <EditText
+            android:id="@+id/price2"
+            style="@style/editStyle" />
 
     </LinearLayout>
 
@@ -97,7 +111,9 @@
             style="@style/textStyle"
             android:text="Молоко 1литр" />
 
-        <EditText style="@style/editStyle" />
+        <EditText
+            android:id="@+id/price3"
+            style="@style/editStyle" />
 
     </LinearLayout>
 
@@ -107,7 +123,9 @@
             style="@style/textStyle"
             android:text="Молоко 0.250мл" />
 
-        <EditText style="@style/editStyle" />
+        <EditText
+            android:id="@+id/price4"
+            style="@style/editStyle" />
 
     </LinearLayout>
 
@@ -126,7 +144,9 @@
             style="@style/textStyle"
             android:text="Соков в накладной:" />
 
-        <EditText style="@style/editStyle" />
+        <EditText
+            android:id="@+id/juiceInOrder"
+            style="@style/editStyle" />
 
     </LinearLayout>
 
