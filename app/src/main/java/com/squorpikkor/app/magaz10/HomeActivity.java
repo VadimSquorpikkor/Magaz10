@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import static com.squorpikkor.app.magaz10.OrderActivity.ordersSumma;
+import static com.squorpikkor.app.magaz10.SettingActivity.totalOrderPrice;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -148,6 +149,18 @@ public class HomeActivity extends AppCompatActivity {
     public void clickActivity(Class c) {
         Intent intent = new Intent(this, c);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        textN.setText(String.valueOf(totalOrderPrice));
     }
 
     /*protected void onSaveInstanceState(Bundle outState) {

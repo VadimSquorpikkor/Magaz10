@@ -5,13 +5,17 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class SettingActivity extends AppCompatActivity {
+
+    public static final String LOGTAG = "LOGGG!!!";
 
     public static int totalJuiceCount;
     public static int bigJuiceCount;
@@ -19,8 +23,12 @@ public class SettingActivity extends AppCompatActivity {
     public static int bigMilkCount;
     public static int smallMilkCount;
 
+    public static double totalOrderPrice;
+
     SharedPreferences preferences;
     SharedPreferences preferences2;
+    SharedPreferences preferences3;
+    SharedPreferences preferences4;
 
     Button button1;
     Button button2;
@@ -29,6 +37,7 @@ public class SettingActivity extends AppCompatActivity {
 
     ArrayList<EditText> juiceArrayList = new ArrayList<>();
     ArrayList<EditText> priceArrayList = new ArrayList<>();
+    ArrayList<Integer> countArrayList = new ArrayList<>();
 
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10;
 
@@ -42,6 +51,8 @@ public class SettingActivity extends AppCompatActivity {
 
         preferences = getSharedPreferences("appSettings", Context.MODE_PRIVATE);
         preferences2 = getSharedPreferences("appSettings2", Context.MODE_PRIVATE);
+        preferences3 = getSharedPreferences("appSettings3", Context.MODE_PRIVATE);
+        preferences4 = getSharedPreferences("appSettings4", Context.MODE_PRIVATE);
 
         saveLoad = new SaveLoad();
         summator = new EditTextSummator();
@@ -73,10 +84,13 @@ public class SettingActivity extends AppCompatActivity {
         priceArrayList.add(edit7);
         priceArrayList.add(edit8);
         priceArrayList.add(edit9);
+
+        countArrayList.add(totalJuiceCount);
+        countArrayList.add(bigJuiceCount);
+        countArrayList.add(bigMilkCount);
+        countArrayList.add(smallJuiceCount);
+        countArrayList.add(smallMilkCount);
         //endregion
-
-
-
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -93,6 +107,8 @@ public class SettingActivity extends AppCompatActivity {
                         break;
                     case R.id.countButton:
                         totalJuiceCount = summator.intSumOfArray(juiceArrayList);
+                        calculateProductCount();
+                        totalOrderPrice = totalOrderPrice();
                         break;
 
 
@@ -117,6 +133,20 @@ public class SettingActivity extends AppCompatActivity {
         super.onResume();
         saveLoad.loadStringEditArray(juiceArrayList, preferences);
         saveLoad.loadStringEditArray(priceArrayList, preferences2);
+        saveLoad.loadIntArray(countArrayList, preferences3);
+        saveLoad.loadStringEdit(edit10, "setNakl", preferences4);
+        Log.e(LOGTAG, "bigJuiceCount = " + bigJuiceCount);
+        Log.e(LOGTAG, "bigMilkCount = " + bigMilkCount);
+        Log.e(LOGTAG, "smallJuiceCount = " + smallJuiceCount);
+        Log.e(LOGTAG, "smallMilkCount = " + smallMilkCount);
+        Log.e(LOGTAG, "totalCount = " + totalJuiceCount);
+        Log.e(LOGTAG, "totalPrice = " + totalOrderPrice);
+        /*totalJuiceCount = countArrayList.get(0);
+        bigJuiceCount = countArrayList.get(1);
+        bigMilkCount = countArrayList.get(2);
+        smallJuiceCount = countArrayList.get(3);
+        smallMilkCount = countArrayList.get(4);*/
+
     }
 
     @Override
@@ -124,6 +154,10 @@ public class SettingActivity extends AppCompatActivity {
         super.onPause();
         saveLoad.saveStringEditArray(juiceArrayList, preferences);
         saveLoad.saveStringEditArray(priceArrayList, preferences2);
+        saveLoad.saveIntArray(countArrayList, preferences3);
+        saveLoad.saveStringEdit(edit10, "setNakl", preferences4);
+
+        Log.e(LOGTAG, preferences3.getString("appSettings3", String.valueOf(smallJuiceCount)));
     }
 
     private void calculateProductCount() {
@@ -134,11 +168,33 @@ public class SettingActivity extends AppCompatActivity {
         bigJuiceCount = CelayaChast;
         bigMilkCount = bigJuiceCount * 2;
 
-        if(DrobnayaChast == 0.25)smallJuiceCount = 1;
+        if (DrobnayaChast == 0)smallJuiceCount = 0;
+        else if(DrobnayaChast == 0.25)smallJuiceCount = 1;
         else if(DrobnayaChast == 0.5)smallJuiceCount = 2;
         else if(DrobnayaChast == 0.75)smallJuiceCount = 3;
-        else smallJuiceCount = 0;
+        else {smallJuiceCount = 0;
+            Toast.makeText(this, "Неправильное значение!", Toast.LENGTH_SHORT).show();
+        }
 
         smallMilkCount = smallJuiceCount * 2;
+        Log.e(LOGTAG, "bigJuiceCount = " + bigJuiceCount);
+        Log.e(LOGTAG, "bigMilkCount = " + bigMilkCount);
+        Log.e(LOGTAG, "smallJuiceCount = " + smallJuiceCount);
+        Log.e(LOGTAG, "smallMilkCount = " + smallMilkCount);
+    }
+
+    private double totalOrderPrice() {
+        double bigJuicePrice = Double.parseDouble(edit6.getText().toString());
+        double bigMilkPrice = Double.parseDouble(edit8.getText().toString());
+        double smallJuicePrice = Double.parseDouble(edit7.getText().toString());
+        double smallMilkPrice = Double.parseDouble(edit9.getText().toString());
+
+        double res = 0;
+                res += (bigJuicePrice * bigJuiceCount) +
+                (bigMilkPrice * bigMilkCount) +
+                (smallJuicePrice * smallJuiceCount) +
+                (smallMilkPrice * smallMilkCount);
+
+        return res;
     }
 }

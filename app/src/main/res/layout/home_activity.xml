@@ -27,7 +27,7 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Денег в нвкладной" />
+            android:text="Денег в накладной" />
 
         <TextView
             style="@style/textStyle"

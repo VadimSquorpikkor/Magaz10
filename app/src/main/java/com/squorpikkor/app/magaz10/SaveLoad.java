@@ -39,4 +39,24 @@ public class SaveLoad {
             count++;
         }
     }
+
+    public void saveIntArray(ArrayList<Integer> arrayList, SharedPreferences sPref) {
+        int count = 1;
+        SharedPreferences.Editor editor = sPref.edit();
+        for (int i : arrayList) {
+            editor.putInt("setting" + count, i);
+            count++;
+        }
+        editor.apply();
+    }
+
+    public void loadIntArray(ArrayList<Integer> arrayList, SharedPreferences sPref) {
+        int count = 1;
+        for (int i = 0; i < arrayList.size(); i++) {
+            if (sPref.contains("setting" + count)) {
+                arrayList.set(i, sPref.getInt("setting" + count, 0));
+            }
+            count++;
+        }
+    }
 }
