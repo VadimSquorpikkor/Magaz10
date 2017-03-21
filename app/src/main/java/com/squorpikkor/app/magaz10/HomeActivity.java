@@ -17,11 +17,10 @@ public class HomeActivity extends AppCompatActivity {
 
     public static final String LOGTAG = "LOGGG!!!";
 
-
-
     Button button1, button2, button3, button4;
 
     EditTextSummator summator;
+    SaveLoad saveLoad = new SaveLoad();
 
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10,
             edit11, edit12, edit13, edit14, edit15, edit16, edit17, edit18, edit19,
@@ -29,10 +28,10 @@ public class HomeActivity extends AppCompatActivity {
 
     TextView textN, textJ;
 
-    double[] dArray;
-
     ArrayList<EditText> listOfEdit1 = new ArrayList<>();
     ArrayList<EditText> listOfEdit2 = new ArrayList<>();
+
+    double totalJuicePrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,15 +112,6 @@ public class HomeActivity extends AppCompatActivity {
         listOfEdit2.add(edit28);
         //endregion
 
-        /*double temp;
-        Log.e(LOGTAG, "onRestoreInstanceState, ALL = " + savedInstanceState);
-
-        if (savedInstanceState == null) {temp = 0;}
-        else { temp = savedInstanceState.getDouble("saved");}
-        Log.e(LOGTAG, "onRestoreInstanceState, temp = " + temp);
-
-        edit1.setText(String.valueOf(temp));*/
-
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,8 +123,8 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.orderButton:
                         clickActivity(OrderActivity.class); break;
                     case R.id.countButton:
-                        textN.setText(String.valueOf(summator.sumOfLines(listOfEdit1, listOfEdit2)));
-                        textJ.setText(String.valueOf(ordersSumma));
+                        totalJuicePrice = summator.sumOfLines(listOfEdit1, listOfEdit2);
+                        textN.setText(String.valueOf(totalJuicePrice));
                 }
             }
         };

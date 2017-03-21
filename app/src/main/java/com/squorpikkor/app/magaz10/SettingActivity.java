@@ -50,7 +50,7 @@ public class SettingActivity extends AppCompatActivity {
         setContentView(R.layout.setting_activity);
 
         preferences = getSharedPreferences("appSettings", Context.MODE_PRIVATE);
-        preferences2 = getSharedPreferences("appSettings2", Context.MODE_PRIVATE);
+        preferences2 = getSharedPreferences("appSettings2", Context.MODE_APPEND);
         preferences3 = getSharedPreferences("appSettings3", Context.MODE_PRIVATE);
         preferences4 = getSharedPreferences("appSettings4", Context.MODE_PRIVATE);
 
