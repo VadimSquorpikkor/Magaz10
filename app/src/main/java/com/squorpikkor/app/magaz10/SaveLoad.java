@@ -9,6 +9,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 class SaveLoad {
+
     void saveStringEdit(EditText edit, String SET_NAME, SharedPreferences sPref) {
         SharedPreferences.Editor editor = sPref.edit();
         editor.putString(SET_NAME, edit.getText().toString());
@@ -19,6 +20,34 @@ class SaveLoad {
         if (sPref.contains(SET_NAME)) {
             edit.setText(sPref.getString(SET_NAME, ""));
         }
+    }
+
+    void saveInteger(int i, String SET_NAME, SharedPreferences sPref) {
+        SharedPreferences.Editor editor = sPref.edit();
+        editor.putInt(SET_NAME, i);
+        editor.apply();
+    }
+
+    int loadInteger(String SET_NAME, SharedPreferences sPref) {
+        int i = 0;
+        if (sPref.contains(SET_NAME)) {
+            i = sPref.getInt(SET_NAME, 0);
+        }
+        return i;
+    }
+
+    void saveDouble(double d, String SET_NAME, SharedPreferences sPref) {
+        SharedPreferences.Editor editor = sPref.edit();
+        editor.putFloat(SET_NAME, (float)d);
+        editor.apply();
+    }
+
+    double loadDouble(String SET_NAME, SharedPreferences sPref) {
+        double d = 0;
+        if (sPref.contains(SET_NAME)) {
+            d = sPref.getFloat(SET_NAME, 0);
+        }
+        return d;
     }
 
     void saveStringEditArray(ArrayList<EditText> arrayList, SharedPreferences sPref) {

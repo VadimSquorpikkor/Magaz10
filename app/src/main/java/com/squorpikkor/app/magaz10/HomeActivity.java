@@ -26,9 +26,17 @@ public class HomeActivity extends AppCompatActivity {
     *                                       соков итого по заказам
     * */
 
+    double mainTotalNakladnayaPrice = 0;
+    double mainTotalJuicePrice = 0;
+    double mainMoneyLeft = 0;
+    double mainMoneyLeftForeach = 0;
+    int mainOrderJuiceCount = 0;
+    int mainJuiceWeGot = 0;
+
     SharedPreferences preferences1;
     SharedPreferences preferences2;
     SharedPreferences preferences3;
+    SharedPreferences prefForVar;
 
     Button button1, button2, button3, button4;
 
@@ -55,6 +63,7 @@ public class HomeActivity extends AppCompatActivity {
         preferences1 = getSharedPreferences("pref1", Context.MODE_PRIVATE);
         preferences2 = getSharedPreferences("pref2", Context.MODE_PRIVATE);
         preferences3 = getSharedPreferences("pref3", Context.MODE_PRIVATE);
+        prefForVar = getSharedPreferences("prefForVar", Context.MODE_PRIVATE);
 
         summator = new EditTextSummator();
 
@@ -65,8 +74,8 @@ public class HomeActivity extends AppCompatActivity {
 
         textN = (TextView) findViewById(R.id.textN);
         textJ = (TextView) findViewById(R.id.textJ);
-        textOst = (TextView) findViewById(R.id.textOst);
-        textFE = (TextView) findViewById(R.id.textFE);
+//        textOst = (TextView) findViewById(R.id.textOst);
+//        textFE = (TextView) findViewById(R.id.textFE);
 
 
         //region EDITTEXT FINDVIEW//////////////////////////////////////////////////////////////////////////
@@ -166,12 +175,39 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /*
+    double mainTotalNakladnayaPrice = 0;
+    double mainTotalJuicePrice = 0;
+    double mainMoneyLeft = 0;
+    double mainMoneyLeftForeach = 0;
+    int mainOrderJuiceCount = 0;
+    int mainJuiceWeGot = 0;*/
+
+    void saveVar() {
+      saveLoad.saveDouble(mainTotalNakladnayaPrice, "set1", prefForVar);
+      saveLoad.saveDouble(mainTotalJuicePrice, "set2", prefForVar);
+      saveLoad.saveDouble(mainMoneyLeft, "set3", prefForVar);
+      saveLoad.saveDouble(mainMoneyLeftForeach, "set4", prefForVar);
+      saveLoad.saveInteger(mainOrderJuiceCount, "set5", prefForVar);
+      saveLoad.saveInteger(mainJuiceWeGot, "set6", prefForVar);
+    }
+
+    void loadVar() {
+        mainTotalNakladnayaPrice = saveLoad.loadDouble("set1", prefForVar);
+        mainTotalJuicePrice = saveLoad.loadDouble("set2", prefForVar);
+        mainMoneyLeft = saveLoad.loadDouble("set3", prefForVar);
+        mainMoneyLeftForeach = saveLoad.loadDouble("set4", prefForVar);
+        mainOrderJuiceCount = saveLoad.loadInteger("set5", prefForVar);
+        mainJuiceWeGot = saveLoad.loadInteger("set6", prefForVar);
+    }
+
     @Override
     protected void onPause() {
         super.onPause();
         saveLoad.saveStringEditArray(listOfEdit1, preferences1);
         saveLoad.saveStringEditArray(listOfEdit2, preferences2);
         saveLoad.saveStringTViewArray(listOfText, preferences3);
+        saveVar();
     }
 
     @Override
@@ -180,6 +216,7 @@ public class HomeActivity extends AppCompatActivity {
         saveLoad.loadStringEditArray(listOfEdit1, preferences1);
         saveLoad.loadStringEditArray(listOfEdit2, preferences2);
         saveLoad.loadStringTViewArray(listOfText, preferences3);
+        loadVar();
     }
 
 
