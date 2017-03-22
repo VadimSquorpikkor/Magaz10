@@ -1,21 +1,34 @@
 package com.squorpikkor.app.magaz10;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import java.util.ArrayList;
 
-import static com.squorpikkor.app.magaz10.OrderActivity.ordersSumma;
 import static com.squorpikkor.app.magaz10.SettingActivity.totalOrderPrice;
 
 public class HomeActivity extends AppCompatActivity {
 
-    public static final String LOGTAG = "LOGGG!!!";
+    //public static final String LOGTAG = "LOGGG!!!";
+
+    /*
+    * Добавить на Settings активити строки: кол-во соков
+    *                                       кол-во м соков
+    *                                       кол во мол
+    *                                       кол-во м мол
+    *                                       сумма в накладной
+    *                                       соков итого по заказам
+    * */
+
+    SharedPreferences preferences1;
+    SharedPreferences preferences2;
+    SharedPreferences preferences3;
 
     Button button1, button2, button3, button4;
 
@@ -26,10 +39,11 @@ public class HomeActivity extends AppCompatActivity {
             edit11, edit12, edit13, edit14, edit15, edit16, edit17, edit18, edit19,
             edit20, edit21, edit22, edit23, edit24, edit25, edit26, edit27, edit28;
 
-    TextView textN, textJ;
+    TextView textN, textJ, textOst, textFE;
 
     ArrayList<EditText> listOfEdit1 = new ArrayList<>();
     ArrayList<EditText> listOfEdit2 = new ArrayList<>();
+    ArrayList<TextView> listOfText = new ArrayList<>();
 
     double totalJuicePrice;
 
@@ -37,6 +51,10 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
+
+        preferences1 = getSharedPreferences("pref1", Context.MODE_PRIVATE);
+        preferences2 = getSharedPreferences("pref2", Context.MODE_PRIVATE);
+        preferences3 = getSharedPreferences("pref3", Context.MODE_PRIVATE);
 
         summator = new EditTextSummator();
 
@@ -47,6 +65,8 @@ public class HomeActivity extends AppCompatActivity {
 
         textN = (TextView) findViewById(R.id.textN);
         textJ = (TextView) findViewById(R.id.textJ);
+        textOst = (TextView) findViewById(R.id.textOst);
+        textFE = (TextView) findViewById(R.id.textFE);
 
 
         //region EDITTEXT FINDVIEW//////////////////////////////////////////////////////////////////////////
@@ -110,6 +130,11 @@ public class HomeActivity extends AppCompatActivity {
         listOfEdit2.add(edit24);
         listOfEdit2.add(edit26);
         listOfEdit2.add(edit28);
+
+        listOfText.add(textJ);
+        listOfText.add(textN);
+        listOfText.add(textOst);
+        listOfText.add(textFE);
         //endregion
 
         View.OnClickListener listener = new View.OnClickListener() {
@@ -124,7 +149,7 @@ public class HomeActivity extends AppCompatActivity {
                         clickActivity(OrderActivity.class); break;
                     case R.id.countButton:
                         totalJuicePrice = summator.sumOfLines(listOfEdit1, listOfEdit2);
-                        textN.setText(String.valueOf(totalJuicePrice));
+                        textN.setText(String.valueOf(totalOrderPrice));
                 }
             }
         };
@@ -144,31 +169,19 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-
+        saveLoad.saveStringEditArray(listOfEdit1, preferences1);
+        saveLoad.saveStringEditArray(listOfEdit2, preferences2);
+        saveLoad.saveStringTViewArray(listOfText, preferences3);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        textN.setText(String.valueOf(totalOrderPrice));
+        saveLoad.loadStringEditArray(listOfEdit1, preferences1);
+        saveLoad.loadStringEditArray(listOfEdit2, preferences2);
+        saveLoad.loadStringTViewArray(listOfText, preferences3);
     }
 
-    /*protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putDouble("saved", Double.parseDouble(edit1.getText().toString()));
-        outState.putInt("check", 777);
-        Log.e(LOGTAG, "onSaveInstanceState, edit = " + edit1.getText().toString());
-        Log.e(LOGTAG, "onSaveInstanceState, outState = " + outState.getBundle("saved"));
-        Log.e(LOGTAG, "onSaveInstanceState, for check outState = " + outState);
-        Log.e(LOGTAG, "onSaveInstanceState, for check outState = " + outState.getDouble("saved"));
-    }
-
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        double temp = savedInstanceState.getDouble("saved");
-        edit1.setText(String.valueOf(temp));
-        Log.e(LOGTAG, "onRestoreInstanceState");
-    }*/
 
 
 }

@@ -4,23 +4,24 @@ package com.squorpikkor.app.magaz10;
 
 import android.content.SharedPreferences;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class SaveLoad {
-    public  void saveStringEdit(EditText edit, String SET_NAME, SharedPreferences sPref) {
+class SaveLoad {
+    void saveStringEdit(EditText edit, String SET_NAME, SharedPreferences sPref) {
         SharedPreferences.Editor editor = sPref.edit();
         editor.putString(SET_NAME, edit.getText().toString());
         editor.apply();
     }
 
-    public void loadStringEdit(EditText edit, String SET_NAME, SharedPreferences sPref) {
+    void loadStringEdit(EditText edit, String SET_NAME, SharedPreferences sPref) {
         if (sPref.contains(SET_NAME)) {
             edit.setText(sPref.getString(SET_NAME, ""));
         }
     }
 
-    public void saveStringEditArray(ArrayList<EditText> arrayList, SharedPreferences sPref) {
+    void saveStringEditArray(ArrayList<EditText> arrayList, SharedPreferences sPref) {
         int count = 1;
         SharedPreferences.Editor editor = sPref.edit();
         for (EditText edit : arrayList) {
@@ -30,7 +31,7 @@ public class SaveLoad {
         editor.apply();
     }
 
-    public void loadStringEditArray(ArrayList<EditText> arrayList, SharedPreferences sPref) {
+    void loadStringEditArray(ArrayList<EditText> arrayList, SharedPreferences sPref) {
         int count = 1;
         for (EditText edit : arrayList) {
             if (sPref.contains("setting" + count)) {
@@ -40,7 +41,27 @@ public class SaveLoad {
         }
     }
 
-    public void saveIntArray(ArrayList<Integer> arrayList, SharedPreferences sPref) {
+    void saveStringTViewArray(ArrayList<TextView> arrayList, SharedPreferences sPref) {
+        int count = 1;
+        SharedPreferences.Editor editor = sPref.edit();
+        for (TextView textView : arrayList) {
+            editor.putString("setting" + count, textView.getText().toString());
+            count++;
+        }
+        editor.apply();
+    }
+
+    void loadStringTViewArray(ArrayList<TextView> arrayList, SharedPreferences sPref) {
+        int count = 1;
+        for (TextView textView : arrayList) {
+            if (sPref.contains("setting" + count)) {
+                textView.setText(sPref.getString("setting" + count, ""));
+            }
+            count++;
+        }
+    }
+
+    void saveIntArray(ArrayList<Integer> arrayList, SharedPreferences sPref) {
         int count = 1;
         SharedPreferences.Editor editor = sPref.edit();
         for (int i : arrayList) {
@@ -50,7 +71,7 @@ public class SaveLoad {
         editor.apply();
     }
 
-    public void loadIntArray(ArrayList<Integer> arrayList, SharedPreferences sPref) {
+    void loadIntArray(ArrayList<Integer> arrayList, SharedPreferences sPref) {
         int count = 1;
         for (int i = 0; i < arrayList.size(); i++) {
             if (sPref.contains("setting" + count)) {
