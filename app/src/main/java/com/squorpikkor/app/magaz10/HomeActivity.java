@@ -159,9 +159,8 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.orderButton:
                         clickActivity(OrderActivity.class); break;
                     case R.id.countButton:
-//                        textN.setText(String.valueOf(totalOrderPrice));
-
-
+                        calculateVar();
+                        displayVar();
                 }
             }
         };
@@ -184,7 +183,8 @@ public class HomeActivity extends AppCompatActivity {
         mainMoneyLeft = mainTotalNakladnayaPrice - mainTotalJuicePrice;
         mainMoneyLeftForeach = mainMoneyLeft/(double)2;
         mainOrderJuiceCount = totalJuiceCount;
-       // mainJuiceWeGot = ;
+        mainJuiceWeGot = 0;
+        mainJuiceWeGot = summator.intSumOfArray(listOfEdit2);
     }
 
     void saveVar() {
@@ -211,6 +211,13 @@ public class HomeActivity extends AppCompatActivity {
         Log.e(LOGTAG,"mainJuiceWeGot = " + mainJuiceWeGot);
     }
 
+    void displayVar() {
+        textJ.setText(mainJuiceWeGot + " / " + totalJuiceCount);
+        textN.setText(String.valueOf(mainTotalNakladnayaPrice));
+        textOst.setText(String.valueOf(mainMoneyLeft));
+        textFE.setText(String.valueOf(mainMoneyLeftForeach));
+    }
+
     @Override
     protected void onPause() {
         super.onPause();
@@ -227,6 +234,8 @@ public class HomeActivity extends AppCompatActivity {
         saveLoad.loadStringEditArray(listOfEdit2, preferences2);
         saveLoad.loadStringTViewArray(listOfText, preferences3);
         loadVar();
+        calculateVar();
+        displayVar();
     }
 
 

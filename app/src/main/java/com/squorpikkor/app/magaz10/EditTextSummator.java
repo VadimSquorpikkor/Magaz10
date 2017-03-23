@@ -37,7 +37,10 @@ public class EditTextSummator {
     public int intSumOfArray(ArrayList<EditText> list) {
         int res = 0;
         for (EditText edit : list) {
-            res += Integer.parseInt(edit.getText().toString());
+            if (edit.getText().length() != 0) {
+                res += Integer.parseInt(edit.getText().toString());
+            }
+
         }
         return res;
     }
