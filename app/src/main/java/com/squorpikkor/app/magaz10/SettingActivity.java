@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,6 +23,8 @@ public class SettingActivity extends AppCompatActivity {
     public static int smallJuiceCount;
     public static int bigMilkCount;
     public static int smallMilkCount;
+
+    TextView txtBJ, txtSJ, txtBM, txtSM, txtTP, txtTJ;
 
     public static double totalOrderPrice;
 
@@ -58,6 +61,13 @@ public class SettingActivity extends AppCompatActivity {
         summator = new EditTextSummator();
 
         //region EDIT & LIST INICIALIZING///////////////////////////////////////////////////////
+        txtBJ = (TextView) findViewById(R.id.textBigJuice);
+        txtSJ = (TextView) findViewById(R.id.textSmallJuice);
+        txtBM = (TextView) findViewById(R.id.textBigMilk);
+        txtSM = (TextView) findViewById(R.id.textSmallMilk);
+        txtTP = (TextView) findViewById(R.id.totalNakladnayaPrice);
+        txtTJ = (TextView) findViewById(R.id.juiceZakazCount);
+
         edit1 = (EditText) findViewById(R.id.jCount1);
         edit2 = (EditText) findViewById(R.id.jCount2);
         edit3 = (EditText) findViewById(R.id.jCount3);
@@ -108,7 +118,8 @@ public class SettingActivity extends AppCompatActivity {
                     case R.id.countButton:
                         totalJuiceCount = summator.intSumOfArray(juiceArrayList);
                         calculateProductCount();
-                        totalOrderPrice = totalOrderPrice();
+                        totalOrderPrice();
+                        displayVar();
                         break;
 
 
@@ -126,6 +137,14 @@ public class SettingActivity extends AppCompatActivity {
         startActivity(new Intent(this, c));
     }
 
+    void displayVar() {
+        txtBJ.setText(String.valueOf(bigJuiceCount));
+        txtSJ.setText(String.valueOf(smallJuiceCount));
+        txtBM.setText(String.valueOf(bigMilkCount));
+        txtSM.setText(String.valueOf(smallMilkCount));
+        txtTP.setText(String.valueOf(totalOrderPrice));
+        txtTJ.setText(String.valueOf(totalJuiceCount));
+    }
 
 
     @Override
@@ -183,7 +202,7 @@ public class SettingActivity extends AppCompatActivity {
         Log.e(LOGTAG, "smallMilkCount = " + smallMilkCount);
     }
 
-    private double totalOrderPrice() {
+    private void totalOrderPrice() {
         double bigJuicePrice = Double.parseDouble(edit6.getText().toString());
         double bigMilkPrice = Double.parseDouble(edit8.getText().toString());
         double smallJuicePrice = Double.parseDouble(edit7.getText().toString());
@@ -194,7 +213,6 @@ public class SettingActivity extends AppCompatActivity {
                 (bigMilkPrice * bigMilkCount) +
                 (smallJuicePrice * smallJuiceCount) +
                 (smallMilkPrice * smallMilkCount);
-
-        return res;
+        totalOrderPrice = res;
     }
 }

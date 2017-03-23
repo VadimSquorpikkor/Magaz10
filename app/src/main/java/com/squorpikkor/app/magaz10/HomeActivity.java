@@ -5,17 +5,19 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import java.util.ArrayList;
 
+import static com.squorpikkor.app.magaz10.SettingActivity.totalJuiceCount;
 import static com.squorpikkor.app.magaz10.SettingActivity.totalOrderPrice;
 
 public class HomeActivity extends AppCompatActivity {
 
-    //public static final String LOGTAG = "LOGGG!!!";
+    public static final String LOGTAG = "LOGGG!!!";
 
     /*
     * Добавить на Settings активити строки: кол-во соков
@@ -53,7 +55,7 @@ public class HomeActivity extends AppCompatActivity {
     ArrayList<EditText> listOfEdit2 = new ArrayList<>();
     ArrayList<TextView> listOfText = new ArrayList<>();
 
-    double totalJuicePrice;
+//    double totalJuicePrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,8 +76,8 @@ public class HomeActivity extends AppCompatActivity {
 
         textN = (TextView) findViewById(R.id.textN);
         textJ = (TextView) findViewById(R.id.textJ);
-//        textOst = (TextView) findViewById(R.id.textOst);
-//        textFE = (TextView) findViewById(R.id.textFE);
+        textOst = (TextView) findViewById(R.id.textOst);
+        textFE = (TextView) findViewById(R.id.textFE);
 
 
         //region EDITTEXT FINDVIEW//////////////////////////////////////////////////////////////////////////
@@ -157,8 +159,9 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.orderButton:
                         clickActivity(OrderActivity.class); break;
                     case R.id.countButton:
-                        totalJuicePrice = summator.sumOfLines(listOfEdit1, listOfEdit2);
-                        textN.setText(String.valueOf(totalOrderPrice));
+//                        textN.setText(String.valueOf(totalOrderPrice));
+
+
                 }
             }
         };
@@ -175,13 +178,14 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*
-    double mainTotalNakladnayaPrice = 0;
-    double mainTotalJuicePrice = 0;
-    double mainMoneyLeft = 0;
-    double mainMoneyLeftForeach = 0;
-    int mainOrderJuiceCount = 0;
-    int mainJuiceWeGot = 0;*/
+    void calculateVar() {
+        mainTotalNakladnayaPrice = totalOrderPrice;
+        mainTotalJuicePrice = summator.sumOfLines(listOfEdit1, listOfEdit2);
+        mainMoneyLeft = mainTotalNakladnayaPrice - mainTotalJuicePrice;
+        mainMoneyLeftForeach = mainMoneyLeft/(double)2;
+        mainOrderJuiceCount = totalJuiceCount;
+       // mainJuiceWeGot = ;
+    }
 
     void saveVar() {
       saveLoad.saveDouble(mainTotalNakladnayaPrice, "set1", prefForVar);
@@ -199,6 +203,12 @@ public class HomeActivity extends AppCompatActivity {
         mainMoneyLeftForeach = saveLoad.loadDouble("set4", prefForVar);
         mainOrderJuiceCount = saveLoad.loadInteger("set5", prefForVar);
         mainJuiceWeGot = saveLoad.loadInteger("set6", prefForVar);
+        Log.e(LOGTAG,"mainTotalNakladnayaPrice = " + mainTotalNakladnayaPrice);
+        Log.e(LOGTAG,"mainTotalJuicePrice = " + mainTotalJuicePrice);
+        Log.e(LOGTAG,"mainMoneyLeft = " + mainMoneyLeft);
+        Log.e(LOGTAG,"mainMoneyLeftForeach = " + mainMoneyLeftForeach);
+        Log.e(LOGTAG,"mainOrderJuiceCount = " + mainOrderJuiceCount);
+        Log.e(LOGTAG,"mainJuiceWeGot = " + mainJuiceWeGot);
     }
 
     @Override

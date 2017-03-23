@@ -33,11 +33,6 @@
             style="@style/textStyle"
             android:id="@+id/textN"
             android:text="0" />
-        <Button
-            style="@style/buttonStyle"
-            android:id="@+id/SaveButton"
-            android:layout_height="30dp"
-            android:text="Сохранить в файл" />
 
     </LinearLayout>
 

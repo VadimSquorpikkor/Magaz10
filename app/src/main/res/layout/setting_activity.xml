@@ -13,6 +13,12 @@
             style="@style/textStyle"
             android:text="Количество соков:" />
 
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/resetButton"
+            android:layout_height="30dp"
+            android:text="Новый заказ" />
+
     </LinearLayout>
 
 
@@ -129,14 +135,13 @@
 
     </LinearLayout>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+    <!--<LinearLayout style="@style/horizontalLayoutStyle">
 
         <TextView
             style="@style/textStyle"
             android:text="" />
 
-
-    </LinearLayout>
+    </LinearLayout>-->
 
     <LinearLayout style="@style/horizontalLayoutStyle">
 
@@ -151,17 +156,70 @@
     </LinearLayout>
 
     <LinearLayout style="@style/horizontalLayoutStyle">
-        <Button
-            style="@style/buttonStyle"
-            android:id="@+id/resetButton"
-            android:text="Новый заказ" />
+        <TextView
+            style="@style/textStyle"
+            android:text="Итого соков:" />
+        <TextView
+            style="@style/textStyle"
+            android:id="@+id/juiceZakazCount"
+            android:text="0" />
     </LinearLayout>
 
-    <LinearLayout style="@style/horizontalLayoutStyle"
+    <!--<LinearLayout style="@style/horizontalLayoutStyle"
         android:layout_height="100dp">
 
 
 
+    </LinearLayout>-->
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <TextView
+            style="@style/textStyle"
+            android:text="Соков больших:" />
+        <TextView
+            style="@style/textStyle"
+            android:id="@+id/textBigJuice"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <TextView
+            style="@style/textStyle"
+            android:text="Соков маленьких:" />
+        <TextView
+            style="@style/textStyle"
+            android:id="@+id/textSmallJuice"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <TextView
+            style="@style/textStyle"
+            android:text="Молоко больших:" />
+        <TextView
+            style="@style/textStyle"
+            android:id="@+id/textBigMilk"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <TextView
+            style="@style/textStyle"
+            android:text="Молоко маленьких:" />
+        <TextView
+            style="@style/textStyle"
+            android:id="@+id/textSmallMilk"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <TextView
+            style="@style/textStyle"
+            android:text="Сумма в накладной:" />
+        <TextView
+            style="@style/textStyle"
+            android:id="@+id/totalNakladnayaPrice"
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout style="@style/horizontalLayoutStyle">
