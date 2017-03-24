@@ -18,8 +18,10 @@ import static android.app.PendingIntent.getActivity;
 
 public class OrderActivity extends AppCompatActivity {
 
-    public static final String ORDER_SETTINGS = "orderSettings";
-    SharedPreferences oSettings;
+    SharedPreferences oSettings1;
+    SharedPreferences oSettings2;
+    SharedPreferences oSettings3;
+    SharedPreferences oSettings4;
 
     public static final String LOGTAG = "LOGGG!!!";
 
@@ -28,11 +30,21 @@ public class OrderActivity extends AppCompatActivity {
     public static double ordersSumma;
 
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10,
-            edit11, edit12, edit13, edit14, edit15, edit16, edit17, edit18, eedit1, eedit2, eedit3, eedit4, eedit5, eedit6, eedit7, eedit8, eedit9, eedit10,
-            eedit11, eedit12, eedit13, eedit14, eedit15, eedit16, eedit17, eedit18, eeedit1, eeedit2, eeedit3, eeedit4, eeedit5, eeedit6, eeedit7, eeedit8, eeedit9, eeedit10,
-            eeedit11, eeedit12, eeedit13, eeedit14, eeedit15, eeedit16, eeedit17, eeedit18;
+            edit11, edit12, edit13, edit14, edit15, edit16, edit17, edit18, edit19, edit20, edit21, edit22, edit23, edit24, edit25, edit26, edit27, edit28, edit29,
+            edit30, edit31, edit32, edit33, edit34, edit35, edit36,
 
-    TextView text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13, text14, text15, text16, text17, text18;
+    eedit1, eedit2, eedit3, eedit4, eedit5, eedit6, eedit7, eedit8, eedit9, eedit10,
+            eedit11, eedit12, eedit13, eedit14, eedit15, eedit16, eedit17, eedit18, eedit19, eedit20, eedit21, eedit22, eedit23, eedit24, eedit25, eedit26, eedit27, eedit28, eedit29,
+            eedit30, eedit31, eedit32, eedit33, eedit34, eedit35, eedit36,
+
+    eeedit1, eeedit2, eeedit3, eeedit4, eeedit5, eeedit6, eeedit7, eeedit8, eeedit9, eeedit10,
+            eeedit11, eeedit12, eeedit13, eeedit14, eeedit15, eeedit16, eeedit17, eeedit18, eeedit19, eeedit20, eeedit21, eeedit22, eeedit23, eeedit24, eeedit25, eeedit26,
+            eeedit27, eeedit28, eeedit29, eeedit30, eeedit31, eeedit32, eeedit33, eeedit34, eeedit35, eeedit36;
+
+    TextView text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13, text14, text15, text16, text17, text18,
+    text19, text20, text21, text22, text23, text24, text25, text26, text27, text28, text29, text30, text31, text32, text33, text34, text35, text36;
+
+    TextView moneyForBonusTotal;
 
     ArrayList<EditText> listOfEdit1 = new ArrayList<>();
     ArrayList<EditText> listOfEdit2 = new ArrayList<>();
@@ -47,7 +59,10 @@ public class OrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_activity);
 
-        oSettings = getSharedPreferences(ORDER_SETTINGS, Context.MODE_PRIVATE);
+        oSettings1 = getSharedPreferences("orderSettings1", Context.MODE_PRIVATE);
+        oSettings2 = getSharedPreferences("orderSettings2", Context.MODE_PRIVATE);
+        oSettings3 = getSharedPreferences("orderSettings3", Context.MODE_PRIVATE);
+        oSettings4 = getSharedPreferences("orderSettings4", Context.MODE_PRIVATE);
 
         summator = new EditTextSummator();
         saveLoad = new SaveLoad();
@@ -55,6 +70,8 @@ public class OrderActivity extends AppCompatActivity {
         button1 = (Button) findViewById(R.id.homeButton);
         button2 = (Button) findViewById(R.id.leftButton);
         button3 = (Button) findViewById(R.id.countButton);
+
+        moneyForBonusTotal = (TextView) findViewById(R.id.orderBonusMoneySpent);
 
         //region EDIT & LIST INICIALIZING///////////////////////////////////////////////////////
         edit1 = (EditText) findViewById(R.id.orderName1);
@@ -75,6 +92,24 @@ public class OrderActivity extends AppCompatActivity {
         edit16 = (EditText) findViewById(R.id.orderName16);
         edit17 = (EditText) findViewById(R.id.orderName17);
         edit18 = (EditText) findViewById(R.id.orderName18);
+        edit19 = (EditText) findViewById(R.id.orderName19);
+        edit20 = (EditText) findViewById(R.id.orderName20);
+        edit21 = (EditText) findViewById(R.id.orderName21);
+        edit22 = (EditText) findViewById(R.id.orderName22);
+        edit23 = (EditText) findViewById(R.id.orderName23);
+        edit24 = (EditText) findViewById(R.id.orderName24);
+        edit25 = (EditText) findViewById(R.id.orderName25);
+        edit26 = (EditText) findViewById(R.id.orderName26);
+        edit27 = (EditText) findViewById(R.id.orderName27);
+        edit28 = (EditText) findViewById(R.id.orderName28);
+        edit29 = (EditText) findViewById(R.id.orderName29);
+        edit30 = (EditText) findViewById(R.id.orderName30);
+        edit31 = (EditText) findViewById(R.id.orderName31);
+        edit32 = (EditText) findViewById(R.id.orderName32);
+        edit33 = (EditText) findViewById(R.id.orderName33);
+        edit34 = (EditText) findViewById(R.id.orderName34);
+        edit35 = (EditText) findViewById(R.id.orderName35);
+        edit36 = (EditText) findViewById(R.id.orderName36);
 
         eedit1 = (EditText) findViewById(R.id.orderPrice1);
         eedit2 = (EditText) findViewById(R.id.orderPrice2);
@@ -94,6 +129,24 @@ public class OrderActivity extends AppCompatActivity {
         eedit16 = (EditText) findViewById(R.id.orderPrice16);
         eedit17 = (EditText) findViewById(R.id.orderPrice17);
         eedit18 = (EditText) findViewById(R.id.orderPrice18);
+        eedit19 = (EditText) findViewById(R.id.orderPrice19);
+        eedit20 = (EditText) findViewById(R.id.orderPrice20);
+        eedit21 = (EditText) findViewById(R.id.orderPrice21);
+        eedit22 = (EditText) findViewById(R.id.orderPrice22);
+        eedit23 = (EditText) findViewById(R.id.orderPrice23);
+        eedit24 = (EditText) findViewById(R.id.orderPrice24);
+        eedit25 = (EditText) findViewById(R.id.orderPrice25);
+        eedit26 = (EditText) findViewById(R.id.orderPrice26);
+        eedit27 = (EditText) findViewById(R.id.orderPrice27);
+        eedit28 = (EditText) findViewById(R.id.orderPrice28);
+        eedit29 = (EditText) findViewById(R.id.orderPrice29);
+        eedit30 = (EditText) findViewById(R.id.orderPrice30);
+        eedit31 = (EditText) findViewById(R.id.orderPrice31);
+        eedit32 = (EditText) findViewById(R.id.orderPrice32);
+        eedit33 = (EditText) findViewById(R.id.orderPrice33);
+        eedit34 = (EditText) findViewById(R.id.orderPrice34);
+        eedit35 = (EditText) findViewById(R.id.orderPrice35);
+        eedit36 = (EditText) findViewById(R.id.orderPrice36);
 
         eeedit1 = (EditText) findViewById(R.id.orderCount1);
         eeedit2 = (EditText) findViewById(R.id.orderCount2);
@@ -113,6 +166,24 @@ public class OrderActivity extends AppCompatActivity {
         eeedit16 = (EditText) findViewById(R.id.orderCount16);
         eeedit17 = (EditText) findViewById(R.id.orderCount17);
         eeedit18 = (EditText) findViewById(R.id.orderCount18);
+        eeedit19 = (EditText) findViewById(R.id.orderCount19);
+        eeedit20 = (EditText) findViewById(R.id.orderCount20);
+        eeedit21 = (EditText) findViewById(R.id.orderCount21);
+        eeedit22 = (EditText) findViewById(R.id.orderCount22);
+        eeedit23 = (EditText) findViewById(R.id.orderCount23);
+        eeedit24 = (EditText) findViewById(R.id.orderCount24);
+        eeedit25 = (EditText) findViewById(R.id.orderCount25);
+        eeedit26 = (EditText) findViewById(R.id.orderCount26);
+        eeedit27 = (EditText) findViewById(R.id.orderCount27);
+        eeedit28 = (EditText) findViewById(R.id.orderCount28);
+        eeedit29 = (EditText) findViewById(R.id.orderCount29);
+        eeedit30 = (EditText) findViewById(R.id.orderCount30);
+        eeedit31 = (EditText) findViewById(R.id.orderCount31);
+        eeedit32 = (EditText) findViewById(R.id.orderCount32);
+        eeedit33 = (EditText) findViewById(R.id.orderCount33);
+        eeedit34 = (EditText) findViewById(R.id.orderCount34);
+        eeedit35 = (EditText) findViewById(R.id.orderCount35);
+        eeedit36 = (EditText) findViewById(R.id.orderCount36);
 
         text1 = (TextView) findViewById(R.id.text1);
         text2 = (TextView) findViewById(R.id.text2);
@@ -132,6 +203,24 @@ public class OrderActivity extends AppCompatActivity {
         text16 = (TextView) findViewById(R.id.text16);
         text17 = (TextView) findViewById(R.id.text17);
         text18 = (TextView) findViewById(R.id.text18);
+        text19 = (TextView) findViewById(R.id.text19);
+        text20 = (TextView) findViewById(R.id.text20);
+        text21 = (TextView) findViewById(R.id.text21);
+        text22 = (TextView) findViewById(R.id.text22);
+        text23 = (TextView) findViewById(R.id.text23);
+        text24 = (TextView) findViewById(R.id.text24);
+        text25 = (TextView) findViewById(R.id.text25);
+        text26 = (TextView) findViewById(R.id.text26);
+        text27 = (TextView) findViewById(R.id.text27);
+        text28 = (TextView) findViewById(R.id.text28);
+        text29 = (TextView) findViewById(R.id.text29);
+        text30 = (TextView) findViewById(R.id.text30);
+        text31 = (TextView) findViewById(R.id.text31);
+        text32 = (TextView) findViewById(R.id.text32);
+        text33 = (TextView) findViewById(R.id.text33);
+        text34 = (TextView) findViewById(R.id.text34);
+        text35 = (TextView) findViewById(R.id.text35);
+        text36 = (TextView) findViewById(R.id.text36);
 
         listOfEdit1.add(edit1);
         listOfEdit1.add(edit2);
@@ -151,6 +240,24 @@ public class OrderActivity extends AppCompatActivity {
         listOfEdit1.add(edit16);
         listOfEdit1.add(edit17);
         listOfEdit1.add(edit18);
+        listOfEdit1.add(edit19);
+        listOfEdit1.add(edit20);
+        listOfEdit1.add(edit21);
+        listOfEdit1.add(edit22);
+        listOfEdit1.add(edit23);
+        listOfEdit1.add(edit24);
+        listOfEdit1.add(edit25);
+        listOfEdit1.add(edit26);
+        listOfEdit1.add(edit27);
+        listOfEdit1.add(edit28);
+        listOfEdit1.add(edit29);
+        listOfEdit1.add(edit30);
+        listOfEdit1.add(edit31);
+        listOfEdit1.add(edit32);
+        listOfEdit1.add(edit33);
+        listOfEdit1.add(edit34);
+        listOfEdit1.add(edit35);
+        listOfEdit1.add(edit36);
 
         listOfEdit2.add(eedit1);
         listOfEdit2.add(eedit2);
@@ -170,6 +277,24 @@ public class OrderActivity extends AppCompatActivity {
         listOfEdit2.add(eedit16);
         listOfEdit2.add(eedit17);
         listOfEdit2.add(eedit18);
+        listOfEdit2.add(eedit19);
+        listOfEdit2.add(eedit20);
+        listOfEdit2.add(eedit21);
+        listOfEdit2.add(eedit22);
+        listOfEdit2.add(eedit23);
+        listOfEdit2.add(eedit24);
+        listOfEdit2.add(eedit25);
+        listOfEdit2.add(eedit26);
+        listOfEdit2.add(eedit27);
+        listOfEdit2.add(eedit28);
+        listOfEdit2.add(eedit29);
+        listOfEdit2.add(eedit30);
+        listOfEdit2.add(eedit31);
+        listOfEdit2.add(eedit32);
+        listOfEdit2.add(eedit33);
+        listOfEdit2.add(eedit34);
+        listOfEdit2.add(eedit35);
+        listOfEdit2.add(eedit36);
 
         listOfEdit3.add(eeedit1);
         listOfEdit3.add(eeedit2);
@@ -189,6 +314,24 @@ public class OrderActivity extends AppCompatActivity {
         listOfEdit3.add(eeedit16);
         listOfEdit3.add(eeedit17);
         listOfEdit3.add(eeedit18);
+        listOfEdit3.add(eeedit19);
+        listOfEdit3.add(eeedit20);
+        listOfEdit3.add(eeedit21);
+        listOfEdit3.add(eeedit22);
+        listOfEdit3.add(eeedit23);
+        listOfEdit3.add(eeedit24);
+        listOfEdit3.add(eeedit25);
+        listOfEdit3.add(eeedit26);
+        listOfEdit3.add(eeedit27);
+        listOfEdit3.add(eeedit28);
+        listOfEdit3.add(eeedit29);
+        listOfEdit3.add(eeedit30);
+        listOfEdit3.add(eeedit31);
+        listOfEdit3.add(eeedit32);
+        listOfEdit3.add(eeedit33);
+        listOfEdit3.add(eeedit34);
+        listOfEdit3.add(eeedit35);
+        listOfEdit3.add(eeedit36);
 
         listOfText.add(text1);
         listOfText.add(text2);
@@ -208,6 +351,24 @@ public class OrderActivity extends AppCompatActivity {
         listOfText.add(text16);
         listOfText.add(text17);
         listOfText.add(text18);
+        listOfText.add(text19);
+        listOfText.add(text20);
+        listOfText.add(text21);
+        listOfText.add(text22);
+        listOfText.add(text23);
+        listOfText.add(text24);
+        listOfText.add(text25);
+        listOfText.add(text26);
+        listOfText.add(text27);
+        listOfText.add(text28);
+        listOfText.add(text29);
+        listOfText.add(text30);
+        listOfText.add(text31);
+        listOfText.add(text32);
+        listOfText.add(text33);
+        listOfText.add(text34);
+        listOfText.add(text35);
+        listOfText.add(text36);
         //endregion
 
         //region onClickListener///////////////////////////////////////////////////////
@@ -223,6 +384,7 @@ public class OrderActivity extends AppCompatActivity {
                         break;
                     case R.id.countButton:
                         ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
+                        moneyForBonusTotal.setText(String.valueOf(ordersSumma));
                         break;
                 }
             }
@@ -241,13 +403,19 @@ public class OrderActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        saveLoad.loadStringEditArray(listOfEdit2, oSettings);
+        saveLoad.loadStringEditArray(listOfEdit1, oSettings1);
+        saveLoad.loadStringEditArray(listOfEdit2, oSettings2);
+        saveLoad.loadStringEditArray(listOfEdit3, oSettings3);
+        saveLoad.loadStringTViewArray(listOfText, oSettings4);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        saveLoad.saveStringEditArray(listOfEdit2, oSettings);
+        saveLoad.saveStringEditArray(listOfEdit1, oSettings1);
+        saveLoad.saveStringEditArray(listOfEdit2, oSettings2);
+        saveLoad.saveStringEditArray(listOfEdit3, oSettings3);
+        saveLoad.saveStringTViewArray(listOfText, oSettings4);
     }
 
 

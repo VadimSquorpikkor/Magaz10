@@ -239,7 +239,7 @@
         <Button
             style="@style/buttonStyle"
             android:id="@+id/countButton"
-            android:text="Сохранить" />
+            android:text="Считать" />
     </LinearLayout>
 
 </LinearLayout>

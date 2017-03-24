@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import java.util.ArrayList;
 
+import static com.squorpikkor.app.magaz10.OrderActivity.ordersSumma;
 import static com.squorpikkor.app.magaz10.SettingActivity.totalJuiceCount;
 import static com.squorpikkor.app.magaz10.SettingActivity.totalOrderPrice;
 
@@ -180,7 +181,7 @@ public class HomeActivity extends AppCompatActivity {
     void calculateVar() {
         mainTotalNakladnayaPrice = totalOrderPrice;
         mainTotalJuicePrice = summator.sumOfLines(listOfEdit1, listOfEdit2);
-        mainMoneyLeft = mainTotalNakladnayaPrice - mainTotalJuicePrice;
+        mainMoneyLeft = mainTotalNakladnayaPrice - mainTotalJuicePrice - ordersSumma;
         mainMoneyLeftForeach = mainMoneyLeft/(double)2;
         mainOrderJuiceCount = totalJuiceCount;
         mainJuiceWeGot = 0;
