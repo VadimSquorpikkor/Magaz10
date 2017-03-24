@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static com.squorpikkor.app.magaz10.HomeActivity.mainMoneyLeftForeach;
+
 public class LeftActivity extends AppCompatActivity {
 
     Button button1;
@@ -20,20 +22,21 @@ public class LeftActivity extends AppCompatActivity {
 
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10, edit11, edit12, edit13, edit14;
 
-    TextView text1, text2, text3, text4, text5, text6, text7;
+    TextView text1, text2, text3, text4, text5, text6, text7, textLeft, textSpent;
 
     ArrayList<EditText> leftList1 = new ArrayList<>();
     ArrayList<EditText> leftList2 = new ArrayList<>();
-//    ArrayList<TextView> leftList3 = new ArrayList<>();
+    ArrayList<TextView> leftList3 = new ArrayList<>();
 
     double moneySpent = 0;
+    double moneyLeft = 0;
 
     SaveLoad saveLoad = new SaveLoad();
     EditTextSummator summator = new EditTextSummator();
 
-    SharedPreferences sharedPref1 = getSharedPreferences("leftPref1", Context.MODE_PRIVATE);
-    SharedPreferences sharedPref2 = getSharedPreferences("leftPref2", Context.MODE_PRIVATE);
-//    SharedPreferences sharedPref3 = getSharedPreferences("leftPref3", Context.MODE_PRIVATE);
+    SharedPreferences sharedPref1;
+    SharedPreferences sharedPref2;
+    SharedPreferences sharedPref3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +70,9 @@ public class LeftActivity extends AppCompatActivity {
         text5 = (TextView) findViewById(R.id.leftTextTotal5);
         text6 = (TextView) findViewById(R.id.leftTextTotal6);
         text7 = (TextView) findViewById(R.id.leftTextTotal7);
+
+        textLeft = (TextView) findViewById(R.id.leftMoneyLeft);
+        textSpent = (TextView) findViewById(R.id.leftMoneySpent);
         //endregion
 
         //region ADD TO LIST///////////////////////
@@ -85,11 +91,19 @@ public class LeftActivity extends AppCompatActivity {
         leftList2.add(edit12);
         leftList2.add(edit13);
         leftList2.add(edit14);
+
+        leftList3.add(text1);
+        leftList3.add(text2);
+        leftList3.add(text3);
+        leftList3.add(text4);
+        leftList3.add(text5);
+        leftList3.add(text6);
+        leftList3.add(text7);
         //endregion
 
-        /*sharedPref1 = getSharedPreferences("leftPref1", Context.MODE_PRIVATE);
+        sharedPref1 = getSharedPreferences("leftPref1", Context.MODE_PRIVATE);
         sharedPref2 = getSharedPreferences("leftPref2", Context.MODE_PRIVATE);
-        sharedPref3 = getSharedPreferences("leftPref3", Context.MODE_PRIVATE);*/
+        sharedPref3 = getSharedPreferences("leftPref3", Context.MODE_PRIVATE);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -102,7 +116,10 @@ public class LeftActivity extends AppCompatActivity {
                         clickActivity(OrderActivity.class);
                         break;
                     case R.id.countButton:
-                        //
+                        moneySpent = summator.sumOfLines(leftList1, leftList2, leftList3);
+                        moneyLeft = mainMoneyLeftForeach - moneySpent;
+                        textLeft.setText(String.valueOf(moneyLeft));
+                        textSpent.setText(String.valueOf(moneySpent));
                         break;
 
                 }
@@ -121,6 +138,9 @@ public class LeftActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        saveLoad.loadStringEditArray(leftList1, sharedPref1);
+        saveLoad.loadStringEditArray(leftList2, sharedPref2);
+        saveLoad.loadStringTViewArray(leftList3, sharedPref3);
     }
 
     @Override
@@ -128,7 +148,7 @@ public class LeftActivity extends AppCompatActivity {
         super.onPause();
         saveLoad.saveStringEditArray(leftList1, sharedPref1);
         saveLoad.saveStringEditArray(leftList2, sharedPref2);
-//        saveLoad.saveStringEditArray(leftList3, sharedPref2);
+        saveLoad.saveStringTViewArray(leftList3, sharedPref3);
     }
 
 

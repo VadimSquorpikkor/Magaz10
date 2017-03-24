@@ -6,10 +6,23 @@
     android:orientation="vertical">
 
     <LinearLayout style="@style/horizontalLayoutStyle"
-        android:layout_height="150dp">
+        android:layout_height="135dp">
 
     </LinearLayout>
 
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <TextView
+            style="@style/textStyle"
+            android:text="Денег потрачено:" />
+
+        <TextView
+            android:id="@+id/leftMoneySpent"
+            style="@style/textStyle"
+            android:text="0" />
+
+    </LinearLayout>
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <TextView
@@ -123,7 +136,7 @@
     </LinearLayout>
 
     <LinearLayout style="@style/horizontalLayoutStyle"
-        android:layout_height="150dp">
+        android:layout_height="135dp">
 
     </LinearLayout>
 

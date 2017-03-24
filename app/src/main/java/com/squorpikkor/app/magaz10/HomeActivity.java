@@ -31,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
     double mainTotalNakladnayaPrice = 0;
     double mainTotalJuicePrice = 0;
     double mainMoneyLeft = 0;
-    double mainMoneyLeftForeach = 0;
+    public static double mainMoneyLeftForeach = 0;
     int mainOrderJuiceCount = 0;
     int mainJuiceWeGot = 0;
 
