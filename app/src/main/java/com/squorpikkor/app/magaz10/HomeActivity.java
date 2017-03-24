@@ -56,10 +56,15 @@ public class HomeActivity extends AppCompatActivity {
     ArrayList<EditText> listOfEdit2 = new ArrayList<>();
     ArrayList<TextView> listOfText = new ArrayList<>();
 
+    boolean ActivityFirstRun;
+
 //    double totalJuicePrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
 

@@ -29,272 +29,362 @@
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName1"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice1"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount1"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <TextView
-                    style="@style/editStyle"
+                    style="@style/shortNumberStyle"
                     android:id="@+id/text1" />
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName2"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice2"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount2"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text2" />
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName3"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice3"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount3"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text3" />
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName4"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice4"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount4"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text4" />
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName5"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice5"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount5"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text5" />
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName6"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice6"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount6"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text6" />
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName7"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice7"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount7"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text7" />
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName8"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice8"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount8"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text8" />
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName9"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice9"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount9"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text9" />
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName10"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice10"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount10"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text10" />
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName11"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice11"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount11"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text11" />
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName12"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice12"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount12"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text12" />
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName13"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice13"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount13"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text13" />
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName14"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice14"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount14"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text14" />
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName15"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice15"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount15"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text15" />
             </LinearLayout>
 
@@ -302,17 +392,17 @@
 
                 <EditText
                     android:id="@+id/orderName16"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice16"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount16"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text16" />
             </LinearLayout>
 
@@ -320,17 +410,17 @@
 
                 <EditText
                     android:id="@+id/orderName17"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice17"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount17"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text17" />
             </LinearLayout>
 
@@ -338,17 +428,17 @@
 
                 <EditText
                     android:id="@+id/orderName18"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice18"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount18"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text18" />
             </LinearLayout>
 
@@ -358,18 +448,18 @@
 
                 <EditText
                     android:id="@+id/orderName19"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice19"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount19"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <TextView
-                    style="@style/editStyle"
+                    style="@style/shortNumberStyle"
                     android:id="@+id/text19" />
             </LinearLayout>
 
@@ -377,17 +467,17 @@
 
                 <EditText
                     android:id="@+id/orderName20"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice20"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount20"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text20" />
             </LinearLayout>
 
@@ -395,17 +485,17 @@
 
                 <EditText
                     android:id="@+id/orderName21"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice21"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount21"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text21" />
             </LinearLayout>
 
@@ -413,17 +503,17 @@
 
                 <EditText
                     android:id="@+id/orderName22"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice22"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount22"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text22" />
             </LinearLayout>
 
@@ -431,17 +521,17 @@
 
                 <EditText
                     android:id="@+id/orderName23"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice23"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount23"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text23" />
             </LinearLayout>
 
@@ -449,17 +539,17 @@
 
                 <EditText
                     android:id="@+id/orderName24"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice24"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount24"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text24" />
             </LinearLayout>
 
@@ -467,17 +557,17 @@
 
                 <EditText
                     android:id="@+id/orderName25"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice25"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount25"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text25" />
             </LinearLayout>
 
@@ -485,17 +575,17 @@
 
                 <EditText
                     android:id="@+id/orderName26"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice26"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount26"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text26" />
             </LinearLayout>
 
@@ -503,17 +593,17 @@
 
                 <EditText
                     android:id="@+id/orderName27"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice27"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount27"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text27" />
             </LinearLayout>
 
@@ -521,17 +611,17 @@
 
                 <EditText
                     android:id="@+id/orderName28"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice28"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount28"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text28" />
             </LinearLayout>
 
@@ -539,17 +629,17 @@
 
                 <EditText
                     android:id="@+id/orderName29"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice29"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount29"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text29" />
             </LinearLayout>
 
@@ -557,17 +647,17 @@
 
                 <EditText
                     android:id="@+id/orderName30"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice30"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount30"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text30" />
             </LinearLayout>
 
@@ -575,17 +665,17 @@
 
                 <EditText
                     android:id="@+id/orderName31"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice31"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount31"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text31" />
             </LinearLayout>
 
@@ -593,17 +683,17 @@
 
                 <EditText
                     android:id="@+id/orderName32"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice32"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount32"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text32" />
             </LinearLayout>
 
@@ -611,17 +701,17 @@
 
                 <EditText
                     android:id="@+id/orderName33"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice33"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount33"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text33" />
             </LinearLayout>
 
@@ -629,17 +719,17 @@
 
                 <EditText
                     android:id="@+id/orderName34"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice34"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount34"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text34" />
             </LinearLayout>
 
@@ -647,17 +737,17 @@
 
                 <EditText
                     android:id="@+id/orderName35"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice35"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount35"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text35" />
             </LinearLayout>
 
@@ -665,17 +755,17 @@
 
                 <EditText
                     android:id="@+id/orderName36"
-                    style="@style/WeightEditStyle" />
+                    style="@style/WeightTextStyle" />
 
                 <EditText
                     android:id="@+id/orderPrice36"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
                 <EditText
                     android:id="@+id/orderCount36"
-                    style="@style/editStyle" />
+                    style="@style/shortNumberStyle" />
 
-                <TextView style="@style/editStyle"
+                <TextView style="@style/shortNumberStyle"
                     android:id="@+id/text36" />
             </LinearLayout>
         </LinearLayout>
@@ -698,6 +788,7 @@
         <Button
             android:id="@+id/orderButton"
             style="@style/buttonStyle"
+            android:background="@android:color/holo_orange_dark"
             android:text="Заказы" />
 
         <Button

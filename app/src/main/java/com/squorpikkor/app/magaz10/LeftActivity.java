@@ -141,6 +141,11 @@ public class LeftActivity extends AppCompatActivity {
         saveLoad.loadStringEditArray(leftList1, sharedPref1);
         saveLoad.loadStringEditArray(leftList2, sharedPref2);
         saveLoad.loadStringTViewArray(leftList3, sharedPref3);
+
+        moneySpent = summator.sumOfLines(leftList1, leftList2, leftList3);
+        moneyLeft = mainMoneyLeftForeach - moneySpent;
+        textLeft.setText(String.valueOf(moneyLeft));
+        textSpent.setText(String.valueOf(moneySpent));
     }
 
     @Override

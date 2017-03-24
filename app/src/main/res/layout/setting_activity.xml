@@ -30,7 +30,8 @@
 
         <EditText
             android:id="@+id/jCount1"
-            style="@style/editStyle" />
+            android:text="0"
+            style="@style/shortNumberStyle" />
 
     </LinearLayout>
 
@@ -42,7 +43,8 @@
 
         <EditText
             android:id="@+id/jCount2"
-            style="@style/editStyle" />
+            android:text="0"
+            style="@style/shortNumberStyle" />
 
     </LinearLayout>
 
@@ -54,7 +56,8 @@
 
         <EditText
             android:id="@+id/jCount3"
-            style="@style/editStyle" />
+            android:text="0"
+            style="@style/shortNumberStyle" />
 
     </LinearLayout>
 
@@ -66,7 +69,8 @@
 
         <EditText
             android:id="@+id/jCount4"
-            style="@style/editStyle" />
+            android:text="0"
+            style="@style/shortNumberStyle" />
 
     </LinearLayout>
     <LinearLayout style="@style/horizontalLayoutStyle">
@@ -77,7 +81,8 @@
 
         <EditText
             android:id="@+id/jCount5"
-            style="@style/editStyle" />
+            android:text="0"
+            style="@style/shortNumberStyle" />
 
     </LinearLayout>
     <LinearLayout
@@ -95,7 +100,8 @@
 
         <EditText
             android:id="@+id/price1"
-            style="@style/editStyle" />
+            android:text="0"
+            style="@style/WeightNumberStyle" />
 
     </LinearLayout>
 
@@ -103,11 +109,12 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Сок 0.125мл" />
+            android:text="Сок 0.250мл" />
 
         <EditText
             android:id="@+id/price2"
-            style="@style/editStyle" />
+            android:text="0"
+            style="@style/WeightNumberStyle" />
 
     </LinearLayout>
 
@@ -119,7 +126,8 @@
 
         <EditText
             android:id="@+id/price3"
-            style="@style/editStyle" />
+            android:text="0"
+            style="@style/WeightNumberStyle" />
 
     </LinearLayout>
 
@@ -131,7 +139,8 @@
 
         <EditText
             android:id="@+id/price4"
-            style="@style/editStyle" />
+            android:text="0"
+            style="@style/WeightNumberStyle" />
 
     </LinearLayout>
 
@@ -151,7 +160,8 @@
 
         <EditText
             android:id="@+id/juiceInOrder"
-            style="@style/editStyle" />
+            android:text="0"
+            style="@style/WeightNumberStyle" />
 
     </LinearLayout>
 

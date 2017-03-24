@@ -407,6 +407,9 @@ public class OrderActivity extends AppCompatActivity {
         saveLoad.loadStringEditArray(listOfEdit2, oSettings2);
         saveLoad.loadStringEditArray(listOfEdit3, oSettings3);
         saveLoad.loadStringTViewArray(listOfText, oSettings4);
+
+        ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
+        moneyForBonusTotal.setText(String.valueOf(ordersSumma));
     }
 
     @Override
@@ -416,6 +419,9 @@ public class OrderActivity extends AppCompatActivity {
         saveLoad.saveStringEditArray(listOfEdit2, oSettings2);
         saveLoad.saveStringEditArray(listOfEdit3, oSettings3);
         saveLoad.saveStringTViewArray(listOfText, oSettings4);
+
+        ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
+        moneyForBonusTotal.setText(String.valueOf(ordersSumma));
     }
 
 

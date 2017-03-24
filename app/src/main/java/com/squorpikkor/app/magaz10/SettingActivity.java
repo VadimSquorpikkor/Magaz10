@@ -154,17 +154,11 @@ public class SettingActivity extends AppCompatActivity {
         saveLoad.loadStringEditArray(priceArrayList, preferences2);
         saveLoad.loadIntArray(countArrayList, preferences3);
         saveLoad.loadStringEdit(edit10, "setNakl", preferences4);
-        Log.e(LOGTAG, "bigJuiceCount = " + bigJuiceCount);
-        Log.e(LOGTAG, "bigMilkCount = " + bigMilkCount);
-        Log.e(LOGTAG, "smallJuiceCount = " + smallJuiceCount);
-        Log.e(LOGTAG, "smallMilkCount = " + smallMilkCount);
-        Log.e(LOGTAG, "totalCount = " + totalJuiceCount);
-        Log.e(LOGTAG, "totalPrice = " + totalOrderPrice);
-        /*totalJuiceCount = countArrayList.get(0);
-        bigJuiceCount = countArrayList.get(1);
-        bigMilkCount = countArrayList.get(2);
-        smallJuiceCount = countArrayList.get(3);
-        smallMilkCount = countArrayList.get(4);*/
+
+        totalJuiceCount = summator.intSumOfArray(juiceArrayList);
+        calculateProductCount();
+        totalOrderPrice();
+        displayVar();
 
     }
 
@@ -176,7 +170,10 @@ public class SettingActivity extends AppCompatActivity {
         saveLoad.saveIntArray(countArrayList, preferences3);
         saveLoad.saveStringEdit(edit10, "setNakl", preferences4);
 
-        Log.e(LOGTAG, preferences3.getString("appSettings3", String.valueOf(smallJuiceCount)));
+        totalJuiceCount = summator.intSumOfArray(juiceArrayList);
+        calculateProductCount();
+        totalOrderPrice();
+        displayVar();
     }
 
     private void calculateProductCount() {
@@ -213,6 +210,11 @@ public class SettingActivity extends AppCompatActivity {
                 (bigMilkPrice * bigMilkCount) +
                 (smallJuicePrice * smallJuiceCount) +
                 (smallMilkPrice * smallMilkCount);
+
+        res = Math.floor(res * 100) / 100;//2 numbers after the dot
+
         totalOrderPrice = res;
+
+
     }
 }
