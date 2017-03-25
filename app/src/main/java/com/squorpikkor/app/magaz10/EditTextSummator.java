@@ -10,9 +10,12 @@ import java.util.ArrayList;
 public class EditTextSummator {
 
     public double multiplexEdit(EditText e1, EditText e2) {
+        double res;
         double d1 = e1.length()==0 ? 0 : Double.parseDouble(e1.getText().toString());
         int i1 = e2.length()==0 ? 0 : Integer.parseInt(e2.getText().toString());
-        return d1 * (double)i1;
+        res =  d1 * (double)i1;
+        res = Math.floor(res * 100) / 100;//2 numbers after the dot
+        return res;
     }
 
     public double sumOfLines(ArrayList<EditText> et1, ArrayList<EditText> et2) {

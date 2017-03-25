@@ -22,6 +22,7 @@ public class LeftActivity extends AppCompatActivity {
 
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10, edit11, edit12, edit13, edit14;
 
+
     TextView text1, text2, text3, text4, text5, text6, text7, textLeft, textSpent;
 
     ArrayList<EditText> leftList1 = new ArrayList<>();

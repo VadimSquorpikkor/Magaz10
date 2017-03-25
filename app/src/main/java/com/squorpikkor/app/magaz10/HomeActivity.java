@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,16 +17,7 @@ import static com.squorpikkor.app.magaz10.SettingActivity.totalOrderPrice;
 
 public class HomeActivity extends AppCompatActivity {
 
-    public static final String LOGTAG = "LOGGG!!!";
-
-    /*
-    * Добавить на Settings активити строки: кол-во соков
-    *                                       кол-во м соков
-    *                                       кол во мол
-    *                                       кол-во м мол
-    *                                       сумма в накладной
-    *                                       соков итого по заказам
-    * */
+//    public static final String LOGTAG = "LOGGG!!!";
 
     double mainTotalNakladnayaPrice = 0;
     double mainTotalJuicePrice = 0;
@@ -56,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
     ArrayList<EditText> listOfEdit2 = new ArrayList<>();
     ArrayList<TextView> listOfText = new ArrayList<>();
 
-    boolean ActivityFirstRun;
+//    boolean ActivityFirstRun;
 
 //    double totalJuicePrice;
 
@@ -209,13 +199,7 @@ public class HomeActivity extends AppCompatActivity {
         mainMoneyLeftForeach = saveLoad.loadDouble("set4", prefForVar);
         mainOrderJuiceCount = saveLoad.loadInteger("set5", prefForVar);
         mainJuiceWeGot = saveLoad.loadInteger("set6", prefForVar);
-        Log.e(LOGTAG,"mainTotalNakladnayaPrice = " + mainTotalNakladnayaPrice);
-        Log.e(LOGTAG,"mainTotalJuicePrice = " + mainTotalJuicePrice);
-        Log.e(LOGTAG,"mainMoneyLeft = " + mainMoneyLeft);
-        Log.e(LOGTAG,"mainMoneyLeftForeach = " + mainMoneyLeftForeach);
-        Log.e(LOGTAG,"mainOrderJuiceCount = " + mainOrderJuiceCount);
-        Log.e(LOGTAG,"mainJuiceWeGot = " + mainJuiceWeGot);
-    }
+     }
 
     void displayVar() {
         textJ.setText(mainJuiceWeGot + " / " + totalJuiceCount);

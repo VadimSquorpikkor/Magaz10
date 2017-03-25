@@ -70,6 +70,26 @@ class SaveLoad {
         }
     }
 
+    void saveBooleanArray(boolean[] array, SharedPreferences sPref) {
+        int count = 1;
+        SharedPreferences.Editor editor = sPref.edit();
+        for (boolean b : array) {
+            editor.putBoolean("setting" + count, b);
+            count++;
+        }
+        editor.apply();
+    }
+
+    void loadBooleanArray(boolean[] array, SharedPreferences sPref) {
+        int count = 1;
+        for (int i = 0; i < array.length; i++) {
+            if (sPref.contains("setting" + count)) {
+                array[i] = sPref.getBoolean("setting" + count, false);
+            }
+            count++;
+        }
+    }
+
     void saveStringTViewArray(ArrayList<TextView> arrayList, SharedPreferences sPref) {
         int count = 1;
         SharedPreferences.Editor editor = sPref.edit();

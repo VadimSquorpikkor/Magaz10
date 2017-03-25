@@ -46,7 +46,7 @@
 
                 <EditText
                     android:id="@+id/orderPrice1"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount1"
@@ -54,6 +54,7 @@
 
                 <TextView
                     style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text1" />
             </LinearLayout>
 
@@ -71,13 +72,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice2"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount2"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text2" />
             </LinearLayout>
 
@@ -95,13 +97,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice3"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount3"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text3" />
             </LinearLayout>
 
@@ -119,13 +122,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice4"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount4"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text4" />
             </LinearLayout>
 
@@ -143,13 +147,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice5"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount5"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text5" />
             </LinearLayout>
 
@@ -167,13 +172,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice6"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount6"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text6" />
             </LinearLayout>
 
@@ -191,13 +197,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice7"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount7"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text7" />
             </LinearLayout>
 
@@ -215,13 +222,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice8"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount8"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text8" />
             </LinearLayout>
 
@@ -239,13 +247,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice9"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount9"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text9" />
             </LinearLayout>
 
@@ -263,13 +272,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice10"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount10"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text10" />
             </LinearLayout>
 
@@ -287,13 +297,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice11"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount11"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text11" />
             </LinearLayout>
 
@@ -311,13 +322,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice12"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount12"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text12" />
             </LinearLayout>
 
@@ -335,13 +347,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice13"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount13"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text13" />
             </LinearLayout>
 
@@ -359,13 +372,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice14"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount14"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text14" />
             </LinearLayout>
 
@@ -383,13 +397,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice15"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount15"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text15" />
             </LinearLayout>
 
@@ -407,13 +422,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice16"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount16"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text16" />
             </LinearLayout>
 
@@ -431,13 +447,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice17"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount17"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text17" />
             </LinearLayout>
 
@@ -455,13 +472,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice18"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount18"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text18" />
             </LinearLayout>
 
@@ -481,14 +499,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice19"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount19"
                     style="@style/shortNumberStyle" />
 
-                <TextView
-                    style="@style/shortNumberStyle"
+                <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text19" />
             </LinearLayout>
 
@@ -506,13 +524,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice20"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount20"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text20" />
             </LinearLayout>
 
@@ -530,13 +549,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice21"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount21"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text21" />
             </LinearLayout>
 
@@ -554,13 +574,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice22"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount22"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text22" />
             </LinearLayout>
 
@@ -578,13 +599,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice23"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount23"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text23" />
             </LinearLayout>
 
@@ -602,13 +624,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice24"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount24"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text24" />
             </LinearLayout>
 
@@ -626,13 +649,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice25"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount25"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text25" />
             </LinearLayout>
 
@@ -650,13 +674,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice26"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount26"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text26" />
             </LinearLayout>
 
@@ -674,13 +699,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice27"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount27"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text27" />
             </LinearLayout>
 
@@ -698,13 +724,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice28"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount28"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text28" />
             </LinearLayout>
 
@@ -722,13 +749,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice29"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount29"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text29" />
             </LinearLayout>
 
@@ -746,13 +774,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice30"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount30"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text30" />
             </LinearLayout>
 
@@ -770,13 +799,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice31"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount31"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text31" />
             </LinearLayout>
 
@@ -794,13 +824,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice32"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount32"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text32" />
             </LinearLayout>
 
@@ -818,13 +849,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice33"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount33"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text33" />
             </LinearLayout>
 
@@ -842,13 +874,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice34"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount34"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text34" />
             </LinearLayout>
 
@@ -866,13 +899,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice35"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount35"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text35" />
             </LinearLayout>
 
@@ -890,13 +924,14 @@
 
                 <EditText
                     android:id="@+id/orderPrice36"
-                    style="@style/shortNumberStyle" />
+                    style="@style/shortDecimalStyle" />
 
                 <EditText
                     android:id="@+id/orderCount36"
                     style="@style/shortNumberStyle" />
 
                 <TextView style="@style/shortNumberStyle"
+                    android:text="1"
                     android:id="@+id/text36" />
             </LinearLayout>
         </LinearLayout>

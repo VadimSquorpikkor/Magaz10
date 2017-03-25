@@ -3,9 +3,9 @@ package com.squorpikkor.app.magaz10;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class SettingActivity extends AppCompatActivity {
 
-    public static final String LOGTAG = "LOGGG!!!";
+//    public static final String LOGTAG = "LOGGG!!!";
 
     public static int totalJuiceCount;
     public static int bigJuiceCount;
@@ -80,8 +80,8 @@ public class SettingActivity extends AppCompatActivity {
         edit10 = (EditText) findViewById(R.id.juiceInOrder);
 
         button1 = (Button) findViewById(R.id.homeButton);
-       /* button2 = (Button) findViewById(R.id.leftButton);
-        button3 = (Button) findViewById(R.id.orderButton);*/
+//        button2 = (Button) findViewById(R.id.leftButton);
+//        button3 = (Button) findViewById(R.id.orderButton);
         button4 = (Button) findViewById(R.id.countButton);
 
         juiceArrayList.add(edit1);
@@ -177,6 +177,7 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     private void calculateProductCount() {
+        edit10.setTextColor(Color.WHITE);
         double field = Double.parseDouble(edit10.getText().toString());
         int CelayaChast = (int)field;
         double DrobnayaChast = field - (double)CelayaChast;
@@ -190,13 +191,15 @@ public class SettingActivity extends AppCompatActivity {
         else if(DrobnayaChast == 0.75)smallJuiceCount = 3;
         else {smallJuiceCount = 0;
             Toast.makeText(this, "Неправильное значение!", Toast.LENGTH_SHORT).show();
+            bigJuiceCount = 0;
+            bigMilkCount = 0;
+            smallJuiceCount = 0;
+            smallMilkCount = 0;
+            edit10.setTextColor(Color.RED);
         }
 
         smallMilkCount = smallJuiceCount * 2;
-        Log.e(LOGTAG, "bigJuiceCount = " + bigJuiceCount);
-        Log.e(LOGTAG, "bigMilkCount = " + bigMilkCount);
-        Log.e(LOGTAG, "smallJuiceCount = " + smallJuiceCount);
-        Log.e(LOGTAG, "smallMilkCount = " + smallMilkCount);
+
     }
 
     private void totalOrderPrice() {

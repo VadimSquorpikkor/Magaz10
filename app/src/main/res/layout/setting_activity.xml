@@ -13,11 +13,11 @@
             style="@style/textStyle"
             android:text="Количество соков:" />
 
-        <Button
+        <!--<Button
             style="@style/buttonStyle"
             android:id="@+id/resetButton"
             android:layout_height="30dp"
-            android:text="Новый заказ" />
+            android:text="Новый заказ" />-->
 
     </LinearLayout>
 
@@ -85,6 +85,17 @@
             style="@style/shortNumberStyle" />
 
     </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <TextView
+            style="@style/textStyle"
+            android:text="Итого соков по заказам:" />
+        <TextView
+            style="@style/textStyle"
+            android:id="@+id/juiceZakazCount"
+            android:text="0" />
+    </LinearLayout>
+
     <LinearLayout
         style="@style/horizontalLayoutStyle">
         <TextView
@@ -109,10 +120,10 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Сок 0.250мл" />
+            android:text="Молоко 1литр" />
 
         <EditText
-            android:id="@+id/price2"
+            android:id="@+id/price3"
             android:text="0"
             style="@style/WeightNumberStyle" />
 
@@ -122,10 +133,10 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Молоко 1литр" />
+            android:text="Сок 0.250мл" />
 
         <EditText
-            android:id="@+id/price3"
+            android:id="@+id/price2"
             android:text="0"
             style="@style/WeightNumberStyle" />
 
@@ -165,15 +176,7 @@
 
     </LinearLayout>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <TextView
-            style="@style/textStyle"
-            android:text="Итого соков по заказам:" />
-        <TextView
-            style="@style/textStyle"
-            android:id="@+id/juiceZakazCount"
-            android:text="0" />
-    </LinearLayout>
+
 
     <!--<LinearLayout style="@style/horizontalLayoutStyle"
         android:layout_height="100dp">
