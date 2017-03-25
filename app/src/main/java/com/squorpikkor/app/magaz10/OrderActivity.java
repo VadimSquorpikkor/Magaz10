@@ -59,13 +59,21 @@ public class OrderActivity extends AppCompatActivity {
     EditTextSummator summator;
     SaveLoad saveLoad;
 
-    CheckBox[] chArray = {check1, check2, check3, check4, check5, check6, check7, check8, check9, check10, check11, check12, check13, check14, check15, check16, check17, check18,
+    /*CheckBox[] chArray = {check1, check2, check3, check4, check5, check6, check7, check8, check9, check10, check11, check12, check13, check14, check15, check16, check17, check18,
             check19, check20, check21, check22, check23, check24, check25, check26, check27, check28, check29, check30, check31, check32, check33, check34, check35, check36};
+*/
+//    CheckBox[] chArray = new CheckBox[3];
+
+    ArrayList<CheckBox> chList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_activity);
+
+        chList.add(check1);
+        chList.add(check2);
+        chList.add(check3);
 
         oSettings1 = getSharedPreferences("orderSettings1", Context.MODE_PRIVATE);
         oSettings2 = getSharedPreferences("orderSettings2", Context.MODE_PRIVATE);
@@ -444,6 +452,7 @@ public class OrderActivity extends AppCompatActivity {
         button1.setOnClickListener(listener);
         button2.setOnClickListener(listener);
         button3.setOnClickListener(listener);
+        button4.setOnClickListener(listener);
     }
 
     private void clickActivity(Class c) {
@@ -479,9 +488,48 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     void uncheckAll() {
-        for (CheckBox checkBox : chArray) {
-            checkBox.setChecked(true);
-        }
+        /*for (CheckBox checkBox : chList) {
+            checkBox.setChecked(false);
+        }*/
+        check1.setChecked(false);
+        check2.setChecked(false);
+        check3.setChecked(false);
+        check4.setChecked(false);
+        check5.setChecked(false);
+        check6.setChecked(false);
+        check7.setChecked(false);
+        check8.setChecked(false);
+        check9.setChecked(false);
+
+        check10.setChecked(false);
+        check11.setChecked(false);
+        check12.setChecked(false);
+        check13.setChecked(false);
+        check14.setChecked(false);
+        check15.setChecked(false);
+        check16.setChecked(false);
+        check17.setChecked(false);
+        check18.setChecked(false);
+        check19.setChecked(false);
+
+        check20.setChecked(false);
+        check21.setChecked(false);
+        check22.setChecked(false);
+        check23.setChecked(false);
+        check24.setChecked(false);
+        check25.setChecked(false);
+        check26.setChecked(false);
+        check27.setChecked(false);
+        check28.setChecked(false);
+        check29.setChecked(false);
+
+        check30.setChecked(false);
+        check31.setChecked(false);
+        check32.setChecked(false);
+        check33.setChecked(false);
+        check34.setChecked(false);
+        check35.setChecked(false);
+        check36.setChecked(false);
 
     }
 
