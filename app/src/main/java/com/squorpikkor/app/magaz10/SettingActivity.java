@@ -34,8 +34,8 @@ public class SettingActivity extends AppCompatActivity {
     SharedPreferences preferences4;
 
     Button button1;
-    Button button2;
-    Button button3;
+//    Button button2;
+//    Button button3;
     Button button4;
 
     ArrayList<EditText> juiceArrayList = new ArrayList<>();
@@ -80,8 +80,8 @@ public class SettingActivity extends AppCompatActivity {
         edit10 = (EditText) findViewById(R.id.juiceInOrder);
 
         button1 = (Button) findViewById(R.id.homeButton);
-        button2 = (Button) findViewById(R.id.leftButton);
-        button3 = (Button) findViewById(R.id.orderButton);
+       /* button2 = (Button) findViewById(R.id.leftButton);
+        button3 = (Button) findViewById(R.id.orderButton);*/
         button4 = (Button) findViewById(R.id.countButton);
 
         juiceArrayList.add(edit1);
@@ -109,12 +109,12 @@ public class SettingActivity extends AppCompatActivity {
                     case R.id.homeButton:
                         clickActivity(HomeActivity.class);
                         break;
-                    case R.id.leftButton:
+                   /* case R.id.leftButton:
                         clickActivity(LeftActivity.class);
                         break;
                     case R.id.orderButton:
                         clickActivity(OrderActivity.class);
-                        break;
+                        break;*/
                     case R.id.countButton:
                         totalJuiceCount = summator.intSumOfArray(juiceArrayList);
                         calculateProductCount();
@@ -128,8 +128,8 @@ public class SettingActivity extends AppCompatActivity {
         };
 
         button1.setOnClickListener(listener);
-        button2.setOnClickListener(listener);
-        button3.setOnClickListener(listener);
+//        button2.setOnClickListener(listener);
+//        button3.setOnClickListener(listener);
         button4.setOnClickListener(listener);
     }
 

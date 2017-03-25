@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,7 +26,7 @@ public class OrderActivity extends AppCompatActivity {
 
     public static final String LOGTAG = "LOGGG!!!";
 
-    Button button1, button2, button3;
+    Button button1, button2, button3, button4;
 
     public static double ordersSumma;
 
@@ -44,6 +45,10 @@ public class OrderActivity extends AppCompatActivity {
     TextView text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13, text14, text15, text16, text17, text18,
     text19, text20, text21, text22, text23, text24, text25, text26, text27, text28, text29, text30, text31, text32, text33, text34, text35, text36;
 
+    CheckBox check1, check2, check3, check4, check5, check6, check7, check8, check9, check10, check11, check12, check13, check14, check15, check16, check17, check18,
+            check19, check20, check21, check22, check23, check24, check25, check26, check27, check28, check29, check30, check31, check32, check33, check34, check35, check36;
+
+
     TextView moneyForBonusTotal;
 
     ArrayList<EditText> listOfEdit1 = new ArrayList<>();
@@ -53,6 +58,9 @@ public class OrderActivity extends AppCompatActivity {
 
     EditTextSummator summator;
     SaveLoad saveLoad;
+
+    CheckBox[] chArray = {check1, check2, check3, check4, check5, check6, check7, check8, check9, check10, check11, check12, check13, check14, check15, check16, check17, check18,
+            check19, check20, check21, check22, check23, check24, check25, check26, check27, check28, check29, check30, check31, check32, check33, check34, check35, check36};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +78,7 @@ public class OrderActivity extends AppCompatActivity {
         button1 = (Button) findViewById(R.id.homeButton);
         button2 = (Button) findViewById(R.id.leftButton);
         button3 = (Button) findViewById(R.id.countButton);
+        button4 = (Button) findViewById(R.id.orderClearButton);
 
         moneyForBonusTotal = (TextView) findViewById(R.id.orderBonusMoneySpent);
 
@@ -221,6 +230,43 @@ public class OrderActivity extends AppCompatActivity {
         text34 = (TextView) findViewById(R.id.text34);
         text35 = (TextView) findViewById(R.id.text35);
         text36 = (TextView) findViewById(R.id.text36);
+
+        check1 = (CheckBox) findViewById(R.id.checkBox1);
+        check2 = (CheckBox) findViewById(R.id.checkBox2);
+        check3 = (CheckBox) findViewById(R.id.checkBox3);
+        check4 = (CheckBox) findViewById(R.id.checkBox4);
+        check5 = (CheckBox) findViewById(R.id.checkBox5);
+        check6 = (CheckBox) findViewById(R.id.checkBox6);
+        check7 = (CheckBox) findViewById(R.id.checkBox7);
+        check8 = (CheckBox) findViewById(R.id.checkBox8);
+        check9 = (CheckBox) findViewById(R.id.checkBox9);
+        check10 = (CheckBox) findViewById(R.id.checkBox10);
+        check11 = (CheckBox) findViewById(R.id.checkBox11);
+        check12 = (CheckBox) findViewById(R.id.checkBox12);
+        check13 = (CheckBox) findViewById(R.id.checkBox13);
+        check14 = (CheckBox) findViewById(R.id.checkBox14);
+        check15 = (CheckBox) findViewById(R.id.checkBox15);
+        check16 = (CheckBox) findViewById(R.id.checkBox16);
+        check17 = (CheckBox) findViewById(R.id.checkBox17);
+        check18 = (CheckBox) findViewById(R.id.checkBox18);
+        check19 = (CheckBox) findViewById(R.id.checkBox19);
+        check20 = (CheckBox) findViewById(R.id.checkBox20);
+        check21 = (CheckBox) findViewById(R.id.checkBox21);
+        check22 = (CheckBox) findViewById(R.id.checkBox22);
+        check23 = (CheckBox) findViewById(R.id.checkBox23);
+        check24 = (CheckBox) findViewById(R.id.checkBox24);
+        check25 = (CheckBox) findViewById(R.id.checkBox25);
+        check26 = (CheckBox) findViewById(R.id.checkBox26);
+        check27 = (CheckBox) findViewById(R.id.checkBox27);
+        check28 = (CheckBox) findViewById(R.id.checkBox28);
+        check29 = (CheckBox) findViewById(R.id.checkBox29);
+        check30 = (CheckBox) findViewById(R.id.checkBox30);
+        check31 = (CheckBox) findViewById(R.id.checkBox31);
+        check32 = (CheckBox) findViewById(R.id.checkBox32);
+        check33 = (CheckBox) findViewById(R.id.checkBox33);
+        check34 = (CheckBox) findViewById(R.id.checkBox34);
+        check35 = (CheckBox) findViewById(R.id.checkBox35);
+        check36 = (CheckBox) findViewById(R.id.checkBox36);
 
         listOfEdit1.add(edit1);
         listOfEdit1.add(edit2);
@@ -376,6 +422,9 @@ public class OrderActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
+                    case R.id.orderClearButton:
+                        uncheckAll();
+                        break;
                     case R.id.homeButton:
                         clickActivity(HomeActivity.class);
                         break;
@@ -385,6 +434,7 @@ public class OrderActivity extends AppCompatActivity {
                     case R.id.countButton:
                         ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
                         moneyForBonusTotal.setText(String.valueOf(ordersSumma));
+
                         break;
                 }
             }
@@ -422,6 +472,17 @@ public class OrderActivity extends AppCompatActivity {
 
         ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
         moneyForBonusTotal.setText(String.valueOf(ordersSumma));
+    }
+
+    void resetValues() {
+
+    }
+
+    void uncheckAll() {
+        for (CheckBox checkBox : chArray) {
+            checkBox.setChecked(true);
+        }
+
     }
 
 

@@ -15,6 +15,11 @@
             android:id="@+id/orderBonusMoneySpent"
             style="@style/textStyle"
             android:text="0" />
+        <Button
+            style="@style/buttonStyle"
+            android:layout_height="30dp"
+            android:text="Очистить"
+            android:id="@+id/orderClearButton"/>
 
     </LinearLayout>
 
@@ -390,6 +395,12 @@
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName16"
                     style="@style/WeightTextStyle" />
@@ -408,6 +419,12 @@
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName17"
                     style="@style/WeightTextStyle" />
@@ -425,6 +442,12 @@
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
+
+                <CheckBox
+                    android:id="@+id/checkBox18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
                 <EditText
                     android:id="@+id/orderName18"
@@ -446,6 +469,12 @@
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName19"
                     style="@style/WeightTextStyle" />
@@ -465,6 +494,12 @@
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName20"
                     style="@style/WeightTextStyle" />
@@ -482,6 +517,12 @@
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
+
+                <CheckBox
+                    android:id="@+id/checkBox21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
                 <EditText
                     android:id="@+id/orderName21"
@@ -501,6 +542,12 @@
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName22"
                     style="@style/WeightTextStyle" />
@@ -518,6 +565,12 @@
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
+
+                <CheckBox
+                    android:id="@+id/checkBox23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
                 <EditText
                     android:id="@+id/orderName23"
@@ -537,6 +590,12 @@
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName24"
                     style="@style/WeightTextStyle" />
@@ -554,6 +613,12 @@
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
+
+                <CheckBox
+                    android:id="@+id/checkBox25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
                 <EditText
                     android:id="@+id/orderName25"
@@ -573,6 +638,12 @@
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName26"
                     style="@style/WeightTextStyle" />
@@ -590,6 +661,12 @@
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
+
+                <CheckBox
+                    android:id="@+id/checkBox27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
                 <EditText
                     android:id="@+id/orderName27"
@@ -609,6 +686,12 @@
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName28"
                     style="@style/WeightTextStyle" />
@@ -626,6 +709,12 @@
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
+
+                <CheckBox
+                    android:id="@+id/checkBox29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
                 <EditText
                     android:id="@+id/orderName29"
@@ -645,6 +734,12 @@
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName30"
                     style="@style/WeightTextStyle" />
@@ -662,6 +757,12 @@
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
+
+                <CheckBox
+                    android:id="@+id/checkBox31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
                 <EditText
                     android:id="@+id/orderName31"
@@ -681,6 +782,12 @@
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName32"
                     style="@style/WeightTextStyle" />
@@ -698,6 +805,12 @@
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
+
+                <CheckBox
+                    android:id="@+id/checkBox33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
                 <EditText
                     android:id="@+id/orderName33"
@@ -717,6 +830,12 @@
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName34"
                     style="@style/WeightTextStyle" />
@@ -735,6 +854,12 @@
 
             <LinearLayout style="@style/horizontalLayoutStyle">
 
+                <CheckBox
+                    android:id="@+id/checkBox35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
                 <EditText
                     android:id="@+id/orderName35"
                     style="@style/WeightTextStyle" />
@@ -752,6 +877,12 @@
             </LinearLayout>
 
             <LinearLayout style="@style/horizontalLayoutStyle">
+
+                <CheckBox
+                    android:id="@+id/checkBox36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
 
                 <EditText
                     android:id="@+id/orderName36"

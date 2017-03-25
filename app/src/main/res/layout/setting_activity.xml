@@ -168,7 +168,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
         <TextView
             style="@style/textStyle"
-            android:text="Итого соков:" />
+            android:text="Итого соков по заказам:" />
         <TextView
             style="@style/textStyle"
             android:id="@+id/juiceZakazCount"
@@ -236,16 +236,16 @@
         <Button
             style="@style/buttonStyle"
             android:id="@+id/homeButton"
-            android:text="Дом" />
+            android:text="Назад" />
 
-        <Button
+        <!--<Button
             style="@style/buttonStyle"
             android:id="@+id/leftButton"
             android:text="Остаток" />
         <Button
             style="@style/buttonStyle"
             android:id="@+id/orderButton"
-            android:text="Заказы" />
+            android:text="Заказы" />-->
         <Button
             style="@style/buttonStyle"
             android:id="@+id/countButton"
