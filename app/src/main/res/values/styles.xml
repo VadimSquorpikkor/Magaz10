@@ -25,6 +25,13 @@
 
     </style>
 
+    <style name="WeightTextStyleSmall" parent="editStyle">
+        <item name="android:layout_width">130dp</item>
+        <item name="android:textSize">10sp</item>
+        <!--<item name="android:layout_weight">3</item>-->
+
+    </style>
+
     <style name="WeightNumberStyle" parent="editStyle">
         <item name="android:layout_width">130dp</item>
         <!--<item name="android:layout_weight">3</item>-->
@@ -34,6 +41,14 @@
 
     <style name="shortNumberStyle" parent="editStyle">
         <item name="android:layout_width">10dp</item>
+        <!--<item name="android:layout_weight">1</item>-->
+        <item name="android:inputType">number</item>
+
+    </style>
+
+    <style name="shortNumberStyleSmall" parent="editStyle">
+        <item name="android:layout_width">10dp</item>
+        <item name="android:textSize">10sp</item>
         <!--<item name="android:layout_weight">1</item>-->
         <item name="android:inputType">number</item>
 

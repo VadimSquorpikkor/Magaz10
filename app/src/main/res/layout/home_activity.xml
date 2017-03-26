@@ -9,30 +9,36 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Соков взяли" />
+            android:text="@string/juiceWeGet" />
 
         <TextView
             style="@style/textStyle"
             android:id="@+id/textJ"
-            android:text="0" />
+            android:text="@string/ZERO" />
 
         <Button
             style="@style/buttonStyle"
             android:id="@+id/SetValueButton"
             android:layout_height="30dp"
-            android:text="Настройки" />
+            android:text="@string/settings" />
     </LinearLayout>
 
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <TextView
             style="@style/textStyle"
-            android:text="Денег в накладной" />
+            android:text="@string/totalPriceInDocument" />
 
         <TextView
             style="@style/textStyle"
             android:id="@+id/textN"
-            android:text="0" />
+            android:text="@string/ZERO" />
+
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/homeClear"
+            android:layout_height="30dp"
+            android:text="@string/clearIt" />
 
     </LinearLayout>
 
@@ -40,12 +46,12 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Остаток" />
+            android:text="@string/moneyLeft" />
 
         <TextView
             style="@style/textStyle"
             android:id="@+id/textOst"
-            android:text="0" />
+            android:text="@string/ZERO" />
 
     </LinearLayout>
 
@@ -53,12 +59,12 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Каждому" />
+            android:text="@string/forEach" />
 
         <TextView
             style="@style/textStyle"
             android:id="@+id/textFE"
-            android:text="0" />
+            android:text="@string/ZERO" />
 
     </LinearLayout>
 
@@ -197,20 +203,20 @@
             style="@style/buttonStyle"
             android:background="@android:color/holo_orange_dark"
             android:id="@+id/homeButton"
-            android:text="Дом" />
+            android:text="@string/home" />
 
         <Button
             style="@style/buttonStyle"
             android:id="@+id/leftButton"
-            android:text="Остаток" />
+            android:text="@string/left" />
         <Button
             style="@style/buttonStyle"
             android:id="@+id/orderButton"
-            android:text="Заказы" />
+            android:text="@string/orders" />
         <Button
             style="@style/buttonStyle"
             android:id="@+id/countButton"
-            android:text="Считать" />
+            android:text="@string/calculate" />
     </LinearLayout>
 
 

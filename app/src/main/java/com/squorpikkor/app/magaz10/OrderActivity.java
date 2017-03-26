@@ -1,8 +1,10 @@
 package com.squorpikkor.app.magaz10;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -463,7 +465,7 @@ public class OrderActivity extends AppCompatActivity {
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.orderClearButton:
-                        uncheckAll();
+                        clearItAlert(v);
                         break;
                     case R.id.homeButton:
                         clickActivity(HomeActivity.class);
@@ -504,7 +506,7 @@ public class OrderActivity extends AppCompatActivity {
         ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
         moneyForBonusTotal.setText(String.valueOf(ordersSumma));
 
-        loadCheckStstus();
+        loadCheckStatus();
     }
 
     @Override
@@ -540,7 +542,7 @@ public class OrderActivity extends AppCompatActivity {
         saveLoad.saveBooleanArray(checkSaverArray, oSettings5);
     }
 
-    void loadCheckStstus() {
+    void loadCheckStatus() {
         saveLoad.loadBooleanArray(checkSaverArray, oSettings5);
         int count = 0;
         for (boolean b : checkSaverArray) {
@@ -558,5 +560,28 @@ public class OrderActivity extends AppCompatActivity {
 
     }
 
+    public void clearItAlert (View view){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+        alert.setMessage("Стереть всё?");
+        alert.setIcon(R.drawable.ic_delete);
+
+        alert.setPositiveButton("Гори оно огнём", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                uncheckAll();
+                saveLoad.clearList(listOfEdit1, "");
+                saveLoad.clearList(listOfEdit2, "");
+                saveLoad.clearList(listOfEdit3, "1");
+                dialog.cancel();
+            }
+        });
+
+        alert.setNegativeButton("нет", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                dialog.cancel();
+            }
+        });
+        alert.show();
+    }
 
 }

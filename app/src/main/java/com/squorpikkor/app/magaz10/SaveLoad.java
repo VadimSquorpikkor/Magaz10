@@ -129,4 +129,16 @@ class SaveLoad {
             count++;
         }
     }
+
+    void clearList(ArrayList<EditText> list, String defaultValue) {
+        for (EditText edit : list) {
+            edit.setText(defaultValue);
+        }
+    }
+
+    void clearTextList(ArrayList<TextView> list, String defaultValue) {
+        for (TextView textView : list) {
+            textView.setText(defaultValue);
+        }
+    }
 }

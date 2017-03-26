@@ -11,7 +11,7 @@
         style="@style/horizontalLayoutStyle">
         <TextView
             style="@style/textStyle"
-            android:text="Количество соков:" />
+            android:text="@string/juiceCount" />
 
         <!--<Button
             style="@style/buttonStyle"
@@ -26,11 +26,11 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Крот(2)" />
+            android:text="@string/KROT" />
 
         <EditText
             android:id="@+id/jCount1"
-            android:text="0"
+            android:text="@string/ZERO"
             style="@style/shortNumberStyle" />
 
     </LinearLayout>
@@ -39,11 +39,11 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Сборка(8)" />
+            android:text="@string/SBORKA" />
 
         <EditText
             android:id="@+id/jCount2"
-            android:text="0"
+            android:text="@string/ZERO"
             style="@style/shortNumberStyle" />
 
     </LinearLayout>
@@ -52,11 +52,11 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Монтаж(5)" />
+            android:text="@string/MONTAZ" />
 
         <EditText
             android:id="@+id/jCount3"
-            android:text="0"
+            android:text="@string/ZERO"
             style="@style/shortNumberStyle" />
 
     </LinearLayout>
@@ -65,11 +65,11 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="С/М/В/Ю(4)" />
+            android:text="@string/OTHERS" />
 
         <EditText
             android:id="@+id/jCount4"
-            android:text="0"
+            android:text="@string/ZERO"
             style="@style/shortNumberStyle" />
 
     </LinearLayout>
@@ -77,11 +77,11 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Корелин(17)" />
+            android:text="@string/KORELIN" />
 
         <EditText
             android:id="@+id/jCount5"
-            android:text="0"
+            android:text="@string/ZERO"
             style="@style/shortNumberStyle" />
 
     </LinearLayout>
@@ -89,29 +89,29 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
         <TextView
             style="@style/textStyle"
-            android:text="Итого соков по заказам:" />
+            android:text="@string/juiceCountTotalByOrders" />
         <TextView
             style="@style/textStyle"
             android:id="@+id/juiceZakazCount"
-            android:text="0" />
+            android:text="@string/ZERO" />
     </LinearLayout>
 
     <LinearLayout
         style="@style/horizontalLayoutStyle">
         <TextView
             style="@style/textStyle"
-            android:text="Цены:" />
+            android:text="@string/prices" />
 
     </LinearLayout>
     <LinearLayout style="@style/horizontalLayoutStyle">
 
         <TextView
             style="@style/textStyle"
-            android:text="Сок 1литр" />
+            android:text="@string/juiceBig" />
 
         <EditText
             android:id="@+id/price1"
-            android:text="0"
+            android:text="@string/ZERO"
             style="@style/WeightNumberStyle" />
 
     </LinearLayout>
@@ -120,11 +120,11 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Молоко 1литр" />
+            android:text="@string/MilkBig" />
 
         <EditText
             android:id="@+id/price3"
-            android:text="0"
+            android:text="@string/ZERO"
             style="@style/WeightNumberStyle" />
 
     </LinearLayout>
@@ -133,11 +133,11 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Сок 0.250мл" />
+            android:text="@string/juiceSmall" />
 
         <EditText
             android:id="@+id/price2"
-            android:text="0"
+            android:text="@string/ZERO"
             style="@style/WeightNumberStyle" />
 
     </LinearLayout>
@@ -146,11 +146,11 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Молоко 0.250мл" />
+            android:text="@string/milkSmall" />
 
         <EditText
             android:id="@+id/price4"
-            android:text="0"
+            android:text="@string/ZERO"
             style="@style/WeightNumberStyle" />
 
     </LinearLayout>
@@ -167,11 +167,11 @@
 
         <TextView
             style="@style/textStyle"
-            android:text="Соков в накладной:" />
+            android:text="@string/juiceCountByDocument" />
 
         <EditText
             android:id="@+id/juiceInOrder"
-            android:text="0"
+            android:text="@string/ZERO"
             style="@style/WeightNumberStyle" />
 
     </LinearLayout>
@@ -188,7 +188,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
         <TextView
             style="@style/textStyle"
-            android:text="Соков больших:" />
+            android:text="@string/juiceBigCount" />
         <TextView
             style="@style/textStyle"
             android:id="@+id/textBigJuice"
@@ -198,7 +198,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
         <TextView
             style="@style/textStyle"
-            android:text="Соков маленьких:" />
+            android:text="@string/juiceSmallCount" />
         <TextView
             style="@style/textStyle"
             android:id="@+id/textSmallJuice"
@@ -208,7 +208,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
         <TextView
             style="@style/textStyle"
-            android:text="Молоко больших:" />
+            android:text="@string/milkBigCount" />
         <TextView
             style="@style/textStyle"
             android:id="@+id/textBigMilk"
@@ -218,7 +218,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
         <TextView
             style="@style/textStyle"
-            android:text="Молоко маленьких:" />
+            android:text="@string/milkSmallCount" />
         <TextView
             style="@style/textStyle"
             android:id="@+id/textSmallMilk"
@@ -228,7 +228,7 @@
     <LinearLayout style="@style/horizontalLayoutStyle">
         <TextView
             style="@style/textStyle"
-            android:text="Сумма в накладной:" />
+            android:text="@string/totalPriceInDocument" />
         <TextView
             style="@style/textStyle"
             android:id="@+id/totalNakladnayaPrice"
@@ -239,7 +239,7 @@
         <Button
             style="@style/buttonStyle"
             android:id="@+id/homeButton"
-            android:text="Назад" />
+            android:text="@string/back" />
 
         <!--<Button
             style="@style/buttonStyle"
@@ -252,7 +252,7 @@
         <Button
             style="@style/buttonStyle"
             android:id="@+id/countButton"
-            android:text="Считать" />
+            android:text="@string/calculate" />
     </LinearLayout>
 
 </LinearLayout>

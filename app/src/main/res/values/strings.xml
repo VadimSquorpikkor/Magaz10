@@ -1,5 +1,41 @@
 <resources>
-    <string name="app_name">Magaz10</string>
+    <string name="app_name">Magaz Assistant</string>
     <string name="changed">Changed!!!</string>
+    <string name="juiceWeGet">Соков взяли</string>
+    <string name="ZERO">0</string>
+    <string name="ONE">1</string>
+    <string name="moneySpentForBonuses">Денег потрачено на бонусы:</string>
+    <string name="clearIt">Очистить</string>
+    <string name="home">Дом</string>
+    <string name="left">Остаток</string>
+    <string name="orders">Заказы</string>
+    <string name="calculate">Считать</string>
+    <string name="back">Назад</string>
+    <string name="juiceCount">Количество соков:</string>
+    <string name="KROT">Крот(2)</string>
+    <string name="SBORKA">Сборка(8)</string>
+    <string name="MONTAZ">Монтаж(5)</string>
+    <string name="OTHERS">С/М/В/Ю(4)</string>
+    <string name="KORELIN">Корелин(17)</string>
+    <string name="juiceCountTotalByOrders">Итого соков по заказам:</string>
+    <string name="juiceBig">Сок 1литр</string>
+    <string name="MilkBig">Молоко 1литр</string>
+    <string name="juiceSmall">Сок 0.250мл</string>
+    <string name="milkSmall">Молоко 0.250мл</string>
+    <string name="juiceCountByDocument">Соков в накладной:</string>
+    <string name="juiceBigCount">Соков больших:</string>
+    <string name="juiceSmallCount">Соков маленьких:</string>
+    <string name="milkBigCount">Молоко больших:</string>
+    <string name="milkSmallCount">Молоко маленьких:</string>
+    <string name="totalPriceInDocument">Сумма в накладной:</string>
+    <string name="prices">Цены:</string>
+    <string name="settings">Настройки</string>
+    <string name="moneyLeft">Остаток</string>
+    <string name="forEach">Каждому</string>
+    <string name="moneySpent">Денег потрачено:</string>
+    <string name="moneyLeftForEach">Денег осталось:</string>
+    <string name="name">Наименование</string>
+    <string name="price">Цена</string>
+    <string name="count">Кол.</string>
 
 </resources>

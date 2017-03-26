@@ -153,7 +153,7 @@ public class SettingActivity extends AppCompatActivity {
         saveLoad.loadStringEditArray(juiceArrayList, preferences);
         saveLoad.loadStringEditArray(priceArrayList, preferences2);
         saveLoad.loadIntArray(countArrayList, preferences3);
-        saveLoad.loadStringEdit(edit10, "setNakl", preferences4);
+        saveLoad.loadStringEdit(edit10, "setInvoice", preferences4);
 
         totalJuiceCount = summator.intSumOfArray(juiceArrayList);
         calculateProductCount();
@@ -168,7 +168,7 @@ public class SettingActivity extends AppCompatActivity {
         saveLoad.saveStringEditArray(juiceArrayList, preferences);
         saveLoad.saveStringEditArray(priceArrayList, preferences2);
         saveLoad.saveIntArray(countArrayList, preferences3);
-        saveLoad.saveStringEdit(edit10, "setNakl", preferences4);
+        saveLoad.saveStringEdit(edit10, "setInvoice", preferences4);
 
         totalJuiceCount = summator.intSumOfArray(juiceArrayList);
         calculateProductCount();
@@ -179,16 +179,16 @@ public class SettingActivity extends AppCompatActivity {
     private void calculateProductCount() {
         edit10.setTextColor(Color.WHITE);
         double field = Double.parseDouble(edit10.getText().toString());
-        int CelayaChast = (int)field;
-        double DrobnayaChast = field - (double)CelayaChast;
+        int IntegerPart = (int)field;
+        double FractionalPart = field - (double)IntegerPart;
 
-        bigJuiceCount = CelayaChast;
+        bigJuiceCount = IntegerPart;
         bigMilkCount = bigJuiceCount * 2;
 
-        if (DrobnayaChast == 0)smallJuiceCount = 0;
-        else if(DrobnayaChast == 0.25)smallJuiceCount = 1;
-        else if(DrobnayaChast == 0.5)smallJuiceCount = 2;
-        else if(DrobnayaChast == 0.75)smallJuiceCount = 3;
+        if (FractionalPart == 0)smallJuiceCount = 0;
+        else if(FractionalPart == 0.25)smallJuiceCount = 1;
+        else if(FractionalPart == 0.5)smallJuiceCount = 2;
+        else if(FractionalPart == 0.75)smallJuiceCount = 3;
         else {smallJuiceCount = 0;
             Toast.makeText(this, "Неправильное значение!", Toast.LENGTH_SHORT).show();
             bigJuiceCount = 0;

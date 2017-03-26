@@ -1,6 +1,8 @@
 package com.squorpikkor.app.magaz10;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +21,7 @@ public class LeftActivity extends AppCompatActivity {
     Button button1;
     Button button2;
     Button button3;
+    Button button4;
 
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10, edit11, edit12, edit13, edit14;
 
@@ -48,6 +51,7 @@ public class LeftActivity extends AppCompatActivity {
         button1 = (Button) findViewById(R.id.homeButton);
         button2 = (Button) findViewById(R.id.orderButton);
         button3 = (Button) findViewById(R.id.countButton);
+        button4 = (Button) findViewById(R.id.leftEraseButton);
 
         edit1 = (EditText) findViewById(R.id.leftPrice1);
         edit2 = (EditText) findViewById(R.id.leftPrice2);
@@ -113,12 +117,16 @@ public class LeftActivity extends AppCompatActivity {
                     case R.id.homeButton:
                         clickActivity(HomeActivity.class);
                         break;
+                    case R.id.leftEraseButton:
+                        clearItAlert(v);
+                        break;
                     case R.id.orderButton:
                         clickActivity(OrderActivity.class);
                         break;
                     case R.id.countButton:
                         moneySpent = summator.sumOfLines(leftList1, leftList2, leftList3);
                         moneyLeft = mainMoneyLeftForeach - moneySpent;
+                        moneyLeft = Math.floor(moneyLeft * 100) / 100;//2 numbers after the dot
                         textLeft.setText(String.valueOf(moneyLeft));
                         textSpent.setText(String.valueOf(moneySpent));
                         break;
@@ -130,6 +138,7 @@ public class LeftActivity extends AppCompatActivity {
         button1.setOnClickListener(listener);
         button2.setOnClickListener(listener);
         button3.setOnClickListener(listener);
+        button4.setOnClickListener(listener);
     }
 
     private void clickActivity(Class c) {
@@ -145,6 +154,7 @@ public class LeftActivity extends AppCompatActivity {
 
         moneySpent = summator.sumOfLines(leftList1, leftList2, leftList3);
         moneyLeft = mainMoneyLeftForeach - moneySpent;
+        moneyLeft = Math.floor(moneyLeft * 100) / 100;//2 numbers after the dot
         textLeft.setText(String.valueOf(moneyLeft));
         textSpent.setText(String.valueOf(moneySpent));
     }
@@ -157,5 +167,27 @@ public class LeftActivity extends AppCompatActivity {
         saveLoad.saveStringTViewArray(leftList3, sharedPref3);
     }
 
+    public void clearItAlert (View view){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+        alert.setMessage("Стереть всё?");
+        alert.setIcon(R.drawable.ic_delete);
+
+        alert.setPositiveButton("Гори оно огнём", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                saveLoad.clearList(leftList1, "");
+                saveLoad.clearList(leftList2, "1");
+                saveLoad.clearTextList(leftList3, "");
+                dialog.cancel();
+            }
+        });
+
+        alert.setNegativeButton("нет", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                dialog.cancel();
+            }
+        });
+        alert.show();
+    }
 
 }

@@ -1,6 +1,8 @@
 package com.squorpikkor.app.magaz10;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -31,7 +33,7 @@ public class HomeActivity extends AppCompatActivity {
     SharedPreferences preferences3;
     SharedPreferences prefForVar;
 
-    Button button1, button2, button3, button4;
+    Button button1, button2, button3, button4, button5;
 
     EditTextSummator summator;
     SaveLoad saveLoad = new SaveLoad();
@@ -69,6 +71,7 @@ public class HomeActivity extends AppCompatActivity {
         button2 = (Button) findViewById(R.id.leftButton);
         button3 = (Button) findViewById(R.id.orderButton);
         button4 = (Button) findViewById(R.id.countButton);
+        button5 = (Button) findViewById(R.id.homeClear);
 
         textN = (TextView) findViewById(R.id.textN);
         textJ = (TextView) findViewById(R.id.textJ);
@@ -150,6 +153,8 @@ public class HomeActivity extends AppCompatActivity {
                 switch (v.getId()) {
                     case R.id.SetValueButton:
                         clickActivity(SettingActivity.class); break;
+                    case R.id.homeClear:
+                        clearItAlert(v); break;
                     case R.id.leftButton:
                         clickActivity(LeftActivity.class); break;
                     case R.id.orderButton:
@@ -196,12 +201,16 @@ public class HomeActivity extends AppCompatActivity {
         mainTotalNakladnayaPrice = saveLoad.loadDouble("set1", prefForVar);
         mainTotalJuicePrice = saveLoad.loadDouble("set2", prefForVar);
         mainMoneyLeft = saveLoad.loadDouble("set3", prefForVar);
+//        mainMoneyLeft = Math.floor(mainMoneyLeft * 100) / 100;//2 numbers after the dot
         mainMoneyLeftForeach = saveLoad.loadDouble("set4", prefForVar);
+//        mainMoneyLeftForeach = Math.floor(mainMoneyLeftForeach * 100) / 100;//2 numbers after the dot
         mainOrderJuiceCount = saveLoad.loadInteger("set5", prefForVar);
         mainJuiceWeGot = saveLoad.loadInteger("set6", prefForVar);
      }
 
     void displayVar() {
+        mainMoneyLeftForeach = Math.floor(mainMoneyLeftForeach * 100) / 100;//2 numbers after the dot
+        mainMoneyLeft = Math.floor(mainMoneyLeft * 100) / 100;//2 numbers after the dot
         textJ.setText(mainJuiceWeGot + " / " + totalJuiceCount);
         textN.setText(String.valueOf(mainTotalNakladnayaPrice));
         textOst.setText(String.valueOf(mainMoneyLeft));
@@ -226,6 +235,31 @@ public class HomeActivity extends AppCompatActivity {
         loadVar();
         calculateVar();
         displayVar();
+    }
+
+    public void clearItAlert (View view){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+        alert.setMessage("Стереть всё?");
+        alert.setIcon(R.drawable.ic_delete);
+
+        alert.setPositiveButton("Гори оно огнём", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                saveLoad.clearList(listOfEdit1, "");
+                saveLoad.clearList(listOfEdit2, "");
+                saveLoad.clearTextList(listOfText, "0");
+                calculateVar();
+                displayVar();
+                dialog.cancel();
+            }
+        });
+
+        alert.setNegativeButton("нет", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                dialog.cancel();
+            }
+        });
+        alert.show();
     }
 
 
