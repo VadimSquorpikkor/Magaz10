@@ -170,6 +170,7 @@ public class HomeActivity extends AppCompatActivity {
         button2.setOnClickListener(listener);
         button3.setOnClickListener(listener);
         button4.setOnClickListener(listener);
+        button5.setOnClickListener(listener);
 
     }
 
