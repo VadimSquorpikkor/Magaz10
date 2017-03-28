@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,24 +15,29 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import static com.squorpikkor.app.magaz10.OrderActivity.ordersSumma;
-import static com.squorpikkor.app.magaz10.SettingActivity.totalJuiceCount;
-import static com.squorpikkor.app.magaz10.SettingActivity.totalOrderPrice;
+//import static com.squorpikkor.app.magaz10.SettingActivity.totalJuiceCount;
+//import static com.squorpikkor.app.magaz10.SettingActivity.totalOrderPrice;
 
 public class HomeActivity extends AppCompatActivity {
 
-//    public static final String LOGTAG = "LOGGG!!!";
+    public static final String LOGTAG = "LOGGG!!!";
 
-    double mainTotalNakladnayaPrice = 0;
+    //////////////////////////////////
+
+    public static int totalJuiceCount;
+
+    public static double totalOrderPrice;
+
+    //////////////////////////////////
     double mainTotalJuicePrice = 0;
     double mainMoneyLeft = 0;
     public static double mainMoneyLeftForeach = 0;
-    int mainOrderJuiceCount = 0;
     int mainJuiceWeGot = 0;
 
     SharedPreferences preferences1;
     SharedPreferences preferences2;
     SharedPreferences preferences3;
-    SharedPreferences prefForVar;
+    static SharedPreferences prefForVar;
 
     Button button1, button2, button3, button4, button5;
 
@@ -180,40 +186,42 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     void calculateVar() {
-        mainTotalNakladnayaPrice = totalOrderPrice;
+        Log.e(LOGTAG, "CALCULATE TotalOrderPrice = " + totalOrderPrice);
         mainTotalJuicePrice = summator.sumOfLines(listOfEdit1, listOfEdit2);
-        mainMoneyLeft = mainTotalNakladnayaPrice - mainTotalJuicePrice - ordersSumma;
+        mainMoneyLeft = totalOrderPrice - mainTotalJuicePrice - ordersSumma;
         mainMoneyLeftForeach = mainMoneyLeft/(double)2;
-        mainOrderJuiceCount = totalJuiceCount;
         mainJuiceWeGot = 0;
         mainJuiceWeGot = summator.intSumOfArray(listOfEdit2);
     }
 
     void saveVar() {
-      saveLoad.saveDouble(mainTotalNakladnayaPrice, "set1", prefForVar);
+        Log.e(LOGTAG, "SAVE TotalOrderPrice = " + totalOrderPrice);
+      saveLoad.saveDouble(totalOrderPrice, "set1", prefForVar);
       saveLoad.saveDouble(mainTotalJuicePrice, "set2", prefForVar);
       saveLoad.saveDouble(mainMoneyLeft, "set3", prefForVar);
       saveLoad.saveDouble(mainMoneyLeftForeach, "set4", prefForVar);
-      saveLoad.saveInteger(mainOrderJuiceCount, "set5", prefForVar);
+      saveLoad.saveInteger(totalJuiceCount, "set5", prefForVar);
       saveLoad.saveInteger(mainJuiceWeGot, "set6", prefForVar);
     }
 
     void loadVar() {
-        mainTotalNakladnayaPrice = saveLoad.loadDouble("set1", prefForVar);
+        Log.e(LOGTAG, "LOAD TotalOrderPrice = " + totalOrderPrice);
+        totalOrderPrice = saveLoad.loadDouble("set1", prefForVar);
         mainTotalJuicePrice = saveLoad.loadDouble("set2", prefForVar);
         mainMoneyLeft = saveLoad.loadDouble("set3", prefForVar);
 //        mainMoneyLeft = Math.floor(mainMoneyLeft * 100) / 100;//2 numbers after the dot
         mainMoneyLeftForeach = saveLoad.loadDouble("set4", prefForVar);
 //        mainMoneyLeftForeach = Math.floor(mainMoneyLeftForeach * 100) / 100;//2 numbers after the dot
-        mainOrderJuiceCount = saveLoad.loadInteger("set5", prefForVar);
+        totalJuiceCount = saveLoad.loadInteger("set5", prefForVar);
         mainJuiceWeGot = saveLoad.loadInteger("set6", prefForVar);
      }
 
     void displayVar() {
+        Log.e(LOGTAG, "DISPLAY TotalOrderPrice = " + totalOrderPrice);
         mainMoneyLeftForeach = Math.floor(mainMoneyLeftForeach * 100) / 100;//2 numbers after the dot
         mainMoneyLeft = Math.floor(mainMoneyLeft * 100) / 100;//2 numbers after the dot
         textJ.setText(mainJuiceWeGot + " / " + totalJuiceCount);
-        textN.setText(String.valueOf(mainTotalNakladnayaPrice));
+        textN.setText(String.valueOf(totalOrderPrice));
         textOst.setText(String.valueOf(mainMoneyLeft));
         textFE.setText(String.valueOf(mainMoneyLeftForeach));
     }
@@ -221,6 +229,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        Log.e(LOGTAG, "ONPAUSE TotalOrderPrice = " + totalOrderPrice);
         saveLoad.saveStringEditArray(listOfEdit1, preferences1);
         saveLoad.saveStringEditArray(listOfEdit2, preferences2);
         saveLoad.saveStringTViewArray(listOfText, preferences3);
@@ -230,6 +239,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        Log.e(LOGTAG, "ONRESUME TotalOrderPrice = " + totalOrderPrice);
         saveLoad.loadStringEditArray(listOfEdit1, preferences1);
         saveLoad.loadStringEditArray(listOfEdit2, preferences2);
         saveLoad.loadStringTViewArray(listOfText, preferences3);

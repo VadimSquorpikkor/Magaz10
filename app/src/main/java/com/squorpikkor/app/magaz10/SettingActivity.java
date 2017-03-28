@@ -14,19 +14,20 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static com.squorpikkor.app.magaz10.HomeActivity.prefForVar;
+import static com.squorpikkor.app.magaz10.HomeActivity.totalJuiceCount;
+import static com.squorpikkor.app.magaz10.HomeActivity.totalOrderPrice;
+
 public class SettingActivity extends AppCompatActivity {
 
 //    public static final String LOGTAG = "LOGGG!!!";
 
-    public static int totalJuiceCount;
-    public static int bigJuiceCount;
-    public static int smallJuiceCount;
-    public static int bigMilkCount;
-    public static int smallMilkCount;
+    int bigJuiceCount;
+    int smallJuiceCount;
+    int bigMilkCount;
+    int smallMilkCount;
 
     TextView txtBJ, txtSJ, txtBM, txtSM, txtTP, txtTJ;
-
-    public static double totalOrderPrice;
 
     SharedPreferences preferences;
     SharedPreferences preferences2;
@@ -172,7 +173,12 @@ public class SettingActivity extends AppCompatActivity {
 
         totalJuiceCount = summator.intSumOfArray(juiceArrayList);
         calculateProductCount();
+
         totalOrderPrice();
+        totalJuiceCount = summator.intSumOfArray(juiceArrayList);
+        saveLoad.saveDouble(totalOrderPrice, "set1", prefForVar);
+        saveLoad.saveInteger(totalJuiceCount, "set5", prefForVar);
+
         displayVar();
     }
 
