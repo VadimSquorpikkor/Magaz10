@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import java.util.ArrayList;
 
-import static com.squorpikkor.app.magaz10.OrderActivity.ordersSumma;
+//import static com.squorpikkor.app.magaz10.OrderActivity.ordersSumma;
 //import static com.squorpikkor.app.magaz10.SettingActivity.totalJuiceCount;
 //import static com.squorpikkor.app.magaz10.SettingActivity.totalOrderPrice;
 
@@ -27,6 +27,10 @@ public class HomeActivity extends AppCompatActivity {
     public static int totalJuiceCount;
 
     public static double totalOrderPrice;
+
+    //////////////////////////////////
+
+    public static double ordersSumma;
 
     //////////////////////////////////
     double mainTotalJuicePrice = 0;
@@ -202,6 +206,7 @@ public class HomeActivity extends AppCompatActivity {
       saveLoad.saveDouble(mainMoneyLeftForeach, "set4", prefForVar);
       saveLoad.saveInteger(totalJuiceCount, "set5", prefForVar);
       saveLoad.saveInteger(mainJuiceWeGot, "set6", prefForVar);
+      saveLoad.saveDouble(ordersSumma, "set7", prefForVar);
     }
 
     void loadVar() {
@@ -214,6 +219,7 @@ public class HomeActivity extends AppCompatActivity {
 //        mainMoneyLeftForeach = Math.floor(mainMoneyLeftForeach * 100) / 100;//2 numbers after the dot
         totalJuiceCount = saveLoad.loadInteger("set5", prefForVar);
         mainJuiceWeGot = saveLoad.loadInteger("set6", prefForVar);
+        ordersSumma = saveLoad.loadDouble("set7", prefForVar);
      }
 
     void displayVar() {
