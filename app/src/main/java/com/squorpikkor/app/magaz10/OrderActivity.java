@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -15,9 +16,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import static com.squorpikkor.app.magaz10.HomeActivity.ordersSumma;
-import static com.squorpikkor.app.magaz10.HomeActivity.prefForVar;
-
 public class OrderActivity extends AppCompatActivity {
 
     SharedPreferences oSettings1;
@@ -25,12 +23,14 @@ public class OrderActivity extends AppCompatActivity {
     SharedPreferences oSettings3;
     SharedPreferences oSettings4;
     SharedPreferences oSettings5;
+    SharedPreferences oSettings6;
 
-//    public static final String LOGTAG = "LOGGG!!!";
+    public static final String LOGTAG = "LOGGG!!!";
 
     Button button1, button2, button3, button4;
 
-
+    public static double ordersSumma;
+    public static int zeroPriceCount;
 
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10,
             edit11, edit12, edit13, edit14, edit15, edit16, edit17, edit18, edit19, edit20, edit21, edit22, edit23, edit24, edit25, edit26, edit27, edit28, edit29,
@@ -45,7 +45,7 @@ public class OrderActivity extends AppCompatActivity {
             eeedit27, eeedit28, eeedit29, eeedit30, eeedit31, eeedit32, eeedit33, eeedit34, eeedit35, eeedit36;
 
     TextView text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13, text14, text15, text16, text17, text18,
-    text19, text20, text21, text22, text23, text24, text25, text26, text27, text28, text29, text30, text31, text32, text33, text34, text35, text36;
+            text19, text20, text21, text22, text23, text24, text25, text26, text27, text28, text29, text30, text31, text32, text33, text34, text35, text36;
 
     CheckBox check1, check2, check3, check4, check5, check6, check7, check8, check9, check10, check11, check12, check13, check14, check15, check16, check17, check18,
             check19, check20, check21, check22, check23, check24, check25, check26, check27, check28, check29, check30, check31, check32, check33, check34, check35, check36;
@@ -74,6 +74,7 @@ public class OrderActivity extends AppCompatActivity {
         oSettings3 = getSharedPreferences("orderSettings3", Context.MODE_PRIVATE);
         oSettings4 = getSharedPreferences("orderSettings4", Context.MODE_PRIVATE);
         oSettings5 = getSharedPreferences("orderSettings5", Context.MODE_PRIVATE);
+        oSettings6 = getSharedPreferences("orderSettings6", Context.MODE_PRIVATE);
 
         summator = new EditTextSummator();
         saveLoad = new SaveLoad();
@@ -479,6 +480,9 @@ public class OrderActivity extends AppCompatActivity {
                     case R.id.countButton:
                         ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
                         moneyForBonusTotal.setText(String.valueOf(ordersSumma));
+                        zeroPriceCount = juiceOrderedCount();
+                        Log.e(LOGTAG, "zeroPriceCount: " + zeroPriceCount);
+
 
                         saveCheckStatus();
 
@@ -505,6 +509,8 @@ public class OrderActivity extends AppCompatActivity {
         saveLoad.loadStringEditArray(listOfEdit2, oSettings2);
         saveLoad.loadStringEditArray(listOfEdit3, oSettings3);
         saveLoad.loadStringTViewArray(listOfText, oSettings4);
+        saveLoad.loadInteger("j_c", oSettings6);
+
 
         ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
         moneyForBonusTotal.setText(String.valueOf(ordersSumma));
@@ -519,10 +525,10 @@ public class OrderActivity extends AppCompatActivity {
         saveLoad.saveStringEditArray(listOfEdit2, oSettings2);
         saveLoad.saveStringEditArray(listOfEdit3, oSettings3);
         saveLoad.saveStringTViewArray(listOfText, oSettings4);
+        saveLoad.saveInteger(juiceOrderedCount(), "j_c", oSettings6);
 
         ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
         moneyForBonusTotal.setText(String.valueOf(ordersSumma));
-        saveLoad.saveDouble(ordersSumma, "set7", prefForVar);
 
         saveCheckStatus();
     }
@@ -544,6 +550,10 @@ public class OrderActivity extends AppCompatActivity {
             count++;
         }
         saveLoad.saveBooleanArray(checkSaverArray, oSettings5);
+    }
+
+    int juiceOrderedCount() {
+        return summator.sumOfZeroPrice(listOfEdit2, listOfEdit3);
     }
 
     void loadCheckStatus() {

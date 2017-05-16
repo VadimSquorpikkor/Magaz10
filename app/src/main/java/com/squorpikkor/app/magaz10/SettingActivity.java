@@ -1,3 +1,5 @@
+/////////////////////settings activity
+
 package com.squorpikkor.app.magaz10;
 
 import android.content.Context;
@@ -14,20 +16,23 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import static com.squorpikkor.app.magaz10.HomeActivity.prefForVar;
-import static com.squorpikkor.app.magaz10.HomeActivity.totalJuiceCount;
-import static com.squorpikkor.app.magaz10.HomeActivity.totalOrderPrice;
+import static com.squorpikkor.app.magaz10.OrderActivity.zeroPriceCount;
 
 public class SettingActivity extends AppCompatActivity {
 
 //    public static final String LOGTAG = "LOGGG!!!";
 
-    int bigJuiceCount;
-    int smallJuiceCount;
-    int bigMilkCount;
-    int smallMilkCount;
+    //public static int totalJuiceCount;
+    public static int bigJuiceCount;
+    public static int smallJuiceCount;
+    public static int bigMilkCount;
+    public static int smallMilkCount;
+    public static int totalJuiceCount = zeroPriceCount;
+
 
     TextView txtBJ, txtSJ, txtBM, txtSM, txtTP, txtTJ;
+
+    public static double totalOrderPrice;
 
     SharedPreferences preferences;
     SharedPreferences preferences2;
@@ -35,7 +40,7 @@ public class SettingActivity extends AppCompatActivity {
     SharedPreferences preferences4;
 
     Button button1;
-//    Button button2;
+    //    Button button2;
 //    Button button3;
     Button button4;
 
@@ -117,7 +122,8 @@ public class SettingActivity extends AppCompatActivity {
                         clickActivity(OrderActivity.class);
                         break;*/
                     case R.id.countButton:
-                        totalJuiceCount = summator.intSumOfArray(juiceArrayList);
+                        //totalJuiceCount = summator.intSumOfArray(juiceArrayList);
+                        totalJuiceCount = zeroPriceCount;
                         calculateProductCount();
                         totalOrderPrice();
                         displayVar();
@@ -156,7 +162,8 @@ public class SettingActivity extends AppCompatActivity {
         saveLoad.loadIntArray(countArrayList, preferences3);
         saveLoad.loadStringEdit(edit10, "setInvoice", preferences4);
 
-        totalJuiceCount = summator.intSumOfArray(juiceArrayList);
+        //totalJuiceCount = summator.intSumOfArray(juiceArrayList);
+        totalJuiceCount = zeroPriceCount;//////////////////
         calculateProductCount();
         totalOrderPrice();
         displayVar();
@@ -171,20 +178,16 @@ public class SettingActivity extends AppCompatActivity {
         saveLoad.saveIntArray(countArrayList, preferences3);
         saveLoad.saveStringEdit(edit10, "setInvoice", preferences4);
 
-        totalJuiceCount = summator.intSumOfArray(juiceArrayList);
+        //totalJuiceCount = summator.intSumOfArray(juiceArrayList);
+        totalJuiceCount = zeroPriceCount;
         calculateProductCount();
-
         totalOrderPrice();
-        totalJuiceCount = summator.intSumOfArray(juiceArrayList);
-        saveLoad.saveDouble(totalOrderPrice, "set1", prefForVar);
-        saveLoad.saveInteger(totalJuiceCount, "set5", prefForVar);
-
         displayVar();
     }
 
-    private void calculateProductCount() {
+    /*private void calculateProductCount() {
         edit10.setTextColor(Color.WHITE);
-        double field = Double.parseDouble(edit10.getText().toString());
+        double field = Double.parseDouble(edit10.getText().toString()) * 2;
         int IntegerPart = (int)field;
         double FractionalPart = field - (double)IntegerPart;
 
@@ -202,9 +205,45 @@ public class SettingActivity extends AppCompatActivity {
             smallJuiceCount = 0;
             smallMilkCount = 0;
             edit10.setTextColor(Color.RED);
+        }*/
+
+    private void calculateProductCount() {
+        edit10.setTextColor(Color.WHITE);
+        double fieldJuice = Double.parseDouble(edit10.getText().toString());
+        double fieldMilk = Double.parseDouble(edit10.getText().toString()) * 2;
+        int IntegerPartJuice = (int)fieldJuice;
+        int IntegerPartMilk = (int)fieldMilk;
+        double FractionalPartJuice = fieldJuice - (double)IntegerPartJuice;
+        double FractionalPartMilk = fieldMilk - (double)IntegerPartMilk;
+
+        bigJuiceCount = IntegerPartJuice;
+        bigMilkCount = IntegerPartMilk;
+
+        if (FractionalPartJuice == 0)smallJuiceCount = 0;
+        else if(FractionalPartJuice == 0.25)smallJuiceCount = 1;
+        else if(FractionalPartJuice == 0.5)smallJuiceCount = 2;
+        else if(FractionalPartJuice == 0.75)smallJuiceCount = 3;
+        else {smallJuiceCount = 0;
+            Toast.makeText(this, "Неправильное значение!", Toast.LENGTH_SHORT).show();
+            bigJuiceCount = 0;
+            bigMilkCount = 0;
+            smallJuiceCount = 0;
+            smallMilkCount = 0;
+            edit10.setTextColor(Color.RED);
         }
 
-        smallMilkCount = smallJuiceCount * 2;
+        if (FractionalPartMilk == 0)smallMilkCount = 0;
+        else if(FractionalPartMilk == 0.25)smallMilkCount = 1;
+        else if(FractionalPartMilk == 0.5)smallMilkCount = 2;
+        else if(FractionalPartMilk == 0.75)smallMilkCount = 3;
+        else {smallMilkCount = 0;
+            Toast.makeText(this, "Неправильное значение!", Toast.LENGTH_SHORT).show();
+            bigJuiceCount = 0;
+            bigMilkCount = 0;
+            smallJuiceCount = 0;
+            smallMilkCount = 0;
+            edit10.setTextColor(Color.RED);
+        }
 
     }
 
@@ -215,7 +254,7 @@ public class SettingActivity extends AppCompatActivity {
         double smallMilkPrice = Double.parseDouble(edit9.getText().toString());
 
         double res = 0;
-                res += (bigJuicePrice * bigJuiceCount) +
+        res += (bigJuicePrice * bigJuiceCount) +
                 (bigMilkPrice * bigMilkCount) +
                 (smallJuicePrice * smallJuiceCount) +
                 (smallMilkPrice * smallMilkCount);

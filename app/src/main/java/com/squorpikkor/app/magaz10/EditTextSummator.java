@@ -49,4 +49,20 @@ class EditTextSummator {
         }
         return res;
     }
+
+    int sumOfZeroPrice(ArrayList<EditText> listOfZero, ArrayList<EditText> listOfCount) {
+        int res = 0;
+        /*for (EditText edit : listOfZero) {
+            if (edit.getText().toString().equals("0")) {
+                res += Integer.parseInt();
+            }
+        }*/
+        for (int i = 0; i < listOfZero.size(); i++) {
+            //Log.e("LOGGG!", "list " + i + " = " + listOfZero.get(i).getText().toString());
+            if (listOfZero.get(i).getText().toString().equals("0")) {
+                res += Integer.parseInt(listOfCount.get(i).getText().toString());
+            }
+        }
+        return res;
+    }
 }
