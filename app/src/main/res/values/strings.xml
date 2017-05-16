@@ -15,8 +15,8 @@
     <string name="KROT">Крот(2)</string>
     <string name="SBORKA">Сборка(8)</string>
     <string name="MONTAZ">Монтаж(5)</string>
-    <string name="OTHERS">С/М/В/Ю(4)</string>
-    <string name="KORELIN">Корелин(17)</string>
+    <string name="OTHERS">Пр/Мк/Вс/Сш(4)</string>
+    <string name="KORELIN">Корелин(14)</string>
     <string name="juiceCountTotalByOrders">Итого соков по заказам:</string>
     <string name="juiceBig">Сок 1литр</string>
     <string name="MilkBig">Молоко 1литр</string>
