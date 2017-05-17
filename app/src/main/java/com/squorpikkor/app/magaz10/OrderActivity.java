@@ -23,7 +23,7 @@ public class OrderActivity extends AppCompatActivity {
     SharedPreferences oSettings3;
     SharedPreferences oSettings4;
     SharedPreferences oSettings5;
-    SharedPreferences oSettings6;
+//    SharedPreferences oSettings6;
 
     public static final String LOGTAG = "LOGGG!!!";
 
@@ -74,7 +74,7 @@ public class OrderActivity extends AppCompatActivity {
         oSettings3 = getSharedPreferences("orderSettings3", Context.MODE_PRIVATE);
         oSettings4 = getSharedPreferences("orderSettings4", Context.MODE_PRIVATE);
         oSettings5 = getSharedPreferences("orderSettings5", Context.MODE_PRIVATE);
-        oSettings6 = getSharedPreferences("orderSettings6", Context.MODE_PRIVATE);
+//        oSettings6 = getSharedPreferences("orderSettings6", Context.MODE_PRIVATE);
 
         summator = new EditTextSummator();
         saveLoad = new SaveLoad();
@@ -509,13 +509,14 @@ public class OrderActivity extends AppCompatActivity {
         saveLoad.loadStringEditArray(listOfEdit2, oSettings2);
         saveLoad.loadStringEditArray(listOfEdit3, oSettings3);
         saveLoad.loadStringTViewArray(listOfText, oSettings4);
-        saveLoad.loadInteger("j_c", oSettings6);
+        //saveLoad.loadInteger("j_c", oSettings6);
 
 
         ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
         moneyForBonusTotal.setText(String.valueOf(ordersSumma));
+        zeroPriceCount = juiceOrderedCount();
 
-        loadCheckStatus();
+                loadCheckStatus();
     }
 
     @Override
@@ -525,10 +526,11 @@ public class OrderActivity extends AppCompatActivity {
         saveLoad.saveStringEditArray(listOfEdit2, oSettings2);
         saveLoad.saveStringEditArray(listOfEdit3, oSettings3);
         saveLoad.saveStringTViewArray(listOfText, oSettings4);
-        saveLoad.saveInteger(juiceOrderedCount(), "j_c", oSettings6);
+//        saveLoad.saveInteger(juiceOrderedCount(), "j_c", oSettings6);
 
         ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
         moneyForBonusTotal.setText(String.valueOf(ordersSumma));
+
 
         saveCheckStatus();
     }

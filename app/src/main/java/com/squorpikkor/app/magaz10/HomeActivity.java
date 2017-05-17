@@ -226,6 +226,7 @@ public class HomeActivity extends AppCompatActivity {
         Log.e(LOGTAG, "DISPLAY TotalOrderPrice = " + totalOrderPrice);
         mainMoneyLeftForeach = Math.floor(mainMoneyLeftForeach * 100) / 100;//2 numbers after the dot
         mainMoneyLeft = Math.floor(mainMoneyLeft * 100) / 100;//2 numbers after the dot
+        totalOrderPrice = Math.floor(totalOrderPrice * 100) / 100;
         textJ.setText(mainJuiceWeGot + " / " + totalJuiceCount);
         textN.setText(String.valueOf(totalOrderPrice));
         textOst.setText(String.valueOf(mainMoneyLeft));

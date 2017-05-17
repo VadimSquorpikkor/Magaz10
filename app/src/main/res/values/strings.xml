@@ -37,5 +37,6 @@
     <string name="name">Наименование</string>
     <string name="price">Цена</string>
     <string name="count">Кол.</string>
+    <string name="title_activity_add_to_order">AddToOrderActivity</string>
 
 </resources>

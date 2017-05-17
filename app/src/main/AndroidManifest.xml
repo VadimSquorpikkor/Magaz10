@@ -17,9 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingActivity" />
-        <activity android:name=".OrderActivity"
-            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".OrderActivity"
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name=".LeftActivity" />
+        <activity android:name=".AddToOrderActivity"></activity>
     </application>
 
 </manifest>
