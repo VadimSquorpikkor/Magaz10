@@ -1,5 +1,3 @@
-/////////////////////settings activity
-
 package com.squorpikkor.app.magaz10;
 
 import android.content.Context;

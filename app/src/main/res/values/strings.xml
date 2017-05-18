@@ -39,4 +39,12 @@
     <string name="count">Кол.</string>
     <string name="title_activity_add_to_order">AddToOrderActivity</string>
 
+    <string-array name="name_list">
+        <item>Antonov</item>
+        <item>Bodyalic</item>
+        <item>Alisevich</item>
+        <item>Machnukov</item>
+        <item>Shustov</item>
+        <item>Pekarskiy</item>
+    </string-array>
 </resources>

@@ -1,9 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.squorpikkor.app.magaz10.AddToOrderActivity">
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/name_list" />
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/userOrder1"
+                style="@style/WeightNumberStyle" />
+
+            <CheckBox
+                android:id="@+id/checkJuice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/userOrder2"
+                style="@style/WeightNumberStyle" />
+
+            <CheckBox
+                android:id="@+id/checkJuice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/userOrder3"
+                style="@style/WeightNumberStyle" />
+
+            <CheckBox
+                android:id="@+id/checkJuice3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/userOrder4"
+                style="@style/WeightNumberStyle" />
+
+            <CheckBox
+                android:id="@+id/checkJuice4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/userOrder5"
+                style="@style/WeightNumberStyle" />
+
+            <CheckBox
+                android:id="@+id/checkJuice5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/userOrder6"
+                style="@style/WeightNumberStyle" />
+
+            <CheckBox
+                android:id="@+id/checkJuice6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/userOrder7"
+                style="@style/WeightNumberStyle" />
+
+            <CheckBox
+                android:id="@+id/checkJuice7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/userOrder8"
+                style="@style/WeightNumberStyle" />
+
+            <CheckBox
+                android:id="@+id/checkJuice8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/userOrder9"
+                style="@style/WeightNumberStyle" />
+
+            <CheckBox
+                android:id="@+id/checkJuice9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/userOrder10"
+                style="@style/WeightNumberStyle" />
+
+            <CheckBox
+                android:id="@+id/checkJuice10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addUserOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dobavit zakaz"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
