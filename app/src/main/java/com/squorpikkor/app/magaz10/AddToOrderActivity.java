@@ -2,6 +2,7 @@ package com.squorpikkor.app.magaz10;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -44,5 +45,22 @@ public class AddToOrderActivity extends AppCompatActivity {
         check8 = (CheckBox) findViewById(R.id.checkJuice8);
         check9 = (CheckBox) findViewById(R.id.checkJuice9);
         check10 = (CheckBox) findViewById(R.id.checkJuice10);
+
+        button = (Button) findViewById(R.id.addUserOrder);
+
+        View.OnClickListener listener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()) {
+                    case R.id.addUserOrder:
+                        addOrderToList();
+                        break;
+                }
+            }
+        };
+    }
+
+    private void addOrderToList() {
+
     }
 }
