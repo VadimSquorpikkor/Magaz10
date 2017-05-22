@@ -53,9 +53,9 @@ public class OrderActivity extends AppCompatActivity {
 
     TextView moneyForBonusTotal;
 
-    ArrayList<EditText> listOfEdit1 = new ArrayList<>();
-    ArrayList<EditText> listOfEdit2 = new ArrayList<>();
-    ArrayList<EditText> listOfEdit3 = new ArrayList<>();
+    ArrayList<EditText> listOfItems = new ArrayList<>();
+    ArrayList<EditText> listOfPrices = new ArrayList<>();
+    ArrayList<EditText> listOfItemCount = new ArrayList<>();
     ArrayList<TextView> listOfText = new ArrayList<>();
     boolean[] checkSaverArray = new boolean[36];
 
@@ -272,116 +272,116 @@ public class OrderActivity extends AppCompatActivity {
         check35 = (CheckBox) findViewById(R.id.checkBox35);
         check36 = (CheckBox) findViewById(R.id.checkBox36);
 
-        listOfEdit1.add(edit1);
-        listOfEdit1.add(edit2);
-        listOfEdit1.add(edit3);
-        listOfEdit1.add(edit4);
-        listOfEdit1.add(edit5);
-        listOfEdit1.add(edit6);
-        listOfEdit1.add(edit7);
-        listOfEdit1.add(edit8);
-        listOfEdit1.add(edit9);
-        listOfEdit1.add(edit10);
-        listOfEdit1.add(edit11);
-        listOfEdit1.add(edit12);
-        listOfEdit1.add(edit13);
-        listOfEdit1.add(edit14);
-        listOfEdit1.add(edit15);
-        listOfEdit1.add(edit16);
-        listOfEdit1.add(edit17);
-        listOfEdit1.add(edit18);
-        listOfEdit1.add(edit19);
-        listOfEdit1.add(edit20);
-        listOfEdit1.add(edit21);
-        listOfEdit1.add(edit22);
-        listOfEdit1.add(edit23);
-        listOfEdit1.add(edit24);
-        listOfEdit1.add(edit25);
-        listOfEdit1.add(edit26);
-        listOfEdit1.add(edit27);
-        listOfEdit1.add(edit28);
-        listOfEdit1.add(edit29);
-        listOfEdit1.add(edit30);
-        listOfEdit1.add(edit31);
-        listOfEdit1.add(edit32);
-        listOfEdit1.add(edit33);
-        listOfEdit1.add(edit34);
-        listOfEdit1.add(edit35);
-        listOfEdit1.add(edit36);
+        listOfItems.add(edit1);
+        listOfItems.add(edit2);
+        listOfItems.add(edit3);
+        listOfItems.add(edit4);
+        listOfItems.add(edit5);
+        listOfItems.add(edit6);
+        listOfItems.add(edit7);
+        listOfItems.add(edit8);
+        listOfItems.add(edit9);
+        listOfItems.add(edit10);
+        listOfItems.add(edit11);
+        listOfItems.add(edit12);
+        listOfItems.add(edit13);
+        listOfItems.add(edit14);
+        listOfItems.add(edit15);
+        listOfItems.add(edit16);
+        listOfItems.add(edit17);
+        listOfItems.add(edit18);
+        listOfItems.add(edit19);
+        listOfItems.add(edit20);
+        listOfItems.add(edit21);
+        listOfItems.add(edit22);
+        listOfItems.add(edit23);
+        listOfItems.add(edit24);
+        listOfItems.add(edit25);
+        listOfItems.add(edit26);
+        listOfItems.add(edit27);
+        listOfItems.add(edit28);
+        listOfItems.add(edit29);
+        listOfItems.add(edit30);
+        listOfItems.add(edit31);
+        listOfItems.add(edit32);
+        listOfItems.add(edit33);
+        listOfItems.add(edit34);
+        listOfItems.add(edit35);
+        listOfItems.add(edit36);
 
-        listOfEdit2.add(eedit1);
-        listOfEdit2.add(eedit2);
-        listOfEdit2.add(eedit3);
-        listOfEdit2.add(eedit4);
-        listOfEdit2.add(eedit5);
-        listOfEdit2.add(eedit6);
-        listOfEdit2.add(eedit7);
-        listOfEdit2.add(eedit8);
-        listOfEdit2.add(eedit9);
-        listOfEdit2.add(eedit10);
-        listOfEdit2.add(eedit11);
-        listOfEdit2.add(eedit12);
-        listOfEdit2.add(eedit13);
-        listOfEdit2.add(eedit14);
-        listOfEdit2.add(eedit15);
-        listOfEdit2.add(eedit16);
-        listOfEdit2.add(eedit17);
-        listOfEdit2.add(eedit18);
-        listOfEdit2.add(eedit19);
-        listOfEdit2.add(eedit20);
-        listOfEdit2.add(eedit21);
-        listOfEdit2.add(eedit22);
-        listOfEdit2.add(eedit23);
-        listOfEdit2.add(eedit24);
-        listOfEdit2.add(eedit25);
-        listOfEdit2.add(eedit26);
-        listOfEdit2.add(eedit27);
-        listOfEdit2.add(eedit28);
-        listOfEdit2.add(eedit29);
-        listOfEdit2.add(eedit30);
-        listOfEdit2.add(eedit31);
-        listOfEdit2.add(eedit32);
-        listOfEdit2.add(eedit33);
-        listOfEdit2.add(eedit34);
-        listOfEdit2.add(eedit35);
-        listOfEdit2.add(eedit36);
+        listOfPrices.add(eedit1);
+        listOfPrices.add(eedit2);
+        listOfPrices.add(eedit3);
+        listOfPrices.add(eedit4);
+        listOfPrices.add(eedit5);
+        listOfPrices.add(eedit6);
+        listOfPrices.add(eedit7);
+        listOfPrices.add(eedit8);
+        listOfPrices.add(eedit9);
+        listOfPrices.add(eedit10);
+        listOfPrices.add(eedit11);
+        listOfPrices.add(eedit12);
+        listOfPrices.add(eedit13);
+        listOfPrices.add(eedit14);
+        listOfPrices.add(eedit15);
+        listOfPrices.add(eedit16);
+        listOfPrices.add(eedit17);
+        listOfPrices.add(eedit18);
+        listOfPrices.add(eedit19);
+        listOfPrices.add(eedit20);
+        listOfPrices.add(eedit21);
+        listOfPrices.add(eedit22);
+        listOfPrices.add(eedit23);
+        listOfPrices.add(eedit24);
+        listOfPrices.add(eedit25);
+        listOfPrices.add(eedit26);
+        listOfPrices.add(eedit27);
+        listOfPrices.add(eedit28);
+        listOfPrices.add(eedit29);
+        listOfPrices.add(eedit30);
+        listOfPrices.add(eedit31);
+        listOfPrices.add(eedit32);
+        listOfPrices.add(eedit33);
+        listOfPrices.add(eedit34);
+        listOfPrices.add(eedit35);
+        listOfPrices.add(eedit36);
 
-        listOfEdit3.add(eeedit1);
-        listOfEdit3.add(eeedit2);
-        listOfEdit3.add(eeedit3);
-        listOfEdit3.add(eeedit4);
-        listOfEdit3.add(eeedit5);
-        listOfEdit3.add(eeedit6);
-        listOfEdit3.add(eeedit7);
-        listOfEdit3.add(eeedit8);
-        listOfEdit3.add(eeedit9);
-        listOfEdit3.add(eeedit10);
-        listOfEdit3.add(eeedit11);
-        listOfEdit3.add(eeedit12);
-        listOfEdit3.add(eeedit13);
-        listOfEdit3.add(eeedit14);
-        listOfEdit3.add(eeedit15);
-        listOfEdit3.add(eeedit16);
-        listOfEdit3.add(eeedit17);
-        listOfEdit3.add(eeedit18);
-        listOfEdit3.add(eeedit19);
-        listOfEdit3.add(eeedit20);
-        listOfEdit3.add(eeedit21);
-        listOfEdit3.add(eeedit22);
-        listOfEdit3.add(eeedit23);
-        listOfEdit3.add(eeedit24);
-        listOfEdit3.add(eeedit25);
-        listOfEdit3.add(eeedit26);
-        listOfEdit3.add(eeedit27);
-        listOfEdit3.add(eeedit28);
-        listOfEdit3.add(eeedit29);
-        listOfEdit3.add(eeedit30);
-        listOfEdit3.add(eeedit31);
-        listOfEdit3.add(eeedit32);
-        listOfEdit3.add(eeedit33);
-        listOfEdit3.add(eeedit34);
-        listOfEdit3.add(eeedit35);
-        listOfEdit3.add(eeedit36);
+        listOfItemCount.add(eeedit1);
+        listOfItemCount.add(eeedit2);
+        listOfItemCount.add(eeedit3);
+        listOfItemCount.add(eeedit4);
+        listOfItemCount.add(eeedit5);
+        listOfItemCount.add(eeedit6);
+        listOfItemCount.add(eeedit7);
+        listOfItemCount.add(eeedit8);
+        listOfItemCount.add(eeedit9);
+        listOfItemCount.add(eeedit10);
+        listOfItemCount.add(eeedit11);
+        listOfItemCount.add(eeedit12);
+        listOfItemCount.add(eeedit13);
+        listOfItemCount.add(eeedit14);
+        listOfItemCount.add(eeedit15);
+        listOfItemCount.add(eeedit16);
+        listOfItemCount.add(eeedit17);
+        listOfItemCount.add(eeedit18);
+        listOfItemCount.add(eeedit19);
+        listOfItemCount.add(eeedit20);
+        listOfItemCount.add(eeedit21);
+        listOfItemCount.add(eeedit22);
+        listOfItemCount.add(eeedit23);
+        listOfItemCount.add(eeedit24);
+        listOfItemCount.add(eeedit25);
+        listOfItemCount.add(eeedit26);
+        listOfItemCount.add(eeedit27);
+        listOfItemCount.add(eeedit28);
+        listOfItemCount.add(eeedit29);
+        listOfItemCount.add(eeedit30);
+        listOfItemCount.add(eeedit31);
+        listOfItemCount.add(eeedit32);
+        listOfItemCount.add(eeedit33);
+        listOfItemCount.add(eeedit34);
+        listOfItemCount.add(eeedit35);
+        listOfItemCount.add(eeedit36);
 
         listOfText.add(text1);
         listOfText.add(text2);
@@ -478,7 +478,7 @@ public class OrderActivity extends AppCompatActivity {
                         clickActivity(LeftActivity.class);
                         break;
                     case R.id.countButton:
-                        ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
+                        ordersSumma = summator.sumOfLines(listOfPrices, listOfItemCount, listOfText);
                         moneyForBonusTotal.setText(String.valueOf(ordersSumma));
                         zeroPriceCount = juiceOrderedCount();
                         Log.e(LOGTAG, "zeroPriceCount: " + zeroPriceCount);
@@ -505,14 +505,14 @@ public class OrderActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        saveLoad.loadStringEditArray(listOfEdit1, oSettings1);
-        saveLoad.loadStringEditArray(listOfEdit2, oSettings2);
-        saveLoad.loadStringEditArray(listOfEdit3, oSettings3);
+        saveLoad.loadStringEditArray(listOfItems, oSettings1);
+        saveLoad.loadStringEditArray(listOfPrices, oSettings2);
+        saveLoad.loadStringEditArray(listOfItemCount, oSettings3);
         saveLoad.loadStringTViewArray(listOfText, oSettings4);
-        //saveLoad.loadInteger("j_c", oSettings6);
+        //zeroPriceCount = saveLoad.loadInteger("j_c", oSettings6);
 
 
-        ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
+        ordersSumma = summator.sumOfLines(listOfPrices, listOfItemCount, listOfText);
         moneyForBonusTotal.setText(String.valueOf(ordersSumma));
         zeroPriceCount = juiceOrderedCount();
 
@@ -522,17 +522,19 @@ public class OrderActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        saveLoad.saveStringEditArray(listOfEdit1, oSettings1);
-        saveLoad.saveStringEditArray(listOfEdit2, oSettings2);
-        saveLoad.saveStringEditArray(listOfEdit3, oSettings3);
+        saveLoad.saveStringEditArray(listOfItems, oSettings1);
+        saveLoad.saveStringEditArray(listOfPrices, oSettings2);
+        saveLoad.saveStringEditArray(listOfItemCount, oSettings3);
         saveLoad.saveStringTViewArray(listOfText, oSettings4);
 //        saveLoad.saveInteger(juiceOrderedCount(), "j_c", oSettings6);
 
-        ordersSumma = summator.sumOfLines(listOfEdit2, listOfEdit3, listOfText);
+        ordersSumma = summator.sumOfLines(listOfPrices, listOfItemCount, listOfText);
         moneyForBonusTotal.setText(String.valueOf(ordersSumma));
 
+        zeroPriceCount = juiceOrderedCount();
 
         saveCheckStatus();
+        Log.e(LOGTAG, "zeroPriceCount: " + zeroPriceCount);
     }
 
     /*void resetValues() {
@@ -555,7 +557,7 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     int juiceOrderedCount() {
-        return summator.sumOfZeroPrice(listOfEdit2, listOfEdit3);
+        return summator.sumOfZeroPrice(listOfPrices, listOfItemCount);
     }
 
     void loadCheckStatus() {
@@ -585,9 +587,9 @@ public class OrderActivity extends AppCompatActivity {
         alert.setPositiveButton("Гори оно огнём", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 uncheckAll();
-                saveLoad.clearList(listOfEdit1, "");
-                saveLoad.clearList(listOfEdit2, "");
-                saveLoad.clearList(listOfEdit3, "1");
+                saveLoad.clearList(listOfItems, "");
+                saveLoad.clearList(listOfPrices, "");
+                saveLoad.clearList(listOfItemCount, "1");
                 dialog.cancel();
             }
         });

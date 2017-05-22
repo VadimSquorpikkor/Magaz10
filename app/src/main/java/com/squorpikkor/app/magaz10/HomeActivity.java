@@ -204,7 +204,7 @@ public class HomeActivity extends AppCompatActivity {
       saveLoad.saveDouble(mainTotalJuicePrice, "set2", prefForVar);
       saveLoad.saveDouble(mainMoneyLeft, "set3", prefForVar);
       saveLoad.saveDouble(mainMoneyLeftForeach, "set4", prefForVar);
-      saveLoad.saveInteger(totalJuiceCount, "set5", prefForVar);
+      /////////saveLoad.saveInteger(totalJuiceCount, "set5", prefForVar);
       saveLoad.saveInteger(mainJuiceWeGot, "set6", prefForVar);
       saveLoad.saveDouble(ordersSumma, "set7", prefForVar);
     }
@@ -217,7 +217,7 @@ public class HomeActivity extends AppCompatActivity {
 //        mainMoneyLeft = Math.floor(mainMoneyLeft * 100) / 100;//2 numbers after the dot
         mainMoneyLeftForeach = saveLoad.loadDouble("set4", prefForVar);
 //        mainMoneyLeftForeach = Math.floor(mainMoneyLeftForeach * 100) / 100;//2 numbers after the dot
-        totalJuiceCount = saveLoad.loadInteger("set5", prefForVar);
+        //////totalJuiceCount = saveLoad.loadInteger("set5", prefForVar);
         mainJuiceWeGot = saveLoad.loadInteger("set6", prefForVar);
         ordersSumma = saveLoad.loadDouble("set7", prefForVar);
      }

@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,18 +15,19 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static com.squorpikkor.app.magaz10.HomeActivity.totalJuiceCount;
 import static com.squorpikkor.app.magaz10.OrderActivity.zeroPriceCount;
 
 public class SettingActivity extends AppCompatActivity {
 
-//    public static final String LOGTAG = "LOGGG!!!";
+    public static final String LOGTAG = "LOGGG!!!";
 
     //public static int totalJuiceCount;
     public static int bigJuiceCount;
     public static int smallJuiceCount;
     public static int bigMilkCount;
     public static int smallMilkCount;
-    public static int totalJuiceCount = zeroPriceCount;
+//    public static int totalJuiceCount;
 
 
     TextView txtBJ, txtSJ, txtBM, txtSM, txtTP, txtTJ;
@@ -36,6 +38,7 @@ public class SettingActivity extends AppCompatActivity {
     SharedPreferences preferences2;
     SharedPreferences preferences3;
     SharedPreferences preferences4;
+    SharedPreferences preferences5;
 
     Button button1;
     //    Button button2;
@@ -60,6 +63,7 @@ public class SettingActivity extends AppCompatActivity {
         preferences2 = getSharedPreferences("appSettings2", Context.MODE_APPEND);
         preferences3 = getSharedPreferences("appSettings3", Context.MODE_PRIVATE);
         preferences4 = getSharedPreferences("appSettings4", Context.MODE_PRIVATE);
+        preferences5 = getSharedPreferences("appSettings5", Context.MODE_PRIVATE);
 
         saveLoad = new SaveLoad();
         summator = new EditTextSummator();
@@ -161,10 +165,14 @@ public class SettingActivity extends AppCompatActivity {
         saveLoad.loadStringEdit(edit10, "setInvoice", preferences4);
 
         //totalJuiceCount = summator.intSumOfArray(juiceArrayList);
-        totalJuiceCount = zeroPriceCount;//////////////////
+        //zeroPriceCount = saveLoad.loadInteger("totJ", preferences5);
+        //totalJuiceCount = zeroPriceCount;//////////////////
+        totalJuiceCount = saveLoad.loadInteger("totJ", preferences5);
         calculateProductCount();
         totalOrderPrice();
         displayVar();
+
+        Log.e(LOGTAG, "SETTINGS zeroPriceCount: " + zeroPriceCount);
 
     }
 
@@ -178,9 +186,12 @@ public class SettingActivity extends AppCompatActivity {
 
         //totalJuiceCount = summator.intSumOfArray(juiceArrayList);
         totalJuiceCount = zeroPriceCount;
+        saveLoad.saveInteger(totalJuiceCount, "totJ", preferences5);
         calculateProductCount();
         totalOrderPrice();
         displayVar();
+
+        Log.e(LOGTAG, "SETTINGS zeroPriceCount: " + zeroPriceCount);
     }
 
     /*private void calculateProductCount() {

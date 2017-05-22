@@ -141,4 +141,21 @@ class SaveLoad {
             textView.setText(defaultValue);
         }
     }
+
+    void saveListOfList(ArrayList<ArrayList<String>> listOfList, boolean[] checkList, ArrayList<EditText> listOfNames, ArrayList<EditText> listOfPrices, ArrayList<EditText> listOfCounts) {
+        int count = 0;
+        for (int i = 0; i < listOfNames.size(); i++) {
+            if (!listOfNames.get(count).getText().toString().equals("")) {// Если поле EditText'а не пустое, то добавить строку таблицы в listOfList, иначе ничего не делать
+                listOfList.add(new ArrayList<String>());
+                listOfList.get(listOfList.size() - 1).add(checkList[count]?"true":"false");
+                listOfList.get(listOfList.size() - 1).add(listOfNames.get(count).getText().toString());
+                listOfList.get(listOfList.size() - 1).add(listOfPrices.get(count).getText().toString());
+                listOfList.get(listOfList.size() - 1).add(listOfCounts.get(count).getText().toString());
+
+
+            }
+        }
+
+    }
+
 }
