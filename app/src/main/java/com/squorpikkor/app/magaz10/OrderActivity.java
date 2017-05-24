@@ -16,6 +16,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static com.squorpikkor.app.magaz10.HomeActivity.ordersSumma;
+import static com.squorpikkor.app.magaz10.HomeActivity.prefForVar;
+
 public class OrderActivity extends AppCompatActivity {
 
     SharedPreferences oSettings1;
@@ -29,7 +32,7 @@ public class OrderActivity extends AppCompatActivity {
 
     Button button1, button2, button3, button4;
 
-    public static double ordersSumma;
+//    public static double ordersSumma;
     public static int zeroPriceCount;
 
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10,
@@ -535,6 +538,9 @@ public class OrderActivity extends AppCompatActivity {
 
         saveCheckStatus();
         Log.e(LOGTAG, "zeroPriceCount: " + zeroPriceCount);
+
+
+        saveLoad.saveDouble(ordersSumma, "set7", prefForVar);
     }
 
     /*void resetValues() {

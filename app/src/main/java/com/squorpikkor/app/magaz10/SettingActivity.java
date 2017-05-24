@@ -15,7 +15,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static com.squorpikkor.app.magaz10.HomeActivity.prefForVar;
 import static com.squorpikkor.app.magaz10.HomeActivity.totalJuiceCount;
+import static com.squorpikkor.app.magaz10.HomeActivity.totalOrderPrice;
 import static com.squorpikkor.app.magaz10.OrderActivity.zeroPriceCount;
 
 public class SettingActivity extends AppCompatActivity {
@@ -32,7 +34,7 @@ public class SettingActivity extends AppCompatActivity {
 
     TextView txtBJ, txtSJ, txtBM, txtSM, txtTP, txtTJ;
 
-    public static double totalOrderPrice;
+    //public static double totalOrderPrice;
 
     SharedPreferences preferences;
     SharedPreferences preferences2;
@@ -192,6 +194,10 @@ public class SettingActivity extends AppCompatActivity {
         displayVar();
 
         Log.e(LOGTAG, "SETTINGS zeroPriceCount: " + zeroPriceCount);
+
+
+        saveLoad.saveDouble(totalOrderPrice, "set1", prefForVar);
+        saveLoad.saveInteger(totalJuiceCount, "set5", prefForVar);
     }
 
     /*private void calculateProductCount() {
