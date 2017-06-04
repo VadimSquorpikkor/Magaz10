@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import java.util.ArrayList;
 
+import static com.squorpikkor.app.magaz10.DataSingleton.getInstance;
+
 //import static com.squorpikkor.app.magaz10.OrderActivity.ordersSumma;
 //import static com.squorpikkor.app.magaz10.SettingActivity.totalJuiceCount;
 //import static com.squorpikkor.app.magaz10.SettingActivity.totalOrderPrice;
@@ -207,6 +209,8 @@ public class HomeActivity extends AppCompatActivity {
       /////////saveLoad.saveInteger(totalJuiceCount, "set5", prefForVar);
       saveLoad.saveInteger(mainJuiceWeGot, "set6", prefForVar);
       saveLoad.saveDouble(ordersSumma, "set7", prefForVar);
+
+      DataSingleton.getInstance().setTotalJuiceCount(5);
     }
 
     void loadVar() {
