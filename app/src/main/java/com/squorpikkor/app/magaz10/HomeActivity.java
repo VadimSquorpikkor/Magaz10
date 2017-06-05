@@ -49,6 +49,7 @@ public class HomeActivity extends AppCompatActivity {
 
     EditTextSummator summator;
     SaveLoad saveLoad = new SaveLoad();
+    SaveLoad2 saveLoad2 = new SaveLoad2();
 
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10,
             edit11, edit12, edit13, edit14, edit15, edit16, edit17, edit18, edit19,
@@ -257,6 +258,8 @@ public class HomeActivity extends AppCompatActivity {
         loadVar();
         calculateVar();
         displayVar();
+
+        saveLoad2.loadHomeActivity();
     }
 
     public void clearItAlert (View view){

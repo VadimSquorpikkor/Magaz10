@@ -34,7 +34,6 @@ public class DataSingleton {
 
     public void setTotalJuiceCount(int totalJuiceCount) {
         this.totalJuiceCount = totalJuiceCount;
-        SaveLoad2.saveInteger(totalJuiceCount, "totalJuiceCount");
     }
 
     public double getTotalOrderPrice() {
