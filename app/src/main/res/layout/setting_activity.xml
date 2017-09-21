@@ -7,22 +7,23 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <!--<LinearLayout
         style="@style/horizontalLayoutStyle">
         <TextView
+            android:textSize="30sp"
             style="@style/textStyle"
             android:text="@string/juiceCount" />
 
-        <!--<Button
+        &lt;!&ndash;<Button
             style="@style/buttonStyle"
             android:id="@+id/resetButton"
             android:layout_height="30dp"
-            android:text="Новый заказ" />-->
+            android:text="Новый заказ" />&ndash;&gt;
 
-    </LinearLayout>
+    </LinearLayout>-->
 
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+    <!--<LinearLayout style="@style/horizontalLayoutStyle">
 
         <TextView
             style="@style/textStyle"
@@ -84,13 +85,16 @@
             android:text="@string/ZERO"
             style="@style/shortNumberStyle" />
 
-    </LinearLayout>
+    </LinearLayout>-->
 
     <LinearLayout style="@style/horizontalLayoutStyle">
         <TextView
+            android:textSize="30sp"
             style="@style/textStyle"
             android:text="@string/juiceCountTotalByOrders" />
+
         <TextView
+            android:textSize="25sp"
             style="@style/textStyle"
             android:id="@+id/juiceZakazCount"
             android:text="@string/ZERO" />
@@ -99,8 +103,9 @@
     <LinearLayout
         style="@style/horizontalLayoutStyle">
         <TextView
+            android:textSize="30sp"
             style="@style/textStyle"
-            android:text="@string/prices" />
+            android:text="@string/juice_price" />
 
     </LinearLayout>
     <LinearLayout style="@style/horizontalLayoutStyle">
@@ -162,6 +167,15 @@
             android:text="" />
 
     </LinearLayout>-->
+
+    <LinearLayout
+        style="@style/horizontalLayoutStyle">
+        <TextView
+            android:textSize="30sp"
+            style="@style/textStyle"
+            android:text="@string/count_juice" />
+
+    </LinearLayout>
 
     <LinearLayout style="@style/horizontalLayoutStyle">
 
@@ -227,32 +241,46 @@
 
     <LinearLayout style="@style/horizontalLayoutStyle">
         <TextView
+            android:textSize="30sp"
             style="@style/textStyle"
             android:text="@string/totalPriceInDocument" />
+        </LinearLayout>
+        <LinearLayout style="@style/horizontalLayoutStyle">
         <TextView
+            android:textColor="@android:color/holo_green_light"
             style="@style/textStyle"
+            android:layout_height="30dp"
             android:id="@+id/totalNakladnayaPrice"
             android:text="" />
     </LinearLayout>
 
     <LinearLayout style="@style/horizontalLayoutStyle">
         <Button
-            style="@style/buttonStyle"
-            android:id="@+id/homeButton"
-            android:text="@string/back" />
-
-        <!--<Button
-            style="@style/buttonStyle"
-            android:id="@+id/leftButton"
-            android:text="Остаток" />
-        <Button
-            style="@style/buttonStyle"
-            android:id="@+id/orderButton"
-            android:text="Заказы" />-->
-        <Button
+            android:layout_height="30dp"
             style="@style/buttonStyle"
             android:id="@+id/countButton"
             android:text="@string/calculate" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/homeButton"
+            android:text="@string/home" />
+        <Button
+            style="@style/buttonStyle"
+            android:background="@android:color/holo_orange_dark"
+            android:id="@+id/SetValueButton"
+            android:text="@string/price_button"/>
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/leftButton"
+            android:text="@string/left" />
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/orderButton"
+            android:text="@string/orders" />
+
     </LinearLayout>
 
 </LinearLayout>

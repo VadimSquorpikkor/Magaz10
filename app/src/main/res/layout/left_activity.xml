@@ -6,10 +6,18 @@
     android:orientation="vertical">
 
     <LinearLayout style="@style/horizontalLayoutStyle"
-        android:layout_height="120dp">
+        android:layout_height="50dp">
 
     </LinearLayout>
 
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <TextView
+            style="@style/textStyle"
+            android:textSize="50sp"
+            android:text="Денег осталось:" />
+
+    </LinearLayout>
 
     <LinearLayout style="@style/horizontalLayoutStyle">
 
@@ -22,6 +30,13 @@
             style="@style/textStyle"
             android:text="@string/ZERO" />
 
+        <Button
+
+            android:layout_height="30dp"
+            style="@style/buttonStyle"
+            android:text="@string/clearIt"
+            android:id="@+id/leftEraseButton"
+             />
     </LinearLayout>
     <LinearLayout style="@style/horizontalLayoutStyle">
 
@@ -34,6 +49,18 @@
             style="@style/textStyle"
             android:text="@string/ZERO" />
 
+    </LinearLayout>
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+        <TextView
+            android:text="@string/price"
+            style="@style/WeightNumberStyle" />
+        <TextView
+            android:text="@string/count"
+            style="@style/editStyle" />
+        <TextView
+            android:text="Всего"
+            style="@style/editStyle" />
     </LinearLayout>
 
     <LinearLayout style="@style/horizontalLayoutStyle">
@@ -141,18 +168,19 @@
             style="@style/buttonStyle"
 
             android:layout_height="30dp"
-            android:text="@string/clearIt"
-            android:id="@+id/leftEraseButton"
-            android:layout_width="170dp" />
+            android:id="@+id/countButton"
+            android:text="@string/calculate"
+             />
+        <!--android:layout_width="170dp"-->
 
-        <TextView
+        <!--<TextView
             android:id="@+id/clear"
             style="@style/editStyle"
-            android:layout_width="250dp" />
+            android:layout_width="250dp" />-->
     </LinearLayout>
 
     <LinearLayout style="@style/horizontalLayoutStyle"
-        android:layout_height="120dp">
+        android:layout_height="20dp">
 
     </LinearLayout>
 
@@ -161,20 +189,20 @@
             style="@style/buttonStyle"
             android:id="@+id/homeButton"
             android:text="@string/home" />
-
         <Button
             style="@style/buttonStyle"
+            android:id="@+id/SetValueButton"
+            android:text="@string/price_button"/>
+        <Button
             android:background="@android:color/holo_orange_dark"
+            style="@style/buttonStyle"
             android:id="@+id/leftButton"
             android:text="@string/left" />
         <Button
             style="@style/buttonStyle"
             android:id="@+id/orderButton"
             android:text="@string/orders" />
-        <Button
-            style="@style/buttonStyle"
-            android:id="@+id/countButton"
-            android:text="@string/calculate" />
+
     </LinearLayout>
 
 

@@ -2,6 +2,7 @@ package com.squorpikkor.app.magaz10;
 
 //Created by Vadim on 04.06.2017.
 
+import android.content.Context;
 import android.content.SharedPreferences;
 
 class SaveLoad2 {

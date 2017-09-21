@@ -30,7 +30,7 @@ public class OrderActivity extends AppCompatActivity {
 
     public static final String LOGTAG = "LOGGG!!!";
 
-    Button button1, button2, button3, button4;
+    Button button1, button2, button3, button4, button5;
 
 //    public static double ordersSumma;
     public static int zeroPriceCount;
@@ -86,6 +86,7 @@ public class OrderActivity extends AppCompatActivity {
         button2 = (Button) findViewById(R.id.leftButton);
         button3 = (Button) findViewById(R.id.countButton);
         button4 = (Button) findViewById(R.id.orderClearButton);
+        button5 = (Button) findViewById(R.id.SetValueButton);
 
         moneyForBonusTotal = (TextView) findViewById(R.id.orderBonusMoneySpent);
 
@@ -471,6 +472,9 @@ public class OrderActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
+                    case R.id.SetValueButton:
+                        clickActivity(SettingActivity.class);
+                        break;
                     case R.id.orderClearButton:
                         clearItAlert(v);
                         break;
@@ -499,6 +503,7 @@ public class OrderActivity extends AppCompatActivity {
         button2.setOnClickListener(listener);
         button3.setOnClickListener(listener);
         button4.setOnClickListener(listener);
+        button5.setOnClickListener(listener);
     }
 
     private void clickActivity(Class c) {

@@ -43,8 +43,8 @@ public class SettingActivity extends AppCompatActivity {
     SharedPreferences preferences5;
 
     Button button1;
-    //    Button button2;
-//    Button button3;
+    Button button2;
+    Button button3;
     Button button4;
 
     ArrayList<EditText> juiceArrayList = new ArrayList<>();
@@ -78,11 +78,11 @@ public class SettingActivity extends AppCompatActivity {
         txtTP = (TextView) findViewById(R.id.totalNakladnayaPrice);
         txtTJ = (TextView) findViewById(R.id.juiceZakazCount);
 
-        edit1 = (EditText) findViewById(R.id.jCount1);
-        edit2 = (EditText) findViewById(R.id.jCount2);
-        edit3 = (EditText) findViewById(R.id.jCount3);
-        edit4 = (EditText) findViewById(R.id.jCount4);
-        edit5 = (EditText) findViewById(R.id.jCount5);
+//        edit1 = (EditText) findViewById(R.id.jCount1);
+//        edit2 = (EditText) findViewById(R.id.jCount2);
+//        edit3 = (EditText) findViewById(R.id.jCount3);
+//        edit4 = (EditText) findViewById(R.id.jCount4);
+//        edit5 = (EditText) findViewById(R.id.jCount5);
         edit6 = (EditText) findViewById(R.id.price1);
         edit7 = (EditText) findViewById(R.id.price2);
         edit8 = (EditText) findViewById(R.id.price3);
@@ -90,15 +90,15 @@ public class SettingActivity extends AppCompatActivity {
         edit10 = (EditText) findViewById(R.id.juiceInOrder);
 
         button1 = (Button) findViewById(R.id.homeButton);
-//        button2 = (Button) findViewById(R.id.leftButton);
-//        button3 = (Button) findViewById(R.id.orderButton);
+        button2 = (Button) findViewById(R.id.leftButton);
+        button3 = (Button) findViewById(R.id.orderButton);
         button4 = (Button) findViewById(R.id.countButton);
 
-        juiceArrayList.add(edit1);
-        juiceArrayList.add(edit2);
-        juiceArrayList.add(edit3);
-        juiceArrayList.add(edit4);
-        juiceArrayList.add(edit5);
+//        juiceArrayList.add(edit1);
+//        juiceArrayList.add(edit2);
+//        juiceArrayList.add(edit3);
+//        juiceArrayList.add(edit4);
+//        juiceArrayList.add(edit5);
 
         priceArrayList.add(edit6);
         priceArrayList.add(edit7);
@@ -119,12 +119,12 @@ public class SettingActivity extends AppCompatActivity {
                     case R.id.homeButton:
                         clickActivity(HomeActivity.class);
                         break;
-                   /* case R.id.leftButton:
+                    case R.id.leftButton:
                         clickActivity(LeftActivity.class);
                         break;
                     case R.id.orderButton:
                         clickActivity(OrderActivity.class);
-                        break;*/
+                        break;
                     case R.id.countButton:
                         //totalJuiceCount = summator.intSumOfArray(juiceArrayList);
                         totalJuiceCount = zeroPriceCount;
@@ -139,8 +139,8 @@ public class SettingActivity extends AppCompatActivity {
         };
 
         button1.setOnClickListener(listener);
-//        button2.setOnClickListener(listener);
-//        button3.setOnClickListener(listener);
+        button2.setOnClickListener(listener);
+        button3.setOnClickListener(listener);
         button4.setOnClickListener(listener);
     }
 

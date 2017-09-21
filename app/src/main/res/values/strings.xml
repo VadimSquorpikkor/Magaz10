@@ -17,7 +17,7 @@
     <string name="MONTAZ">Монтаж(5)</string>
     <string name="OTHERS">Пр/Мк/Вс/Сш(4)</string>
     <string name="KORELIN">Корелин(14)</string>
-    <string name="juiceCountTotalByOrders">Итого соков по заказам:</string>
+    <string name="juiceCountTotalByOrders">Соков по заказам:</string>
     <string name="juiceBig">Сок 1литр</string>
     <string name="MilkBig">Молоко 1литр</string>
     <string name="juiceSmall">Сок 0.250мл</string>
@@ -38,6 +38,9 @@
     <string name="price">Цена</string>
     <string name="count">Кол.</string>
     <string name="title_activity_add_to_order">AddToOrderActivity</string>
+    <string name="price_button">Цены</string>
+    <string name="juice_price">Цены на соки:</string>
+    <string name="count_juice">Посчитать соки:</string>
 
     <string-array name="name_list">
         <item>Antonov</item>

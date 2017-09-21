@@ -16,11 +16,7 @@
             android:id="@+id/textJ"
             android:text="@string/ZERO" />
 
-        <Button
-            style="@style/buttonStyle"
-            android:id="@+id/SetValueButton"
-            android:layout_height="30dp"
-            android:text="@string/settings" />
+
     </LinearLayout>
 
     <LinearLayout style="@style/horizontalLayoutStyle">
@@ -34,11 +30,7 @@
             android:id="@+id/textN"
             android:text="@string/ZERO" />
 
-        <Button
-            style="@style/buttonStyle"
-            android:id="@+id/homeClear"
-            android:layout_height="30dp"
-            android:text="@string/clearIt" />
+
 
     </LinearLayout>
 
@@ -53,10 +45,6 @@
             android:id="@+id/textOst"
             android:text="@string/ZERO" />
 
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
         <TextView
             style="@style/textStyle"
             android:text="@string/forEach" />
@@ -65,8 +53,18 @@
             style="@style/textStyle"
             android:id="@+id/textFE"
             android:text="@string/ZERO" />
-
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/homeClear"
+            android:layout_height="30dp"
+            android:text="@string/clearIt" />
     </LinearLayout>
+
+    <!--<LinearLayout style="@style/horizontalLayoutStyle">
+
+
+
+    </LinearLayout>-->
 
     <LinearLayout style="@style/horizontalLayoutStyle">
 
@@ -197,6 +195,13 @@
             android:id="@+id/edit28"/>
 
     </LinearLayout>
+    <LinearLayout style="@style/horizontalLayoutStyle">
+    <Button
+        style="@style/buttonStyle"
+        android:id="@+id/countButton"
+        android:layout_height="30dp"
+        android:text="@string/calculate" />
+        </LinearLayout>
 
     <LinearLayout style="@style/horizontalLayoutStyle">
         <Button
@@ -204,7 +209,10 @@
             android:background="@android:color/holo_orange_dark"
             android:id="@+id/homeButton"
             android:text="@string/home" />
-
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/SetValueButton"
+            android:text="@string/price_button"/>
         <Button
             style="@style/buttonStyle"
             android:id="@+id/leftButton"
@@ -213,10 +221,7 @@
             style="@style/buttonStyle"
             android:id="@+id/orderButton"
             android:text="@string/orders" />
-        <Button
-            style="@style/buttonStyle"
-            android:id="@+id/countButton"
-            android:text="@string/calculate" />
+
     </LinearLayout>
 
 

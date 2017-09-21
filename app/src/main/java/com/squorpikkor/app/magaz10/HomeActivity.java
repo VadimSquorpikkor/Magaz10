@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import java.util.ArrayList;
 
-import static com.squorpikkor.app.magaz10.DataSingleton.getInstance;
+//import static com.squorpikkor.app.magaz10.DataSingleton.getInstance;
 
 //import static com.squorpikkor.app.magaz10.OrderActivity.ordersSumma;
 //import static com.squorpikkor.app.magaz10.SettingActivity.totalJuiceCount;
@@ -35,6 +35,7 @@ public class HomeActivity extends AppCompatActivity {
     public static double ordersSumma;
 
     //////////////////////////////////
+
     double mainTotalJuicePrice = 0;
     double mainMoneyLeft = 0;
     public static double mainMoneyLeftForeach = 0;
@@ -49,7 +50,7 @@ public class HomeActivity extends AppCompatActivity {
 
     EditTextSummator summator;
     SaveLoad saveLoad = new SaveLoad();
-    SaveLoad2 saveLoad2 = new SaveLoad2();
+//    SaveLoad2 saveLoad2 = new SaveLoad2();
 
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10,
             edit11, edit12, edit13, edit14, edit15, edit16, edit17, edit18, edit19,
@@ -211,7 +212,7 @@ public class HomeActivity extends AppCompatActivity {
       saveLoad.saveInteger(mainJuiceWeGot, "set6", prefForVar);
       saveLoad.saveDouble(ordersSumma, "set7", prefForVar);
 
-      DataSingleton.getInstance().setTotalJuiceCount(5);
+      //DataSingleton.getInstance().setTotalJuiceCount(5);
     }
 
     void loadVar() {
@@ -259,7 +260,7 @@ public class HomeActivity extends AppCompatActivity {
         calculateVar();
         displayVar();
 
-        saveLoad2.loadHomeActivity();
+//        saveLoad2.loadHomeActivity();
     }
 
     public void clearItAlert (View view){

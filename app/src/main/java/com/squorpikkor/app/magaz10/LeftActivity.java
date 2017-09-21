@@ -22,6 +22,7 @@ public class LeftActivity extends AppCompatActivity {
     Button button2;
     Button button3;
     Button button4;
+    Button button5;
 
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10, edit11, edit12, edit13, edit14;
 
@@ -52,6 +53,7 @@ public class LeftActivity extends AppCompatActivity {
         button2 = (Button) findViewById(R.id.orderButton);
         button3 = (Button) findViewById(R.id.countButton);
         button4 = (Button) findViewById(R.id.leftEraseButton);
+        button5 = (Button) findViewById(R.id.SetValueButton);
 
         edit1 = (EditText) findViewById(R.id.leftPrice1);
         edit2 = (EditText) findViewById(R.id.leftPrice2);
@@ -114,6 +116,9 @@ public class LeftActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
+                    case R.id.SetValueButton:
+                        clickActivity(SettingActivity.class);
+                        break;
                     case R.id.homeButton:
                         clickActivity(HomeActivity.class);
                         break;
@@ -139,6 +144,7 @@ public class LeftActivity extends AppCompatActivity {
         button2.setOnClickListener(listener);
         button3.setOnClickListener(listener);
         button4.setOnClickListener(listener);
+        button5.setOnClickListener(listener);
     }
 
     private void clickActivity(Class c) {
