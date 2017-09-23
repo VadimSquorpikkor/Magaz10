@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 import static com.squorpikkor.app.magaz10.HomeActivity.ordersSumma;
 import static com.squorpikkor.app.magaz10.HomeActivity.prefForVar;
+import static com.squorpikkor.app.magaz10.HomeActivity.zeroPriceCount;
 
 public class OrderActivity extends AppCompatActivity {
 
@@ -33,7 +34,7 @@ public class OrderActivity extends AppCompatActivity {
     Button button1, button2, button3, button4, button5;
 
 //    public static double ordersSumma;
-    public static int zeroPriceCount;
+//    public static int zeroPriceCount;
 
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10,
             edit11, edit12, edit13, edit14, edit15, edit16, edit17, edit18, edit19, edit20, edit21, edit22, edit23, edit24, edit25, edit26, edit27, edit28, edit29,

@@ -15,20 +15,26 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import static com.squorpikkor.app.magaz10.HomeActivity.bigJuiceCount;
+import static com.squorpikkor.app.magaz10.HomeActivity.bigMilkCount;
 import static com.squorpikkor.app.magaz10.HomeActivity.prefForVar;
+import static com.squorpikkor.app.magaz10.HomeActivity.smallJuiceCount;
+import static com.squorpikkor.app.magaz10.HomeActivity.smallMilkCount;
 import static com.squorpikkor.app.magaz10.HomeActivity.totalJuiceCount;
 import static com.squorpikkor.app.magaz10.HomeActivity.totalOrderPrice;
-import static com.squorpikkor.app.magaz10.OrderActivity.zeroPriceCount;
+import static com.squorpikkor.app.magaz10.HomeActivity.zeroPriceCount;
 
 public class SettingActivity extends AppCompatActivity {
 
     public static final String LOGTAG = "LOGGG!!!";
 
     //public static int totalJuiceCount;
-    public static int bigJuiceCount;
+
+    /*public static int bigJuiceCount;
     public static int smallJuiceCount;
     public static int bigMilkCount;
-    public static int smallMilkCount;
+    public static int smallMilkCount;*/
+
 //    public static int totalJuiceCount;
 
 
@@ -51,7 +57,7 @@ public class SettingActivity extends AppCompatActivity {
     ArrayList<EditText> priceArrayList = new ArrayList<>();
     ArrayList<Integer> countArrayList = new ArrayList<>();
 
-    EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10;
+    EditText edit6, edit7, edit8, edit9, edit10;
 
     SaveLoad saveLoad;
     EditTextSummator summator;
@@ -161,6 +167,8 @@ public class SettingActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
+        Log.e(LOGTAG, "SETTINGS zeroPriceCount: " + zeroPriceCount);
         saveLoad.loadStringEditArray(juiceArrayList, preferences);
         saveLoad.loadStringEditArray(priceArrayList, preferences2);
         saveLoad.loadIntArray(countArrayList, preferences3);
@@ -170,6 +178,7 @@ public class SettingActivity extends AppCompatActivity {
         //zeroPriceCount = saveLoad.loadInteger("totJ", preferences5);
         //totalJuiceCount = zeroPriceCount;//////////////////
         totalJuiceCount = saveLoad.loadInteger("totJ", preferences5);
+        totalJuiceCount = zeroPriceCount;
         calculateProductCount();
         totalOrderPrice();
         displayVar();

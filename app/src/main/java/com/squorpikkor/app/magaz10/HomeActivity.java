@@ -26,6 +26,12 @@ public class HomeActivity extends AppCompatActivity {
 
     //////////////////////////////////
 
+    public static int zeroPriceCount;
+    public static int bigJuiceCount;
+    public static int smallJuiceCount;
+    public static int bigMilkCount;
+    public static int smallMilkCount;
+
     public static int totalJuiceCount;
 
     public static double totalOrderPrice;
@@ -233,7 +239,8 @@ public class HomeActivity extends AppCompatActivity {
         mainMoneyLeftForeach = Math.floor(mainMoneyLeftForeach * 100) / 100;//2 numbers after the dot
         mainMoneyLeft = Math.floor(mainMoneyLeft * 100) / 100;//2 numbers after the dot
         totalOrderPrice = Math.floor(totalOrderPrice * 100) / 100;
-        textJ.setText(mainJuiceWeGot + " / " + totalJuiceCount);
+//        textJ.setText(mainJuiceWeGot + " / " + totalJuiceCount);
+        textJ.setText(mainJuiceWeGot + " / " + zeroPriceCount);
         textN.setText(String.valueOf(totalOrderPrice));
         textOst.setText(String.valueOf(mainMoneyLeft));
         textFE.setText(String.valueOf(mainMoneyLeftForeach));
@@ -259,6 +266,8 @@ public class HomeActivity extends AppCompatActivity {
         loadVar();
         calculateVar();
         displayVar();
+
+
 
 //        saveLoad2.loadHomeActivity();
     }
