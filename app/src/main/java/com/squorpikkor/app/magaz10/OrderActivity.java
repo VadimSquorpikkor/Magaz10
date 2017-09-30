@@ -31,7 +31,7 @@ public class OrderActivity extends AppCompatActivity {
 
     public static final String LOGTAG = "LOGGG!!!";
 
-    Button button1, button2, button3, button4, button5;
+    Button button1, button2, button3, button4, button5, phonesButton;
 
 //    public static double ordersSumma;
 //    public static int zeroPriceCount;
@@ -68,6 +68,8 @@ public class OrderActivity extends AppCompatActivity {
 
     ArrayList<CheckBox> chList = new ArrayList<>();
 
+    String phonesText = "Крот - 145\nПраневич - 136\nВася - 104\nСергей Каменщиков (Корелин) - (9)2651237";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +90,7 @@ public class OrderActivity extends AppCompatActivity {
         button3 = (Button) findViewById(R.id.countButton);
         button4 = (Button) findViewById(R.id.orderClearButton);
         button5 = (Button) findViewById(R.id.SetValueButton);
+        phonesButton = (Button)findViewById(R.id.phonesButton);
 
         moneyForBonusTotal = (TextView) findViewById(R.id.orderBonusMoneySpent);
 
@@ -490,10 +493,10 @@ public class OrderActivity extends AppCompatActivity {
                         moneyForBonusTotal.setText(String.valueOf(ordersSumma));
                         zeroPriceCount = juiceOrderedCount();
                         Log.e(LOGTAG, "zeroPriceCount: " + zeroPriceCount);
-
-
                         saveCheckStatus();
-
+                        break;
+                    case R.id.phonesButton:
+                        okAlert(phonesText);
                         break;
                 }
             }
@@ -505,6 +508,7 @@ public class OrderActivity extends AppCompatActivity {
         button3.setOnClickListener(listener);
         button4.setOnClickListener(listener);
         button5.setOnClickListener(listener);
+        phonesButton.setOnClickListener(listener);
     }
 
     private void clickActivity(Class c) {
@@ -612,6 +616,24 @@ public class OrderActivity extends AppCompatActivity {
             }
         });
         alert.show();
+    }
+
+    void okAlert(String message) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+        alert.setMessage(message);
+
+        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                dialog.cancel();
+            }
+        });
+
+        alert.show();
+    }
+
+    void addDynamicView() {
+
     }
 
 }

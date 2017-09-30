@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+    <!--<LinearLayout style="@style/horizontalLayoutStyle">
 
         <TextView
             style="@style/textStyle"
@@ -20,6 +20,30 @@
             android:layout_height="30dp"
             android:text="@string/clearIt"
             android:id="@+id/orderClearButton"/>
+
+    </LinearLayout>-->
+
+    <LinearLayout style="@style/horizontalLayoutStyle">
+
+        <Button
+            style="@style/buttonStyle"
+            android:layout_height="30dp"
+            android:text="@string/clearIt"
+            android:id="@+id/orderClearButton"/>
+
+        <TextView
+            style="@style/textStyle"
+            android:text="@string/money" />
+
+        <TextView
+            android:id="@+id/orderBonusMoneySpent"
+            style="@style/textStyle"
+            android:text="@string/ZERO" />
+        <Button
+            style="@style/buttonStyle"
+            android:layout_height="30dp"
+            android:text="@string/phones"
+            android:id="@+id/phonesButton"/>
 
     </LinearLayout>
 
@@ -958,6 +982,15 @@
                     android:text=""
                     android:id="@+id/text36" />
             </LinearLayout>
+            <LinearLayout style="@style/horizontalLayoutStyle"
+                android:layout_height="180dp">
+            </LinearLayout>
+            <LinearLayout style="@style/horizontalLayoutStyle"
+                android:layout_height="wrap_content"
+                android:id="@+id/experimental_layout">
+
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
@@ -991,5 +1024,7 @@
             android:text="@string/orders" />
 
     </LinearLayout>
+
+
 
 </LinearLayout>

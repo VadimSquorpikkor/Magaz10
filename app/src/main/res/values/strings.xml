@@ -41,6 +41,8 @@
     <string name="price_button">Цены</string>
     <string name="juice_price">Цены на соки:</string>
     <string name="count_juice">Посчитать соки:</string>
+    <string name="phones">телефоны</string>
+    <string name="money">Денег</string>
 
     <string-array name="name_list">
         <item>Antonov</item>

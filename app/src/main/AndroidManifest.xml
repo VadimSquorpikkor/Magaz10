@@ -21,7 +21,8 @@
             android:name=".OrderActivity"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".LeftActivity" />
-        <activity android:name=".AddToOrderActivity"></activity>
+        <activity android:name=".AddToOrderActivity" />
+        <activity android:name=".ClientListActivity"></activity>
     </application>
 
 </manifest>
