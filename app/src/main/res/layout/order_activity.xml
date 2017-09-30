@@ -986,6 +986,7 @@
                 android:layout_height="180dp">
             </LinearLayout>
             <LinearLayout style="@style/horizontalLayoutStyle"
+                android:orientation="vertical"
                 android:layout_height="wrap_content"
                 android:id="@+id/experimental_layout">
 

@@ -10,6 +10,10 @@ public class Juice {
     private double cost = 0;
     private int count = 0;
 
+    Juice(String name) {
+        this.name = name;
+    }
+
     double totalPrice() {
         return cost * (double)count;
     }

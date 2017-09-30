@@ -9,7 +9,15 @@ import java.util.ArrayList;
 
 public class User {
     private String name;
-    private ArrayList<Juice> currentUserOrder;
+    private ArrayList<Juice> currentUserOrder = new ArrayList<>();
+
+    User(String name) {
+        this.name = name;
+    }
+
+    void addJuice(String name) {
+        currentUserOrder.add(new Juice(name));
+    }
 
     public String getName() {
         return name;

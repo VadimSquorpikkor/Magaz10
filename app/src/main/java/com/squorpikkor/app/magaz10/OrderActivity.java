@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -69,6 +70,9 @@ public class OrderActivity extends AppCompatActivity {
     ArrayList<CheckBox> chList = new ArrayList<>();
 
     String phonesText = "Крот - 145\nПраневич - 136\nВася - 104\nСергей Каменщиков (Корелин) - (9)2651237";
+
+    ViewConstructor viewConstructor;
+    LinearLayout layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -471,6 +475,19 @@ public class OrderActivity extends AppCompatActivity {
         }
 
 
+        /**EXPERIMENTAL LAYOUT*/
+        ArrayList<User> userList = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            User user = new User("User " + i);
+            user.addJuice("Nice Juice ");
+            userList.add(user);
+        }
+        layout = (LinearLayout) findViewById(R.id.experimental_layout);
+        viewConstructor = new ViewConstructor(this, layout);
+        viewConstructor.createBlock(userList.get(0));
+        viewConstructor.createBlock(userList.get(1));
+        viewConstructor.createBlock(userList.get(2));
+
         //region onClickListener///////////////////////////////////////////////////////
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -633,6 +650,7 @@ public class OrderActivity extends AppCompatActivity {
     }
 
     void addDynamicView() {
+
 
     }
 
