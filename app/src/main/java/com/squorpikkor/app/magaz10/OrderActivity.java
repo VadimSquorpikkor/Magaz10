@@ -479,9 +479,13 @@ public class OrderActivity extends AppCompatActivity {
         ArrayList<User> userList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             User user = new User("User " + i);
-            user.addJuice("Nice Juice ");
+//            user.addJuice("Nice Juice ");
             userList.add(user);
         }
+        userList.get(0).addJuice("Juice Some Nice1");
+        userList.get(0).addJuice("Juice Some Nice2");
+        userList.get(0).addJuice("Juice Some Nice3");
+
         layout = (LinearLayout) findViewById(R.id.experimental_layout);
         viewConstructor = new ViewConstructor(this, layout);
         viewConstructor.createBlock(userList.get(0));
