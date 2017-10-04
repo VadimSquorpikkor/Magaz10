@@ -2,7 +2,9 @@ package com.squorpikkor.app.magaz10;
 
 // Created by Vadim on 03.06.2017.
 
-public class DataSingleton {
+import java.io.Serializable;
+
+public class DataSingleton implements Serializable{
 
     private DataSingleton() {}
 
