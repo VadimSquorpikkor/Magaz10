@@ -474,8 +474,11 @@ public class OrderActivity extends AppCompatActivity {
             checkSaverArray[i] = false;
         }
 
+/*
 
-        /**EXPERIMENTAL LAYOUT*/
+        */
+/**EXPERIMENTAL LAYOUT*//*
+
         ArrayList<User> userList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             User user = new User("User " + i);
@@ -491,6 +494,7 @@ public class OrderActivity extends AppCompatActivity {
         viewConstructor.createBlock(userList.get(0));
         viewConstructor.createBlock(userList.get(1));
         viewConstructor.createBlock(userList.get(2));
+*/
 
         //region onClickListener///////////////////////////////////////////////////////
         View.OnClickListener listener = new View.OnClickListener() {
