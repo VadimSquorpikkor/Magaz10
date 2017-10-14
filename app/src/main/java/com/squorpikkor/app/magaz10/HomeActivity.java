@@ -60,9 +60,11 @@ public class HomeActivity extends AppCompatActivity {
 
     EditText edit1, edit2, edit3, edit4, edit5, edit6, edit7, edit8, edit9, edit10,
             edit11, edit12, edit13, edit14, edit15, edit16, edit17, edit18, edit19,
-            edit20, edit21, edit22, edit23, edit24, edit25, edit26, edit27, edit28;
+            edit20, edit21, edit22, edit23, edit24, edit25, edit26, edit27, edit28,
+            edit29, edit30, edit31, edit32, edit33, edit34, edit35, edit36, edit37,
+            edit38, edit39, edit40;
 
-    TextView textN, textJ, textOst, textFE;
+    TextView textN, textJ, textOst, textFE, juiceBigLeft;
 
     ArrayList<EditText> listOfEdit1 = new ArrayList<>();
     ArrayList<EditText> listOfEdit2 = new ArrayList<>();
@@ -97,6 +99,7 @@ public class HomeActivity extends AppCompatActivity {
         textJ = (TextView) findViewById(R.id.textJ);
         textOst = (TextView) findViewById(R.id.textOst);
         textFE = (TextView) findViewById(R.id.textFE);
+        juiceBigLeft = (TextView)findViewById(R.id.JuiceBigLeft);
 
 
         //region EDITTEXT FINDVIEW//////////////////////////////////////////////////////////////////////////
@@ -128,6 +131,22 @@ public class HomeActivity extends AppCompatActivity {
         edit26 = (EditText) findViewById(R.id.edit26);
         edit27 = (EditText) findViewById(R.id.edit27);
         edit28 = (EditText) findViewById(R.id.edit28);
+
+
+        edit29 = (EditText) findViewById(R.id.edit29);
+        edit30 = (EditText) findViewById(R.id.edit30);
+        edit31 = (EditText) findViewById(R.id.edit31);
+        edit32 = (EditText) findViewById(R.id.edit32);
+        edit33 = (EditText) findViewById(R.id.edit33);
+        edit34 = (EditText) findViewById(R.id.edit34);
+        edit35 = (EditText) findViewById(R.id.edit35);
+        edit36 = (EditText) findViewById(R.id.edit36);
+        edit37 = (EditText) findViewById(R.id.edit37);
+        edit38 = (EditText) findViewById(R.id.edit38);
+        edit39 = (EditText) findViewById(R.id.edit39);
+        edit40 = (EditText) findViewById(R.id.edit40);
+
+
         //endregion
 
         //region ADD EDIT TO LIST//////////////////////////////////////////////////////////////////
@@ -145,6 +164,12 @@ public class HomeActivity extends AppCompatActivity {
         listOfEdit1.add(edit23);
         listOfEdit1.add(edit25);
         listOfEdit1.add(edit27);
+        listOfEdit1.add(edit29);
+        listOfEdit1.add(edit31);
+        listOfEdit1.add(edit33);
+        listOfEdit1.add(edit35);
+        listOfEdit1.add(edit37);
+        listOfEdit1.add(edit39);
 
         listOfEdit2.add(edit2);
         listOfEdit2.add(edit4);
@@ -160,6 +185,12 @@ public class HomeActivity extends AppCompatActivity {
         listOfEdit2.add(edit24);
         listOfEdit2.add(edit26);
         listOfEdit2.add(edit28);
+        listOfEdit2.add(edit30);
+        listOfEdit2.add(edit32);
+        listOfEdit2.add(edit34);
+        listOfEdit2.add(edit36);
+        listOfEdit2.add(edit38);
+        listOfEdit2.add(edit40);
 
         listOfText.add(textJ);
         listOfText.add(textN);
@@ -244,6 +275,7 @@ public class HomeActivity extends AppCompatActivity {
         textN.setText(String.valueOf(totalOrderPrice));
         textOst.setText(String.valueOf(mainMoneyLeft));
         textFE.setText(String.valueOf(mainMoneyLeftForeach));
+        juiceBigLeft.setText(String.valueOf(zeroPriceCount - mainJuiceWeGot));
     }
 
     @Override

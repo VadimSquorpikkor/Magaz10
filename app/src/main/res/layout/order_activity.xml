@@ -983,7 +983,7 @@
                     android:id="@+id/text36" />
             </LinearLayout>
             <LinearLayout style="@style/horizontalLayoutStyle"
-                android:layout_height="180dp">
+                android:layout_height="200dp">
             </LinearLayout>
             <LinearLayout style="@style/horizontalLayoutStyle"
                 android:orientation="vertical"
