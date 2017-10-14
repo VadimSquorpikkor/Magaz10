@@ -66,133 +66,226 @@
 
     </LinearLayout>-->
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:textSize="40dp"
+            android:text="00"
+            android:textAlignment="center"
+
+            android:textColor="@android:color/holo_orange_light"
+            android:id="@+id/JuiceBigLeft"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/horizontalLayoutStyle">
 
 
-        <EditText style="@style/WeightNumberStyle"
-            android:id="@+id/edit1"/>
-        <EditText style="@style/shortNumberStyle"
-            android:id="@+id/edit2"/>
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit1"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit2"/>
 
-    </LinearLayout>
+                </LinearLayout>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-
-        <EditText style="@style/WeightNumberStyle"
-            android:id="@+id/edit3"/>
-        <EditText style="@style/shortNumberStyle"
-            android:id="@+id/edit4"/>
-
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
+                <LinearLayout style="@style/horizontalLayoutStyle">
 
 
-        <EditText style="@style/WeightNumberStyle"
-            android:id="@+id/edit5"/>
-        <EditText style="@style/shortNumberStyle"
-            android:id="@+id/edit6"/>
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit3"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit4"/>
 
-    </LinearLayout>
+                </LinearLayout>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+                <LinearLayout style="@style/horizontalLayoutStyle">
 
 
-        <EditText style="@style/WeightNumberStyle"
-            android:id="@+id/edit7"/>
-        <EditText style="@style/shortNumberStyle"
-            android:id="@+id/edit8"/>
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit5"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit6"/>
 
-    </LinearLayout>
+                </LinearLayout>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+                <LinearLayout style="@style/horizontalLayoutStyle">
 
-        <EditText style="@style/WeightNumberStyle"
-            android:id="@+id/edit9"/>
-        <EditText style="@style/shortNumberStyle"
-            android:id="@+id/edit10"/>
 
-    </LinearLayout>
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit7"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit8"/>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+                </LinearLayout>
 
-        <EditText style="@style/WeightNumberStyle"
-            android:id="@+id/edit11"/>
-        <EditText style="@style/shortNumberStyle"
-            android:id="@+id/edit12"/>
+                <LinearLayout style="@style/horizontalLayoutStyle">
 
-    </LinearLayout>
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit9"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit10"/>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+                </LinearLayout>
 
-        <EditText style="@style/WeightNumberStyle"
-            android:id="@+id/edit13"/>
-        <EditText style="@style/shortNumberStyle"
-            android:id="@+id/edit14"/>
+                <LinearLayout style="@style/horizontalLayoutStyle">
 
-    </LinearLayout>
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit11"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit12"/>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+                </LinearLayout>
 
-        <EditText style="@style/WeightNumberStyle"
-            android:id="@+id/edit15"/>
-        <EditText style="@style/shortNumberStyle"
-            android:id="@+id/edit16"/>
+                <LinearLayout style="@style/horizontalLayoutStyle">
 
-    </LinearLayout>
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit13"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit14"/>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+                </LinearLayout>
 
-        <EditText style="@style/WeightNumberStyle"
-            android:id="@+id/edit17"/>
-        <EditText style="@style/shortNumberStyle"
-            android:id="@+id/edit18"/>
+                <LinearLayout style="@style/horizontalLayoutStyle">
 
-    </LinearLayout>
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit15"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit16"/>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+                </LinearLayout>
 
-        <EditText style="@style/WeightNumberStyle"
-            android:id="@+id/edit19"/>
-        <EditText style="@style/shortNumberStyle"
-            android:id="@+id/edit20"/>
+                <LinearLayout style="@style/horizontalLayoutStyle">
 
-    </LinearLayout>
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit17"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit18"/>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+                </LinearLayout>
 
-        <EditText style="@style/WeightNumberStyle"
-            android:id="@+id/edit21"/>
-        <EditText style="@style/shortNumberStyle"
-            android:id="@+id/edit22"/>
+                <LinearLayout style="@style/horizontalLayoutStyle">
 
-    </LinearLayout>
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit19"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit20"/>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+                </LinearLayout>
 
-        <EditText style="@style/WeightNumberStyle"
-            android:id="@+id/edit23"/>
-        <EditText style="@style/shortNumberStyle"
-            android:id="@+id/edit24"/>
+                <LinearLayout style="@style/horizontalLayoutStyle">
 
-    </LinearLayout>
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit21"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit22"/>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+                </LinearLayout>
 
-        <EditText style="@style/WeightNumberStyle"
-            android:id="@+id/edit25"/>
-        <EditText style="@style/shortNumberStyle"
-            android:id="@+id/edit26"/>
+                <LinearLayout style="@style/horizontalLayoutStyle">
 
-    </LinearLayout>
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit23"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit24"/>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+                </LinearLayout>
 
-        <EditText style="@style/WeightNumberStyle"
-            android:id="@+id/edit27"/>
-        <EditText style="@style/shortNumberStyle"
-            android:id="@+id/edit28"/>
+                <LinearLayout style="@style/horizontalLayoutStyle">
+
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit25"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit26"/>
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/horizontalLayoutStyle">
+
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit27"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit28"/>
+
+                </LinearLayout>
+                <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+                <LinearLayout style="@style/horizontalLayoutStyle">
+
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit29"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit30"/>
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/horizontalLayoutStyle">
+
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit31"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit32"/>
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/horizontalLayoutStyle">
+
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit33"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit34"/>
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/horizontalLayoutStyle">
+
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit35"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit36"/>
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/horizontalLayoutStyle">
+
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit37"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit38"/>
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/horizontalLayoutStyle">
+
+                    <EditText style="@style/WeightNumberStyle"
+                        android:id="@+id/edit39"/>
+                    <EditText style="@style/shortNumberStyle"
+                        android:id="@+id/edit40"/>
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/horizontalLayoutStyle"
+                    android:layout_height="200dp">
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+
 
     </LinearLayout>
     <LinearLayout style="@style/horizontalLayoutStyle">
