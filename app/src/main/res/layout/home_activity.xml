@@ -5,16 +5,32 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+    <LinearLayout style="@style/horizontalLayoutStyle"
+        android:weightSum="1">
 
         <TextView
             style="@style/textStyle"
             android:text="@string/juiceWeGet" />
 
         <TextView
-            style="@style/textStyle"
             android:id="@+id/textJ"
+            style="@style/textStyle"
             android:text="@string/ZERO" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end"
+            >
+
+            <ImageView
+                android:id="@+id/infoImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_info_white_24dp"/>
+
+        </LinearLayout>
+
 
 
     </LinearLayout>

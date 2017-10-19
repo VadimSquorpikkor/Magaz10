@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".HomeActivity">
+        <activity
+            android:name=".HomeActivity"
+            android:windowSoftInputMode="stateHidden">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +24,9 @@
             android:name=".OrderActivity"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".LeftActivity" />
-        <activity android:name=".AddToOrderActivity" />
-        <activity android:name=".ClientListActivity"></activity>
+        <activity android:name=".ClientListActivity" />
+        <activity android:name=".PhoneActivity" />
+        <activity android:name=".AboutActivity" />
     </application>
 
 </manifest>

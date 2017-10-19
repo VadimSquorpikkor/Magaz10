@@ -521,7 +521,8 @@ public class OrderActivity extends AppCompatActivity {
                         saveCheckStatus();
                         break;
                     case R.id.phonesButton:
-                        okAlert(phonesText);
+//                        okAlert(phonesText);
+                        clickActivity(PhoneActivity.class);
                         break;
                 }
             }

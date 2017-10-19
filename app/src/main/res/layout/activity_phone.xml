@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Телефоны:"
+            android:textAlignment="center"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="Крот"/>
+            <TextView
+                style="@style/phone_style"
+                android:text="145"/>
+
+            <View style="@style/line_separator"/>
+
+            <TextView
+                style="@style/textStyle"
+                android:text="Вася"/>
+            <TextView
+                style="@style/phone_style"
+                android:text="104"/>
+
+            <View style="@style/line_separator"/>
+
+            <TextView
+                style="@style/textStyle"
+                android:text="Праневич"/>
+            <TextView
+                style="@style/phone_style"
+                android:text="136"/>
+
+            <View style="@style/line_separator"/>
+
+            <TextView
+                style="@style/textStyle"
+                android:text="Сергей Каменщиков (Корелинские)"/>
+            <TextView
+                style="@style/phone_style"
+                android:text="(9)2651237"/>
+
+            <View style="@style/line_separator"/>
+
+            <TextView
+                style="@style/textStyle"
+                android:text="Ваня"/>
+            <TextView
+                style="@style/phone_style"
+                android:text="+375336008652"/>
+
+            <View style="@style/line_separator"/>
+
+            <TextView
+                style="@style/textStyle"
+                android:text="Максим"/>
+            <TextView
+                style="@style/phone_style"
+                android:text="+375297545217"/>
+
+            <View style="@style/line_separator"/>
+
+            <TextView
+                style="@style/textStyle"
+                android:text="Ира"/>
+            <TextView
+                style="@style/phone_style"
+                android:text="+375297069363"/>
+
+            <View style="@style/line_separator"/>
+
+            <TextView
+                style="@style/textStyle"
+                android:text="Крот (Мобильный)"/>
+            <TextView
+                style="@style/phone_style"
+                android:text="+375297618631"/>
+
+            <View style="@style/line_separator"/>
+
+            <TextView
+                style="@style/textStyle"
+                android:text="Максим Ячминев"/>
+            <TextView
+                style="@style/phone_style"
+                android:text="+375333613613"/>
+
+            <View style="@style/line_separator"/>
+
+            <TextView
+                style="@style/textStyle"
+                android:text="Сергей Каменщиков (Мобильный)"/>
+            <TextView
+                style="@style/phone_style"
+                android:text="+375291293053"/>
+
+            <View style="@style/line_separator"/>
+
+            <TextView
+                style="@style/textStyle"
+                android:text="Алесь"/>
+            <TextView
+                style="@style/phone_style"
+                android:text="+375291293914"/>
+
+            <View style="@style/line_separator"/>
+
+            <TextView
+                style="@style/textStyle"
+                android:text="Юра Мороз"/>
+            <TextView
+                style="@style/phone_style"
+                android:text="+375297506665"/>
+
+            <View style="@style/line_separator"/>
+
+            <TextView
+                style="@style/textStyle"
+                android:text="Алеся (Зембин)"/>
+            <TextView
+                style="@style/phone_style"
+                android:text="+375293763895"/>
+
+            <View style="@style/line_separator"/>
+
+            <TextView
+                style="@style/textStyle"
+                android:text="Корелин Александр Михайлович"/>
+            <TextView
+                style="@style/phone_style"
+                android:text="+375296845135"/>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,18 +1,24 @@
 package com.squorpikkor.app.magaz10;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
+
 
 //import static com.squorpikkor.app.magaz10.DataSingleton.getInstance;
 
@@ -53,6 +59,8 @@ public class HomeActivity extends AppCompatActivity {
     static SharedPreferences prefForVar;
 
     Button button1, button2, button3, button4, button5;
+
+    ImageView imageView;
 
     EditTextSummator summator;
     SaveLoad saveLoad = new SaveLoad();
@@ -198,6 +206,8 @@ public class HomeActivity extends AppCompatActivity {
         listOfText.add(textFE);
         //endregion
 
+        imageView = (ImageView) findViewById(R.id.infoImageView);
+
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -213,6 +223,11 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.countButton:
                         calculateVar();
                         displayVar();
+                        break;
+                    case R.id.infoImageView:
+                        showInfoDialog3();
+                        //clickActivity(PhoneActivity.class);
+                        break;
                 }
             }
         };
@@ -222,7 +237,70 @@ public class HomeActivity extends AppCompatActivity {
         button3.setOnClickListener(listener);
         button4.setOnClickListener(listener);
         button5.setOnClickListener(listener);
+        imageView.setOnClickListener(listener);
 
+    }
+
+    private void showInfoDialog() {
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+        alert.setTitle("Magaz Assistant");
+
+        ImageView image = new ImageView(this);
+        image.setImageResource(R.drawable.squorpikkor);
+
+
+        alert.setMessage("AppVersion - 2.4"+"\n"+"Баги и предложения посылать на: "+"\n"+"VadimSerikov11@gmail.com");
+
+        alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                dialog.cancel();
+            }
+        });
+
+        //alert.setView(image);
+
+        alert.show();
+    }
+
+    private void showInfoDialog2() {
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.info);
+
+//        dialog.setTitle("Bla Bla");
+
+        /*TextView text = (TextView) dialog.findViewById(R.id.text);
+        text.setText("Your Text");
+        ImageView image = (ImageView) dialog.findViewById(R.id.image);
+        image.setImageResource(R.drawable.squorpikkor);
+
+        Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+        dialogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });*/
+
+        dialog.show();
+
+    }
+
+    private void showInfoDialog3() {
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+//        alert.setView(R.layout.info);//for Android version > 21
+
+        LayoutInflater inflater = this.getLayoutInflater();
+        alert.setView(inflater.inflate(R.layout.info, null));//FOR SHOW XML LAYOUT!!!
+
+        alert.setPositiveButton("Понял", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                dialog.cancel();
+            }
+        });
+
+        alert.show();
     }
 
     public void clickActivity(Class c) {
@@ -321,7 +399,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        alert.setNegativeButton("нет", new DialogInterface.OnClickListener() {
+        alert.setNegativeButton("Нет", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 dialog.cancel();
             }
