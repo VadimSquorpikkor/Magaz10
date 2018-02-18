@@ -249,7 +249,7 @@
         <TextView
             android:textColor="@android:color/holo_green_light"
             style="@style/textStyle"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:id="@+id/totalNakladnayaPrice"
             android:text="" />
     </LinearLayout>

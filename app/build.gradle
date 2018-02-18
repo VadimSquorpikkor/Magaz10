@@ -7,8 +7,8 @@ android {
         applicationId "com.squorpikkor.app.magaz10"
         minSdkVersion 18
         targetSdkVersion 25
-        versionCode 143
-        versionName "1.4.3"
+        versionCode 144
+        versionName "1.4.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

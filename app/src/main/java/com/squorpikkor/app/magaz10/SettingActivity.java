@@ -1,6 +1,8 @@
 package com.squorpikkor.app.magaz10;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -190,6 +192,13 @@ public class SettingActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        /**To prevent error on parse to double from empty field  ********/
+        if(edit6.getText().toString().equals(""))edit6.setText("0"); /***/
+        if(edit8.getText().toString().equals(""))edit8.setText("0"); /***/
+        if(edit7.getText().toString().equals(""))edit7.setText("0"); /***/
+        if(edit9.getText().toString().equals(""))edit9.setText("0"); /***/
+        if(edit10.getText().length()==0)edit10.setText("0"); /**same*/
+        /****************************************************************/
         saveLoad.saveStringEditArray(juiceArrayList, preferences);
         saveLoad.saveStringEditArray(priceArrayList, preferences2);
         saveLoad.saveIntArray(countArrayList, preferences3);
@@ -233,8 +242,21 @@ public class SettingActivity extends AppCompatActivity {
 
     private void calculateProductCount() {
         edit10.setTextColor(Color.WHITE);
-        double fieldJuice = Double.parseDouble(edit10.getText().toString());
-        double fieldMilk = Double.parseDouble(edit10.getText().toString()) * 2;
+        double fieldJuice;
+        double fieldMilk;
+
+        /*if (!edit10.getText().toString().equals("")) {
+            fieldJuice = Double.parseDouble(edit10.getText().toString());
+            fieldMilk = Double.parseDouble(edit10.getText().toString()) * 2;
+        } else {
+            edit10.setText("0");
+            fieldJuice = 0;
+            fieldMilk = 0;
+        }*/
+        if(edit10.getText().toString().equals(""))edit10.setText("0"); //To prevent error on parse to double from empty field
+        fieldJuice = Double.parseDouble(edit10.getText().toString());
+        fieldMilk = Double.parseDouble(edit10.getText().toString()) * 2;
+
         int IntegerPartJuice = (int)fieldJuice;
         int IntegerPartMilk = (int)fieldMilk;
         double FractionalPartJuice = fieldJuice - (double)IntegerPartJuice;
@@ -272,6 +294,13 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     private void totalOrderPrice() {
+        /**To prevent error on parse to double from empty field  ********/
+        if(edit6.getText().toString().equals(""))edit6.setText("0"); /***/
+        if(edit8.getText().toString().equals(""))edit8.setText("0"); /***/
+        if(edit7.getText().toString().equals(""))edit7.setText("0"); /***/
+        if(edit9.getText().toString().equals(""))edit9.setText("0"); /***/
+        if(edit10.getText().length()==0)edit10.setText("0"); /***/
+        /****************************************************************/
         double bigJuicePrice = Double.parseDouble(edit6.getText().toString());
         double bigMilkPrice = Double.parseDouble(edit8.getText().toString());
         double smallJuicePrice = Double.parseDouble(edit7.getText().toString());
@@ -289,4 +318,6 @@ public class SettingActivity extends AppCompatActivity {
 
 
     }
+
+
 }

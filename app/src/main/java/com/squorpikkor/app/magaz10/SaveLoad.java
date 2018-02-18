@@ -2,7 +2,10 @@ package com.squorpikkor.app.magaz10;
 
 // Created by VadimSquorpikkor on 20.03.2017.
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -158,4 +161,14 @@ class SaveLoad {
 
     }
 
+    /*public void errorAlert (View view){
+        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setMessage("Что-то пошло не так...");
+        alert.setPositiveButton("Ого", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                dialog.cancel();
+            }
+        });
+        alert.show();
+    }*/
 }
