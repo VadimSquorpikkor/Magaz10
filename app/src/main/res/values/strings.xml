@@ -44,7 +44,7 @@
     <string name="phones">телефоны</string>
     <string name="money">Денег</string>
     <string name="mail_address">VadimSerikov11@gmail.com</string>
-    <string name="app_version">Version 1.4.4</string>
+    <string name="app_version">Version 2.0</string>
     <string name="info_text">Баги и предложения высылать на</string>
 
     <string-array name="name_list">

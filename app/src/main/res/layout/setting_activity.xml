@@ -1,286 +1,314 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <!--<LinearLayout
-        style="@style/horizontalLayoutStyle">
-        <TextView
-            android:textSize="30sp"
-            style="@style/textStyle"
-            android:text="@string/juiceCount" />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
 
-        &lt;!&ndash;<Button
-            style="@style/buttonStyle"
-            android:id="@+id/resetButton"
-            android:layout_height="30dp"
-            android:text="Новый заказ" />&ndash;&gt;
+        <!--<LinearLayout
+            style="@style/horizontalLayoutStyle">
+            <TextView
+                android:textSize="30sp"
+                style="@style/textStyle"
+                android:text="@string/juiceCount" />
 
-    </LinearLayout>-->
+            &lt;!&ndash;<Button
+                style="@style/buttonStyle"
+                android:id="@+id/resetButton"
+                android:layout_height="30dp"
+                android:text="Новый заказ" />&ndash;&gt;
 
-
-    <!--<LinearLayout style="@style/horizontalLayoutStyle">
-
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/KROT" />
-
-        <EditText
-            android:id="@+id/jCount1"
-            android:text="@string/ZERO"
-            style="@style/shortNumberStyle" />
-
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/SBORKA" />
-
-        <EditText
-            android:id="@+id/jCount2"
-            android:text="@string/ZERO"
-            style="@style/shortNumberStyle" />
-
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/MONTAZ" />
-
-        <EditText
-            android:id="@+id/jCount3"
-            android:text="@string/ZERO"
-            style="@style/shortNumberStyle" />
-
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/OTHERS" />
-
-        <EditText
-            android:id="@+id/jCount4"
-            android:text="@string/ZERO"
-            style="@style/shortNumberStyle" />
-
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/KORELIN" />
-
-        <EditText
-            android:id="@+id/jCount5"
-            android:text="@string/ZERO"
-            style="@style/shortNumberStyle" />
-
-    </LinearLayout>-->
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <TextView
-            android:textSize="30sp"
-            style="@style/textStyle"
-            android:text="@string/juiceCountTotalByOrders" />
-
-        <TextView
-            android:textSize="25sp"
-            style="@style/textStyle"
-            android:id="@+id/juiceZakazCount"
-            android:text="@string/ZERO" />
-    </LinearLayout>
-
-    <LinearLayout
-        style="@style/horizontalLayoutStyle">
-        <TextView
-            android:textSize="30sp"
-            style="@style/textStyle"
-            android:text="@string/juice_price" />
-
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/juiceBig" />
-
-        <EditText
-            android:id="@+id/price1"
-            android:text="@string/ZERO"
-            style="@style/WeightNumberStyle" />
-
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/MilkBig" />
-
-        <EditText
-            android:id="@+id/price3"
-            android:text="@string/ZERO"
-            style="@style/WeightNumberStyle" />
-
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/juiceSmall" />
-
-        <EditText
-            android:id="@+id/price2"
-            android:text="@string/ZERO"
-            style="@style/WeightNumberStyle" />
-
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/milkSmall" />
-
-        <EditText
-            android:id="@+id/price4"
-            android:text="@string/ZERO"
-            style="@style/WeightNumberStyle" />
-
-    </LinearLayout>
-
-    <!--<LinearLayout style="@style/horizontalLayoutStyle">
-
-        <TextView
-            style="@style/textStyle"
-            android:text="" />
-
-    </LinearLayout>-->
-
-    <LinearLayout
-        style="@style/horizontalLayoutStyle">
-        <TextView
-            android:textSize="30sp"
-            style="@style/textStyle"
-            android:text="@string/count_juice" />
-
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/juiceCountByDocument" />
-
-        <EditText
-            android:id="@+id/juiceInOrder"
-            android:text="@string/ZERO"
-            style="@style/WeightNumberStyle" />
-
-    </LinearLayout>
+        </LinearLayout>-->
 
 
+        <!--<LinearLayout style="@style/horizontalLayoutStyle">
 
-    <!--<LinearLayout style="@style/horizontalLayoutStyle"
-        android:layout_height="100dp">
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/KROT" />
 
+            <EditText
+                android:id="@+id/jCount1"
+                android:text="@string/ZERO"
+                style="@style/shortNumberStyle" />
 
+        </LinearLayout>
 
-    </LinearLayout>-->
+        <LinearLayout style="@style/horizontalLayoutStyle">
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/juiceBigCount" />
-        <TextView
-            style="@style/textStyle"
-            android:id="@+id/textBigJuice"
-            android:text="" />
-    </LinearLayout>
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/SBORKA" />
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/juiceSmallCount" />
-        <TextView
-            style="@style/textStyle"
-            android:id="@+id/textSmallJuice"
-            android:text="" />
-    </LinearLayout>
+            <EditText
+                android:id="@+id/jCount2"
+                android:text="@string/ZERO"
+                style="@style/shortNumberStyle" />
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/milkBigCount" />
-        <TextView
-            style="@style/textStyle"
-            android:id="@+id/textBigMilk"
-            android:text="" />
-    </LinearLayout>
+        </LinearLayout>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/milkSmallCount" />
-        <TextView
-            style="@style/textStyle"
-            android:id="@+id/textSmallMilk"
-            android:text="" />
-    </LinearLayout>
+        <LinearLayout style="@style/horizontalLayoutStyle">
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <TextView
-            android:textSize="30sp"
-            style="@style/textStyle"
-            android:text="@string/totalPriceInDocument" />
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/MONTAZ" />
+
+            <EditText
+                android:id="@+id/jCount3"
+                android:text="@string/ZERO"
+                style="@style/shortNumberStyle" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/OTHERS" />
+
+            <EditText
+                android:id="@+id/jCount4"
+                android:text="@string/ZERO"
+                style="@style/shortNumberStyle" />
+
         </LinearLayout>
         <LinearLayout style="@style/horizontalLayoutStyle">
-        <TextView
-            android:textColor="@android:color/holo_green_light"
-            style="@style/textStyle"
-            android:layout_height="50dp"
-            android:id="@+id/totalNakladnayaPrice"
-            android:text="" />
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/KORELIN" />
+
+            <EditText
+                android:id="@+id/jCount5"
+                android:text="@string/ZERO"
+                style="@style/shortNumberStyle" />
+
+        </LinearLayout>-->
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/juiceCountTotalByOrders"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/juiceZakazCount"
+                style="@style/textStyle"
+                android:text="@string/ZERO"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/juice_price"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/juiceBig" />
+
+            <EditText
+                android:id="@+id/price1"
+                style="@style/WeightNumberStyle"
+                android:text="@string/ZERO" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/MilkBig" />
+
+            <EditText
+                android:id="@+id/price3"
+                style="@style/WeightNumberStyle"
+                android:text="@string/ZERO" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/juiceSmall" />
+
+            <EditText
+                android:id="@+id/price2"
+                style="@style/WeightNumberStyle"
+                android:text="@string/ZERO" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/milkSmall" />
+
+            <EditText
+                android:id="@+id/price4"
+                style="@style/WeightNumberStyle"
+                android:text="@string/ZERO" />
+
+        </LinearLayout>
+
+        <!--<LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="" />
+
+        </LinearLayout>-->
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/count_juice"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/juiceCountByDocument" />
+
+            <EditText
+                android:id="@+id/juiceInOrder"
+                style="@style/WeightNumberStyle"
+                android:text="@string/ZERO" />
+
+        </LinearLayout>
+
+
+        <!--<LinearLayout style="@style/horizontalLayoutStyle"
+            android:layout_height="100dp">
+
+
+
+        </LinearLayout>-->
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/juiceBigCount" />
+
+            <TextView
+                android:id="@+id/textBigJuice"
+                style="@style/textStyle"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/juiceSmallCount" />
+
+            <TextView
+                android:id="@+id/textSmallJuice"
+                style="@style/textStyle"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/milkBigCount" />
+
+            <TextView
+                android:id="@+id/textBigMilk"
+                style="@style/textStyle"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/milkSmallCount" />
+
+            <TextView
+                android:id="@+id/textSmallMilk"
+                style="@style/textStyle"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/totalPriceInDocument"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                android:id="@+id/totalNakladnayaPrice"
+                style="@style/textStyle"
+                android:layout_height="50dp"
+                android:text=""
+                android:textColor="@android:color/holo_green_light" />
+        </LinearLayout>
+
+
+
     </LinearLayout>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <Button
-            android:layout_height="30dp"
-            style="@style/buttonStyle"
-            android:id="@+id/countButton"
-            android:text="@string/calculate" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/countButton"
+        style="@style/buttonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="@string/calculate" />
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+    <LinearLayout
+        style="@style/horizontalLayoutStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
         <Button
-            style="@style/buttonStyle"
             android:id="@+id/homeButton"
+            style="@style/buttonStyle"
             android:text="@string/home" />
+
         <Button
+            android:id="@+id/SetValueButton"
             style="@style/buttonStyle"
             android:background="@android:color/holo_orange_dark"
-            android:id="@+id/SetValueButton"
-            android:text="@string/price_button"/>
+            android:text="@string/price_button" />
+
         <Button
-            style="@style/buttonStyle"
             android:id="@+id/leftButton"
-            android:text="@string/left" />
-        <Button
             style="@style/buttonStyle"
+            android:text="@string/left" />
+
+        <Button
             android:id="@+id/orderButton"
+            style="@style/buttonStyle"
             android:text="@string/orders" />
 
     </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

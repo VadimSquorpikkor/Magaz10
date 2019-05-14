@@ -1,209 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <LinearLayout style="@style/horizontalLayoutStyle"
-        android:layout_height="50dp">
+    <TextView
+        style="@style/textStyle"
+        android:text="Денег осталось:"
+        android:textSize="50sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/moneySpent" />
+
+            <TextView
+                android:id="@+id/leftMoneySpent"
+                style="@style/textStyle"
+                android:text="@string/ZERO" />
+
+            <Button
+
+                android:id="@+id/leftEraseButton"
+                style="@style/buttonStyle"
+                android:layout_height="30dp"
+                android:text="@string/clearIt" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/textStyle"
+                android:text="@string/moneyLeftForEach" />
+
+            <TextView
+                android:id="@+id/leftMoneyLeft"
+                style="@style/textStyle"
+                android:text="@string/ZERO" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <TextView
+                style="@style/WeightNumberStyle"
+                android:text="@string/price" />
+
+            <TextView
+                style="@style/editStyle"
+                android:text="@string/count" />
+
+            <TextView
+                style="@style/editStyle"
+                android:text="Всего" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/leftPrice1"
+                style="@style/WeightNumberStyle" />
+
+            <EditText
+                android:id="@+id/leftCount1"
+                style="@style/shortNumberStyle" />
+
+            <TextView
+                android:id="@+id/leftTextTotal1"
+                style="@style/editStyle" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/leftPrice2"
+                style="@style/WeightNumberStyle" />
+
+            <EditText
+                android:id="@+id/leftCount2"
+                style="@style/shortNumberStyle" />
+
+            <TextView
+                android:id="@+id/leftTextTotal2"
+                style="@style/editStyle" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/leftPrice3"
+                style="@style/WeightNumberStyle" />
+
+            <EditText
+                android:id="@+id/leftCount3"
+                style="@style/shortNumberStyle" />
+
+            <TextView
+                android:id="@+id/leftTextTotal3"
+                style="@style/editStyle" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/leftPrice4"
+                style="@style/WeightNumberStyle" />
+
+            <EditText
+                android:id="@+id/leftCount4"
+                style="@style/shortNumberStyle" />
+
+            <TextView
+                android:id="@+id/leftTextTotal4"
+                style="@style/editStyle" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/leftPrice5"
+                style="@style/WeightNumberStyle" />
+
+            <EditText
+                android:id="@+id/leftCount5"
+                style="@style/shortNumberStyle" />
+
+            <TextView
+                android:id="@+id/leftTextTotal5"
+                style="@style/editStyle" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/leftPrice6"
+                style="@style/WeightNumberStyle" />
+
+            <EditText
+                android:id="@+id/leftCount6"
+                style="@style/shortNumberStyle" />
+
+            <TextView
+                android:id="@+id/leftTextTotal6"
+                style="@style/editStyle" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/horizontalLayoutStyle">
+
+            <EditText
+                android:id="@+id/leftPrice7"
+                style="@style/WeightNumberStyle" />
+
+            <EditText
+                android:id="@+id/leftCount7"
+                style="@style/shortNumberStyle" />
+
+            <TextView
+                android:id="@+id/leftTextTotal7"
+                style="@style/editStyle" />
+        </LinearLayout>
+
 
     </LinearLayout>
 
-    <LinearLayout style="@style/horizontalLayoutStyle">
+    <Button
+        android:id="@+id/countButton"
+        style="@style/buttonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="@string/calculate" />
 
-        <TextView
-            style="@style/textStyle"
-            android:textSize="50sp"
-            android:text="Денег осталось:" />
-
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/moneySpent" />
-
-        <TextView
-            android:id="@+id/leftMoneySpent"
-            style="@style/textStyle"
-            android:text="@string/ZERO" />
+    <LinearLayout
+        style="@style/horizontalLayoutStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
 
         <Button
-
-            android:layout_height="30dp"
-            style="@style/buttonStyle"
-            android:text="@string/clearIt"
-            android:id="@+id/leftEraseButton"
-             />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <TextView
-            style="@style/textStyle"
-            android:text="@string/moneyLeftForEach" />
-
-        <TextView
-            android:id="@+id/leftMoneyLeft"
-            style="@style/textStyle"
-            android:text="@string/ZERO" />
-
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <TextView
-            android:text="@string/price"
-            style="@style/WeightNumberStyle" />
-        <TextView
-            android:text="@string/count"
-            style="@style/editStyle" />
-        <TextView
-            android:text="Всего"
-            style="@style/editStyle" />
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <EditText
-            android:id="@+id/leftPrice1"
-            style="@style/WeightNumberStyle" />
-
-        <EditText
-            android:id="@+id/leftCount1"
-            style="@style/shortNumberStyle" />
-
-        <TextView
-            android:id="@+id/leftTextTotal1"
-            style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <EditText
-            android:id="@+id/leftPrice2"
-            style="@style/WeightNumberStyle" />
-
-        <EditText
-            android:id="@+id/leftCount2"
-            style="@style/shortNumberStyle" />
-
-        <TextView
-            android:id="@+id/leftTextTotal2"
-            style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <EditText
-            android:id="@+id/leftPrice3"
-            style="@style/WeightNumberStyle" />
-
-        <EditText
-            android:id="@+id/leftCount3"
-            style="@style/shortNumberStyle" />
-
-        <TextView
-            android:id="@+id/leftTextTotal3"
-            style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <EditText
-            android:id="@+id/leftPrice4"
-            style="@style/WeightNumberStyle" />
-
-        <EditText
-            android:id="@+id/leftCount4"
-            style="@style/shortNumberStyle" />
-
-        <TextView
-            android:id="@+id/leftTextTotal4"
-            style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <EditText
-            android:id="@+id/leftPrice5"
-            style="@style/WeightNumberStyle" />
-
-        <EditText
-            android:id="@+id/leftCount5"
-            style="@style/shortNumberStyle" />
-
-        <TextView
-            android:id="@+id/leftTextTotal5"
-            style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <EditText
-            android:id="@+id/leftPrice6"
-            style="@style/WeightNumberStyle" />
-
-        <EditText
-            android:id="@+id/leftCount6"
-            style="@style/shortNumberStyle" />
-
-        <TextView
-            android:id="@+id/leftTextTotal6"
-            style="@style/editStyle" />
-    </LinearLayout>
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <EditText
-            android:id="@+id/leftPrice7"
-            style="@style/WeightNumberStyle" />
-
-        <EditText
-            android:id="@+id/leftCount7"
-            style="@style/shortNumberStyle" />
-
-        <TextView
-            android:id="@+id/leftTextTotal7"
-            style="@style/editStyle" />
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
-
-        <Button
-            style="@style/buttonStyle"
-
-            android:layout_height="30dp"
-            android:id="@+id/countButton"
-            android:text="@string/calculate"
-             />
-        <!--android:layout_width="170dp"-->
-
-        <!--<TextView
-            android:id="@+id/clear"
-            style="@style/editStyle"
-            android:layout_width="250dp" />-->
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle"
-        android:layout_height="20dp">
-
-    </LinearLayout>
-
-    <LinearLayout style="@style/horizontalLayoutStyle">
-        <Button
-            style="@style/buttonStyle"
             android:id="@+id/homeButton"
+            style="@style/buttonStyle"
             android:text="@string/home" />
+
         <Button
-            style="@style/buttonStyle"
             android:id="@+id/SetValueButton"
-            android:text="@string/price_button"/>
-        <Button
-            android:background="@android:color/holo_orange_dark"
             style="@style/buttonStyle"
+            android:text="@string/price_button" />
+
+        <Button
             android:id="@+id/leftButton"
-            android:text="@string/left" />
-        <Button
             style="@style/buttonStyle"
+            android:background="@android:color/holo_orange_dark"
+            android:text="@string/left" />
+
+        <Button
             android:id="@+id/orderButton"
+            style="@style/buttonStyle"
             android:text="@string/orders" />
 
     </LinearLayout>
 
-
-</LinearLayout>
+</RelativeLayout>
