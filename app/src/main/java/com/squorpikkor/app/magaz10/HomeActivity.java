@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import java.util.ArrayList;
 
 
@@ -86,7 +87,6 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
 
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity);
 
@@ -107,19 +107,19 @@ public class HomeActivity extends AppCompatActivity {
         textJ = (TextView) findViewById(R.id.textJ);
         textOst = (TextView) findViewById(R.id.textOst);
         textFE = (TextView) findViewById(R.id.textFE);
-        juiceBigLeft = (TextView)findViewById(R.id.JuiceBigLeft);
+        juiceBigLeft = (TextView) findViewById(R.id.JuiceBigLeft);
 
 
         //region EDITTEXT FINDVIEW//////////////////////////////////////////////////////////////////////////
-         edit1 = (EditText) findViewById(R.id.edit1);
-         edit2 = (EditText) findViewById(R.id.edit2);
-         edit3 = (EditText) findViewById(R.id.edit3);
-         edit4 = (EditText) findViewById(R.id.edit4);
-         edit5 = (EditText) findViewById(R.id.edit5);
-         edit6 = (EditText) findViewById(R.id.edit6);
-         edit7 = (EditText) findViewById(R.id.edit7);
-         edit8 = (EditText) findViewById(R.id.edit8);
-         edit9 = (EditText) findViewById(R.id.edit9);
+        edit1 = (EditText) findViewById(R.id.edit1);
+        edit2 = (EditText) findViewById(R.id.edit2);
+        edit3 = (EditText) findViewById(R.id.edit3);
+        edit4 = (EditText) findViewById(R.id.edit4);
+        edit5 = (EditText) findViewById(R.id.edit5);
+        edit6 = (EditText) findViewById(R.id.edit6);
+        edit7 = (EditText) findViewById(R.id.edit7);
+        edit8 = (EditText) findViewById(R.id.edit8);
+        edit9 = (EditText) findViewById(R.id.edit9);
         edit10 = (EditText) findViewById(R.id.edit10);
         edit11 = (EditText) findViewById(R.id.edit11);
         edit12 = (EditText) findViewById(R.id.edit12);
@@ -206,6 +206,7 @@ public class HomeActivity extends AppCompatActivity {
         listOfText.add(textFE);
         //endregion
 
+
         imageView = (ImageView) findViewById(R.id.infoImageView);
 
         View.OnClickListener listener = new View.OnClickListener() {
@@ -213,13 +214,17 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.SetValueButton:
-                        clickActivity(SettingActivity.class); break;
+                        clickActivity(SettingActivity.class);
+                        break;
                     case R.id.homeClear:
-                        clearItAlert(v); break;
+                        clearItAlert(v);
+                        break;
                     case R.id.leftButton:
-                        clickActivity(LeftActivity.class); break;
+                        clickActivity(LeftActivity.class);
+                        break;
                     case R.id.orderButton:
-                        clickActivity(OrderActivity.class); break;
+                        clickActivity(OrderActivity.class);
+                        break;
                     case R.id.countButton:
                         calculateVar();
                         displayVar();
@@ -250,7 +255,7 @@ public class HomeActivity extends AppCompatActivity {
         image.setImageResource(R.drawable.squorpikkor);
 
 
-        alert.setMessage("AppVersion - 2.4"+"\n"+"Баги и предложения посылать на: "+"\n"+"VadimSerikov11@gmail.com");
+        alert.setMessage("AppVersion - 2.4" + "\n" + "Баги и предложения посылать на: " + "\n" + "VadimSerikov11@gmail.com");
 
         alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
@@ -312,22 +317,22 @@ public class HomeActivity extends AppCompatActivity {
         Log.e(LOGTAG, "CALCULATE TotalOrderPrice = " + totalOrderPrice);
         mainTotalJuicePrice = summator.sumOfLines(listOfEdit1, listOfEdit2);
         mainMoneyLeft = totalOrderPrice - mainTotalJuicePrice - ordersSumma;
-        mainMoneyLeftForeach = mainMoneyLeft/(double)2;
+        mainMoneyLeftForeach = mainMoneyLeft / (double) 2;
         mainJuiceWeGot = 0;
         mainJuiceWeGot = summator.intSumOfArray(listOfEdit2);
     }
 
     void saveVar() {
         Log.e(LOGTAG, "SAVE TotalOrderPrice = " + totalOrderPrice);
-      saveLoad.saveDouble(totalOrderPrice, "set1", prefForVar);
-      saveLoad.saveDouble(mainTotalJuicePrice, "set2", prefForVar);
-      saveLoad.saveDouble(mainMoneyLeft, "set3", prefForVar);
-      saveLoad.saveDouble(mainMoneyLeftForeach, "set4", prefForVar);
-      /////////saveLoad.saveInteger(totalJuiceCount, "set5", prefForVar);
-      saveLoad.saveInteger(mainJuiceWeGot, "set6", prefForVar);
-      saveLoad.saveDouble(ordersSumma, "set7", prefForVar);
+        saveLoad.saveDouble(totalOrderPrice, "set1", prefForVar);
+        saveLoad.saveDouble(mainTotalJuicePrice, "set2", prefForVar);
+        saveLoad.saveDouble(mainMoneyLeft, "set3", prefForVar);
+        saveLoad.saveDouble(mainMoneyLeftForeach, "set4", prefForVar);
+        /////////saveLoad.saveInteger(totalJuiceCount, "set5", prefForVar);
+        saveLoad.saveInteger(mainJuiceWeGot, "set6", prefForVar);
+        saveLoad.saveDouble(ordersSumma, "set7", prefForVar);
 
-      //DataSingleton.getInstance().setTotalJuiceCount(5);
+        //DataSingleton.getInstance().setTotalJuiceCount(5);
     }
 
     void loadVar() {
@@ -341,7 +346,7 @@ public class HomeActivity extends AppCompatActivity {
         //////totalJuiceCount = saveLoad.loadInteger("set5", prefForVar);
         mainJuiceWeGot = saveLoad.loadInteger("set6", prefForVar);
         ordersSumma = saveLoad.loadDouble("set7", prefForVar);
-     }
+    }
 
     void displayVar() {
         Log.e(LOGTAG, "DISPLAY TotalOrderPrice = " + totalOrderPrice);
@@ -378,11 +383,10 @@ public class HomeActivity extends AppCompatActivity {
         displayVar();
 
 
-
 //        saveLoad2.loadHomeActivity();
     }
 
-    public void clearItAlert (View view){
+    public void clearItAlert(View view) {
         final AlertDialog.Builder alert = new AlertDialog.Builder(this);
 
         alert.setMessage("Стереть всё?");
@@ -406,7 +410,6 @@ public class HomeActivity extends AppCompatActivity {
         });
         alert.show();
     }
-
 
 
 }

@@ -12,7 +12,6 @@
         <activity
             android:name=".HomeActivity"
             android:windowSoftInputMode="stateHidden">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
