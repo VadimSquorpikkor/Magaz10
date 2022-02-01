@@ -1,14 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 30
     buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.squorpikkor.app.magaz10"
         minSdkVersion 18
-        targetSdkVersion 25
+        targetSdkVersion 30
         versionCode 152
-        versionName "2.0"
+        versionName "2.1"
+        setProperty("archivesBaseName", "MagazAssistant-v" + versionName)
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
